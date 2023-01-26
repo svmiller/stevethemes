@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/404.html</loc>
+  </url>
+  <url>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
+    <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/example_plot.html</loc>
+  </url>
+  <url>
+    <loc>/reference/g_c.html</loc>
+  </url>
+  <url>
+    <loc>/reference/hello.html</loc>
+  </url>
+  <url>
+    <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/martel_ratings.html</loc>
+  </url>
+  <url>
+    <loc>/reference/se_counties_gdppc.html</loc>
+  </url>
+  <url>
+    <loc>/reference/steve_hex.html</loc>
+  </url>
+  <url>
+    <loc>/reference/theme_steve.html</loc>
+  </url>
+</urlset>
