@@ -1,13 +1,14 @@
 Package: stevethemes
 Type: Package
-Title: Steve's `ggplot2` themes and related theme elements
+Title: Steve's ggplot2 themes and related theme elements
 Depends: R (>= 3.5.0)
+Version: 0.1.0
 Authors@R: person("Steve", "Miller",
                   email = "steven.v.miller@gmail.com", 
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0003-4072-6263"))
 Maintainer: Steve Miller <steven.v.miller@gmail.com>
-Description: These are a compilation of my preferred themes for `ggplot2` and
+Description: These are a compilation of my preferred themes for ggplot2 and
     related theme elements (like colors and a palettes). I believe these themes
     and theme elements are aesthetically pleasing, both for pedagogical 
     instruction and the presentation of applied statistical research to a wide
@@ -16,3 +17,5 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.0
+Imports:
+    ggplot2 (>= 3.3.0)
