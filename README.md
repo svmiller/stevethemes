@@ -1,5 +1,5 @@
 
-# `peacesciencer`: Tools and Data for Quantitative Peace Science
+# `stevethemes`: Steve’s `ggplot2` themes and related theme elements
 
 [![](https://www.r-pkg.org/badges/version/stevethemes?color=green)](https://cran.r-project.org/package=stevethemes)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/stevethemes?color=green)](https://cran.r-project.org/package=stevethemes)
