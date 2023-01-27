@@ -2,6 +2,10 @@
 
 - Pop! OS (22.04), R 4.1.2
 
+## Feedback to CRAN Upon Initial Rejection
+
+I thank CRAN for pointing me to style guidelines about referencing other CRAN packages in the DESCRIPTION file, and apologize for the invalid URL/redirect. I'm also a little embarrassed I keep making rookie mistakes after all these years. :P
+
 ## Initial Comments to CRAN
 
 R CMD check done via `devtools::check()`, resulting in 0 errors, 0 warnings and 0 notes.

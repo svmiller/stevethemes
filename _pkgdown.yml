@@ -3,3 +3,5 @@ url: http://svmiller.com
 template:
   bootstrap: 5
 
+figures:
+  fig.width: 9
