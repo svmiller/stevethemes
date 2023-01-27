@@ -10,9 +10,12 @@ if(getRversion() >= "2.15.1")
 
 .onAttach <- function(libname, pkgname) {
 
-  check_open_sans <- subset(system_fonts(), family == "Open Sans")
-  check_titillium_web <- subset(system_fonts(), family == "Titillium Web")
-  check_crimson_pro <- subset(system_fonts(), family == "Crimson Pro")
+  my_fonts <- system_fonts()
+
+
+  check_open_sans <-  my_fonts[which(my_fonts$family == "Open Sans"),]
+  check_titillium_web <-  my_fonts[which(my_fonts$family == "Titillium Web"),]
+  check_crimson_pro <-  my_fonts[which(my_fonts$family == "Crimson Pro"),]
 
   if (nrow(check_open_sans) == 0) {
     has_open_sans <- "Open Sans (x)"
