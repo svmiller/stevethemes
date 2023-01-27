@@ -6,3 +6,5 @@
 ^data-raw$
 ^README\.Rmd$
 ^LICENSE\.md$
+^cran-comments\.md$
+^CRAN-RELEASE$
