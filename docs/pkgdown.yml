@@ -2,7 +2,7 @@ pandoc: 2.19.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2023-01-27T11:55Z
+last_built: 2023-01-27T13:57Z
 urls:
   reference: http://svmiller.com/reference
   article: http://svmiller.com/articles

@@ -7,7 +7,8 @@
 theme_steve(style = "web", ...)
 }
 \arguments{
-\item{style}{various styles/adjustments to make to the base theme}
+\item{style}{various styles/adjustments to make to the base theme. Must be
+one of the following: "web" (default), "ms", "fira", or "generic".}
 
 \item{...}{optional stuff, though you don't need to think much about this.}
 }
@@ -20,12 +21,19 @@ result is, I think, a lovely template for graphs I make in R.
 \details{
 The best use of this function may involve the fonts you have installed
 on your system. The user should experiment with various options to see what they
-like.
+like. The "generic" style will use default \pkg{ggplot2} fonts.
 }
 \examples{
-
+\donttest{
 library(ggplot2)
 
 example_plot() + theme_steve()
+
+example_plot() + theme_steve(style="ms")
+
+example_plot() + theme_steve(style="fira")
+
+example_plot() + theme_steve(style="generic")
+}
 
 }

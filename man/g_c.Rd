@@ -2,13 +2,13 @@
 % Please edit documentation in R/g_c.R
 \name{g_c}
 \alias{g_c}
-\title{Specify a Custom Color from `steve_hex`}
+\title{Specify a Custom Color from \code{steve_hex}}
 \usage{
 g_c(x)
 }
 \arguments{
-\item{x}{a label coinciding with a value in the `color` column of the
-`steve_hex` data frame}
+\item{x}{a label coinciding with a value in the \code{color} column of the
+\code{steve_hex} data frame}
 }
 \value{
 \code{g_c()} returns a character vector, in particular, a hex triplet
@@ -17,11 +17,11 @@ a custom fill or color in a plot.
 }
 \description{
 \code{g_c()} is a simple function that interfaces with the
-`steve_hex` data frame to return a hex value associated with a named
+\code{steve_hex} data frame to return a hex value associated with a named
 color.
 }
 \details{
-Check `steve_hex` in this same package for the custom colors
+Check \code{steve_hex} in this same package for the custom colors
 included
 }
 \examples{

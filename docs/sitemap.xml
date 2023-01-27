@@ -4,10 +4,16 @@
     <loc>http://svmiller.com/404.html</loc>
   </url>
   <url>
+    <loc>http://svmiller.com/LICENSE-text.html</loc>
+  </url>
+  <url>
     <loc>http://svmiller.com/authors.html</loc>
   </url>
   <url>
     <loc>http://svmiller.com/index.html</loc>
+  </url>
+  <url>
+    <loc>http://svmiller.com/news/index.html</loc>
   </url>
   <url>
     <loc>http://svmiller.com/reference/download_some_fonts.html</loc>

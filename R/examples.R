@@ -49,7 +49,7 @@ example_plot <- function(type = "bar") {
 
   } else if (type == "scatter") {
     ggplot(kwh_gdp, aes(.data$ln_kwhpc, .data$ln_gdppc)) +
-      geom_smooth(method='lm') + geom_point(alpha=.8) +
+      geom_smooth(method='lm', color=g_c("su_blue"), fill=g_c("martel_pink")) + geom_point(alpha=.8) +
       labs(title = "Energy Consumption per Capita and GDP per Capita, 2010",
            subtitle = "This is just a simple scatterplot. Experiment with customization options!",
            y = "GDP per Capita (Current USD, Logged)",

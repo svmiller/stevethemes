@@ -13,7 +13,9 @@ Description: These are a compilation of my preferred themes for ggplot2 and
     and theme elements are aesthetically pleasing, both for pedagogical 
     instruction and the presentation of applied statistical research to a wide
     audience. These themes imply routine use of easily obtained/free fonts.
-License: What license is it under?
+URL: http://svmiller.com/stevethemes
+BugReports: https://github.com/svmiller/stevethemes/issues
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.0

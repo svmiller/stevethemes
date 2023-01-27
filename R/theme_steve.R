@@ -5,20 +5,33 @@
 #' \pkg{ggplot2}, but adjusts the margins and axes a bit to my liking. The end
 #' result is, I think, a lovely template for graphs I make in R.
 #'
-#' @param style various styles/adjustments to make to the base theme
+#' @param style various styles/adjustments to make to the base theme. Must be
+#' one of the following: "web" (default), "ms", "fira", or "generic".
 #' @param ... optional stuff, though you don't need to think much about this.
 #'
 #' @details The best use of this function may involve the fonts you have installed
 #' on your system. The user should experiment with various options to see what they
-#' like.
+#' like. The "generic" style will use default \pkg{ggplot2} fonts.
 #'
 #' @examples
-#'
+#' \donttest{
 #' library(ggplot2)
 #'
 #' example_plot() + theme_steve()
 #'
+#' example_plot() + theme_steve(style="ms")
+#'
+#' example_plot() + theme_steve(style="fira")
+#'
+#' example_plot() + theme_steve(style="generic")
+#' }
+#'
 theme_steve <- function(style="web",...) {
+
+  if(!(style %in% c("web", "fira", "ms", "generic"))) {
+    stop("This is not a recognized style in this function.")
+  }
+
   theme_bw() +
     theme(panel.border = element_blank(),
           plot.margin = ggplot2::margin(15, 15, 15, 15),
@@ -47,6 +60,26 @@ theme_steve <- function(style="web",...) {
             axis.title.y = element_text(family = "Open Sans"),
             axis.title.x = element_text(family = "Open Sans"),
             text = element_text(family = "Open Sans")) -> p
+  } else if(style == "ms") {
+    p +
+      theme(plot.title = element_text(family = "Crimson Pro"),
+            legend.title = element_text(family = "Crimson Pro"),
+            plot.subtitle = element_text(family = "Crimson Pro"),
+            axis.title.y = element_text(family = "Crimson Pro"),
+            axis.title.x = element_text(family = "Crimson Pro"),
+            text = element_text(family = "Crimson Pro")) -> p
+
+  } else if(style == "fira") {
+    p +
+      theme(plot.title = element_text(family = "Fira Sans"),
+            legend.title = element_text(family = "Fira Sans"),
+            plot.subtitle = element_text(family = "Fira Sans"),
+            axis.title.y = element_text(family = "Fira Sans"),
+            axis.title.x = element_text(family = "Fira Sans"),
+            text = element_text(family = "Fira Sans")) -> p
+
+  } else if(style == "generic") {
+
   }
 
   return(p)

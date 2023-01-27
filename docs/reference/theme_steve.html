@@ -27,10 +27,19 @@ result is, I think, a lovely template for graphs I make in R."><!-- mathjax --><
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav"></ul></div>
+      <ul class="navbar-nav"><li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/svmiller/stevethemes/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul></div>
 
     
   </div>
@@ -38,7 +47,7 @@ result is, I think, a lovely template for graphs I make in R."><!-- mathjax --><
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Steve's Preferred <span class="pkg">ggplot2</span> Themes and Assorted Stuff</h1>
-      
+      <small class="dont-index">Source: <a href="https://github.com/svmiller/stevethemes/blob/HEAD/R/theme_steve.R" class="external-link"><code>R/theme_steve.R</code></a></small>
       <div class="d-none name"><code>theme_steve.Rd</code></div>
     </div>
 
@@ -57,7 +66,8 @@ result is, I think, a lovely template for graphs I make in R.</p>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>style</dt>
-<dd><p>various styles/adjustments to make to the base theme</p></dd>
+<dd><p>various styles/adjustments to make to the base theme. Must be
+one of the following: "web" (default), "ms", "fira", or "generic".</p></dd>
 
 
 <dt>...</dt>
@@ -68,16 +78,26 @@ result is, I think, a lovely template for graphs I make in R.</p>
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The best use of this function may involve the fonts you have installed
 on your system. The user should experiment with various options to see what they
-like.</p>
+like. The "generic" style will use default <span class="pkg">ggplot2</span> fonts.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">theme_steve</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(e, x, parent.frame()):</span> Can't subset `.data` outside of a data mask context.</span>
+<span class="r-plt img"><img src="theme_steve-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"></span>
+<span class="r-in"><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">theme_steve</span><span class="op">(</span>style<span class="op">=</span><span class="st">"ms"</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="theme_steve-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"></span>
+<span class="r-in"><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">theme_steve</span><span class="op">(</span>style<span class="op">=</span><span class="st">"fira"</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="theme_steve-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"></span>
+<span class="r-in"><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">theme_steve</span><span class="op">(</span>style<span class="op">=</span><span class="st">"generic"</span><span class="op">)</span></span>
+<span class="r-plt img"><img src="theme_steve-4.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="co"># }</span></span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>
