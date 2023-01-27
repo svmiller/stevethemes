@@ -2,9 +2,12 @@
 % Please edit documentation in R/print-ready.R
 \name{no_gridlines}
 \alias{no_gridlines}
+\alias{make_classic}
 \title{Miscellaneous functions to make your \pkg{ggplot2} plot "print-ready"}
 \usage{
 no_gridlines(...)
+
+make_classic(...)
 }
 \arguments{
 \item{...}{not necessary for anything; don't put anything here.}

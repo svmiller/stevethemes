@@ -28,7 +28,7 @@
 example_plot <- function(type = "bar") {
 
   if(type == "bar") {
-    ggplot(martel_ratings, aes(as.factor(value))) +
+    ggplot(martel_ratings, aes(as.factor(.data$value))) +
       labs(title = "A Bar Chart of Cagematch Ratings for Rick Martel",
            x = "Rating on 1-10 Scale", y ="Count",
            caption = "Data: Cagematch, the Internet Wrestling Database. Data are for illustration purposes, though Rick Martel is an objective 10/10.",
@@ -37,7 +37,7 @@ example_plot <- function(type = "bar") {
 
   } else if (type == "faceted_line") {
 
-    ggplot(se_counties_gdppc, aes(year, value)) +
+    ggplot(se_counties_gdppc, aes(.data$year, .data$value)) +
       geom_line() +
       facet_wrap(~county) +
       labs(title = "The GDP per Capita of Swedish Counties, 2001-2020",
@@ -48,7 +48,7 @@ example_plot <- function(type = "bar") {
 
 
   } else if (type == "scatter") {
-    ggplot(kwh_gdp, aes(ln_kwhpc, ln_gdppc)) +
+    ggplot(kwh_gdp, aes(.data$ln_kwhpc, .data$ln_gdppc)) +
       geom_smooth(method='lm') + geom_point(alpha=.8) +
       labs(title = "Energy Consumption per Capita and GDP per Capita, 2010",
            subtitle = "This is just a simple scatterplot. Experiment with customization options!",

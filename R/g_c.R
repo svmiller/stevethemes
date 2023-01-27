@@ -25,6 +25,6 @@
 #' g_c("martel_pink")
 
 g_c <- function(x) {
-  as.character(subset(steve_hex, color == x)[2])
+  as.character(subset(steve_hex, .data$color == x)[2])
 }
 

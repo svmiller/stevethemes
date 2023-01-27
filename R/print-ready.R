@@ -34,6 +34,9 @@
 #' example_plot(type='scatter') + make_classic()
 #'
 
+#' @rdname print-ready
+#' @export
+#'
 no_gridlines <- function(...) {
 
   theme(panel.grid.major = element_blank(),
@@ -42,6 +45,9 @@ no_gridlines <- function(...) {
   return(p)
 }
 
+#' @rdname print-ready
+#' @export
+#'
 make_classic <- function(...) {
 
   theme(panel.grid.major = element_blank(),

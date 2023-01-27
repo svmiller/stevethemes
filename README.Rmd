@@ -1,0 +1,32 @@
+---
+output: github_document
+always_allow_html: TRUE
+---
+
+# `stevethemes`: Steve's `ggplot2` themes and related theme elements
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r loadstuff, echo=FALSE, results="hide", message=FALSE}
+library("badger")
+library("tidyverse")
+```
+
+```{r, echo = FALSE, results='asis'}
+cat(
+	badge_cran_release("stevethemes", "green"),
+	badge_cran_download("stevethemes", "grand-total", "green"),
+	badge_cran_download("stevethemes", "last-month", "green"),
+	badge_cran_download("stevethemes", "last-week", "green")
+)
+```
+
+<img src="http://svmiller.com/images/stevethemes-hexlogo.png" alt="stevethemes  hexlogo" align="right" width="200" style="padding: 0 15px; float: right;"/>
+
+`stevethemes` is an R package including various `{ggplot2}` themes and theme elements (like colors and palettes) that I find useful and aesthetically pleasing. I'm working on this project, so hold on just a second.
