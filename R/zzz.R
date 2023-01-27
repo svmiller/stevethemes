@@ -10,14 +10,14 @@ if(getRversion() >= "2.15.1")
 
 .onAttach <- function(libname, pkgname) {
 
-  check_open_sans <- subset(system_fonts(), .data$family == "Open Sans")
-  check_titillium_web <- subset(system_fonts(), .data$family == "Titillium Web")
-  check_crimson_pro <- subset(system_fonts(), .data$family == "Crimson Pro")
+  check_open_sans <- subset(system_fonts(), family == "Open Sans")
+  check_titillium_web <- subset(system_fonts(), family == "Titillium Web")
+  check_crimson_pro <- subset(system_fonts(), family == "Crimson Pro")
 
   if (nrow(check_open_sans) == 0) {
     has_open_sans <- "Open Sans (x)"
   } else {
-    has_open_sans <- "Open Sans (✓)"
+    has_open_sans <- "Open Sans (\u2713)"
 
   }
 
@@ -25,14 +25,14 @@ if(getRversion() >= "2.15.1")
   if (nrow(check_titillium_web) == 0) {
     has_titillium_web <- "Titillium Web (x)"
   } else {
-    has_titillium_web <- "Titillium Web (✓)"
+    has_titillium_web <- "Titillium Web (\u2713)"
 
   }
 
   if (nrow(check_crimson_pro) == 0) {
     has_crimson_pro <- "Crimson Pro (x)"
   } else {
-    has_crimson_pro <- "Crimson Pro (✓)"
+    has_crimson_pro <- "Crimson Pro (\u2713)"
 
   }
 
