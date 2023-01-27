@@ -14,7 +14,7 @@
 #' like. The "generic" style will use default \pkg{ggplot2} fonts.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' example_plot() + theme_steve()

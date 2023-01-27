@@ -26,7 +26,7 @@ changes requested by publishes for the printing process.
 \details{
 \code{no_gridlines()} is a simple wrapper for some basic
 \pkg{ggplot2} code that will allow you to remove gridlines from the plot.
-\code{make_classic()} removes gridlines, removes the defualt gray background,
+\code{make_classic()} removes gridlines, removes the default gray background,
 *and* imposes a black, solid line on both axes. It will also hard code the
 axis text to be black. Using the latter with the former is likely redundant.
 

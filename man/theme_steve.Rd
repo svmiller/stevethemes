@@ -24,7 +24,7 @@ on your system. The user should experiment with various options to see what they
 like. The "generic" style will use default \pkg{ggplot2} fonts.
 }
 \examples{
-\donttest{
+\dontrun{
 library(ggplot2)
 
 example_plot() + theme_steve()
