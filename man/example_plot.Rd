@@ -29,6 +29,8 @@ example_plot()
 
 example_plot(type = "faceted_line")
 
+example_plot(type = "scatter")
+
 }
 \author{
 Steven V. Miller

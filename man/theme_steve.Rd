@@ -9,7 +9,7 @@ theme_steve(style = "web", ...)
 \arguments{
 \item{style}{various styles/adjustments to make to the base theme}
 
-\item{...}{optional stuff, called for side effects}
+\item{...}{optional stuff, though you don't need to think much about this.}
 }
 \description{
 \code{theme_steve()} is my default theme framework for graphs I
@@ -18,7 +18,9 @@ make with \pkg{ggplot2}. It starts \code{theme_bw()}, which is available in
 result is, I think, a lovely template for graphs I make in R.
 }
 \details{
-I'll add more here eventually. I promise.
+The best use of this function may involve the fonts you have installed
+on your system. The user should experiment with various options to see what they
+like.
 }
 \examples{
 
