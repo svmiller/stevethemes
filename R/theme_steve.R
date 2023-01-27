@@ -6,9 +6,11 @@
 #' result is, I think, a lovely template for graphs I make in R.
 #'
 #' @param style various styles/adjustments to make to the base theme
-#' @param ... optional stuff, called for side effects
+#' @param ... optional stuff, though you don't need to think much about this.
 #'
-#' @details I'll add more here eventually. I promise.
+#' @details The best use of this function may involve the fonts you have installed
+#' on your system. The user should experiment with various options to see what they
+#' like.
 #'
 #' @examples
 #'

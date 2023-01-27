@@ -23,6 +23,8 @@
 #'
 #' example_plot(type = "faceted_line")
 #'
+#' example_plot(type = "scatter")
+#'
 example_plot <- function(type = "bar") {
 
   if(type == "bar") {
@@ -31,7 +33,7 @@ example_plot <- function(type = "bar") {
            x = "Rating on 1-10 Scale", y ="Count",
            caption = "Data: Cagematch, the Internet Wrestling Database. Data are for illustration purposes, though Rick Martel is an objective 10/10.",
            subtitle = "This is just a simple bar chart. Experiment with customization options!") +
-      geom_bar(fill=g_c("martel_eau"), alpha=.9, color='black')
+      geom_bar(fill=g_c("martel_eau"), alpha=.9, color='black') -> p
 
   } else if (type == "faceted_line") {
 
@@ -42,11 +44,20 @@ example_plot <- function(type = "bar") {
            subtitle = "This is just a simple faceted line chart. Experiment with customization options!",
            y = "GDP per Capita (Nominal SEK)",
            x = "Year",
-           caption = "Data: OECD")
+           caption = "Data: OECD") -> p
 
 
+  } else if (type == "scatter") {
+    ggplot(kwh_gdp, aes(ln_kwhpc, ln_gdppc)) +
+      geom_smooth(method='lm') + geom_point(alpha=.8) +
+      labs(title = "Energy Consumption per Capita and GDP per Capita, 2010",
+           subtitle = "This is just a simple scatterplot. Experiment with customization options!",
+           y = "GDP per Capita (Current USD, Logged)",
+           x = "Kilowatt Hours per Capita (Logged)",
+           caption = "Data: World Bank, OECD, and International Energy Agency") -> p
   }
 
+  return(p)
 }
 
 

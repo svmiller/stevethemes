@@ -45,3 +45,27 @@
 #' @details Data come from the OECD and exist to be used as a faceted line chart.
 
 "se_counties_gdppc"
+
+#' Kilowatt Hours per Capita and GDP per Capita, 2010
+#'
+#' This is a simple data frame of the GDP per capita and kilowatt hours consumed
+#' per capita of over 130 sovereign states in 2010.
+#'
+#' @format A data frame the following 7 variables.
+#' \describe{
+#' \item{\code{country}}{the name of the country}
+#' \item{\code{iso3c}}{the three-character ISO code of the country}
+#' \item{\code{year}}{the year of observation (2010)}
+#' \item{\code{kwhpc}}{the electric power consumption (kilowatt hours) per capita of the country}
+#' \item{\code{gdppc}}{the GDP per capita of the country in current USD}
+#' \item{\code{ln_kwhpc}}{the (log-transformed) electric power consumption (kilowatt hours) per capita of the country}
+#' \item{\code{ln_gdppc}}{the (log-transformed) GDP per capita of the country in current USD}
+#'
+#' }
+#'
+#' @details Data come from a use of the \code{WDI()} function in the \pkg{WDI}
+#' package. The GDP per capita data come from a combination of the World Bank
+#' and OECD. The energy consumption data come from the International Energy
+#' Agency. Data exist to be used in a simple scatterplot.
+
+"kwh_gdp"
