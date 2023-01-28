@@ -21,7 +21,7 @@
 #'
 theme_steve <- function(style="web",...) {
 
-  if(!(style %in% c("web", "fira", "ms", "generic"))) {
+  if(!(style %in% c("web", "fira", "ms", "generic", "custom"))) {
     stop("This is not a recognized style in this function.")
   }
 
