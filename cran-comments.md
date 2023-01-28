@@ -4,7 +4,7 @@
 
 ## Feedback to CRAN Upon Second Rejection
 
-I apologize for the lack of title case in the DESCRIPTION field. I think the move from the United States to Europe made me a little lax on that. :P
+I apologize for the lack of title case in the DESCRIPTION field. That's my bad.
 
 CRAN is correct that the use of \dontrun{} was inappropriate in the way that I used it. It was because I was wanting to do too much in the examples field there. I removed that from the examples and also pared down what was being done in the examples section.
 
