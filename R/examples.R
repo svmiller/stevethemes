@@ -29,9 +29,9 @@ example_plot <- function(type = "bar") {
 
   if(type == "bar") {
     ggplot(martel_ratings, aes(as.factor(.data$value))) +
-      labs(title = "A Bar Chart of Cagematch Ratings for Rick Martel",
+      labs(title = "A Bar Chart of CAGEMATCH Ratings for Rick Martel",
            x = "Rating on 1-10 Scale", y ="Count",
-           caption = "Data: Cagematch, the Internet Wrestling Database. Data are for illustration purposes, though Rick Martel is an objective 10/10.",
+           caption = "Data: CAGEMATCH, the Internet Wrestling Database. Data are for illustration purposes, though Rick Martel is an objective 10/10.",
            subtitle = "This is just a simple bar chart. Experiment with customization options!") +
       geom_bar(fill=g_c("martel_eau"), alpha=.9, color='black') -> p
 

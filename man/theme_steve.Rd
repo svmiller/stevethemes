@@ -10,7 +10,7 @@ theme_steve(style = "web", ...)
 \item{style}{various styles/adjustments to make to the base theme. Must be
 one of the following: "web" (default), "ms", "fira", or "generic".}
 
-\item{...}{optional stuff, though you don't need to think much about this.}
+\item{...}{no return value, called for side effects}
 }
 \description{
 \code{theme_steve()} is my default theme framework for graphs I
@@ -24,16 +24,9 @@ on your system. The user should experiment with various options to see what they
 like. The "generic" style will use default \pkg{ggplot2} fonts.
 }
 \examples{
-\dontrun{
 library(ggplot2)
 
-example_plot() + theme_steve()
-
-example_plot() + theme_steve(style="ms")
-
-example_plot() + theme_steve(style="fira")
-
-example_plot() + theme_steve(style="generic")
-}
+# Experiment with options, those this depends on fonts you have installed.
+example_plot() + theme_steve(style='generic')
 
 }

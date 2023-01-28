@@ -13,10 +13,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Titillium Web', serif;
+	font-weight: bold;
 }
 
 code {
   padding: 1px;
   background-color: #fff;
   font-family: 'Fira Code', monospace;
+}
+
+a {
+  color: #0d6efd;
 }

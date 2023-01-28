@@ -1,6 +1,6 @@
 Package: stevethemes
 Type: Package
-Title: Steve's 'ggplot2' themes and related theme elements
+Title: Steve's 'ggplot2' Themes and Related Theme Elements
 Depends: R (>= 3.5.0)
 Version: 0.1.0
 Authors@R: person("Steve", "Miller",

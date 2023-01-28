@@ -2,6 +2,8 @@ url: http://svmiller.com
 
 template:
   bootstrap: 5
+  params:
+    bootswatch: journal
 
 figures:
   fig.width: 9
