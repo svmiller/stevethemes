@@ -2,6 +2,14 @@
 
 - Pop! OS (22.04), R 4.1.2
 
+## Feedback to CRAN Upon Second Rejection
+
+I apologize for the lack of title case in the DESCRIPTION field. I think the move from the United States to Europe made me a little lax on that. :P
+
+CRAN is correct that the use of \dontrun{} was inappropriate in the way that I used it. It was because I was wanting to do too much in the examples field there. I removed that from the examples and also pared down what was being done in the examples section.
+
+I think it would just be easier to remove the `download_some_fonts()` function. Its use is better done anyways in the `{gfonts}` package and much of what was being done in that function is now included outright in the package. The package is bigger now but is still well below the 5 MB maximum.
+
 ## Feedback to CRAN Upon Initial Rejection
 
 I thank CRAN for pointing me to style guidelines about referencing other CRAN packages in the DESCRIPTION file, and apologize for the invalid URL/redirect. I'm also a little embarrassed I keep making rookie mistakes after all these years. :P

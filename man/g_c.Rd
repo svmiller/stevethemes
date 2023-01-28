@@ -2,7 +2,7 @@
 % Please edit documentation in R/g_c.R
 \name{g_c}
 \alias{g_c}
-\title{Specify a Custom Color from \code{steve_hex}}
+\title{Get a Custom Color from \code{steve_hex}}
 \usage{
 g_c(x)
 }
@@ -16,9 +16,9 @@ that coincides with the label supplied in the function. Use it for specifying
 a custom fill or color in a plot.
 }
 \description{
-\code{g_c()} is a simple function that interfaces with the
-\code{steve_hex} data frame to return a hex value associated with a named
-color.
+\code{g_c()} (i.e. *g*et *c*olor) is a simple function that
+interfaces with the \code{steve_hex} data frame to return a hex value
+associated with a named color.
 }
 \details{
 Check \code{steve_hex} in this same package for the custom colors

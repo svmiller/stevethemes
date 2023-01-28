@@ -3,16 +3,36 @@ Type: Package
 Title: Steve's 'ggplot2' Themes and Related Theme Elements
 Depends: R (>= 3.5.0)
 Version: 0.1.0
-Authors@R: person("Steve", "Miller",
+Authors@R: c(person("Steve", "Miller",
                   email = "steven.v.miller@gmail.com", 
                   role = c("aut", "cre"),
-                  comment = c(ORCID = "0000-0003-4072-6263"))
+                  comment = c(ORCID = "0000-0003-4072-6263")),
+             person("Accademia di Belle Arti di Urbino",
+             comment = "Principal design of Titillium Web font",
+             role = c("ctb")),
+             person("Steve", "Matteson",
+             comment = "Designer of Open Sans",
+             role = c("ctb")),
+             person("Erik", "Spiekermann",
+             comment = "Designer of Fira Sans",
+             role = c("ctb")),
+             person("Ralph", "du Carrois",
+             comment = "Designer of Fira Sans",
+             role = c("ctb")),
+             person("Sebastian", "Kosch",
+             comment = "Design initiator for Crimson Pro",
+             role = c("ctb")),
+             person("Jacques", "Le Bailly",
+             comment = "Designer of Crimson Pro",
+             role = c("ctb"))
+                  )
 Maintainer: Steve Miller <steven.v.miller@gmail.com>
 Description: These are a compilation of my preferred themes for 'ggplot2' and
     related theme elements (like colors and a palettes). I believe these themes
     and theme elements are aesthetically pleasing, both for pedagogical 
     instruction and the presentation of applied statistical research to a wide
-    audience. These themes imply routine use of easily obtained/free fonts.
+    audience. These themes imply routine use of easily obtained/free fonts, simple
+    forms of which are included in this package.
 URL: http://svmiller.com/stevethemes/
 BugReports: https://github.com/svmiller/stevethemes/issues
 License: MIT + file LICENSE

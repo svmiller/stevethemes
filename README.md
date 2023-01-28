@@ -1,5 +1,5 @@
 
-# `stevethemes`: Steve’s `ggplot2` themes and related theme elements
+# `stevethemes`: Steve’s `ggplot2` Themes and Related Theme Elements
 
 [![](https://www.r-pkg.org/badges/version/stevethemes?color=green)](https://cran.r-project.org/package=stevethemes)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/stevethemes?color=green)](https://cran.r-project.org/package=stevethemes)
@@ -14,8 +14,10 @@ aesthetically pleasing. It also includes some various helper functions
 for adjusting plots to taste for either the web or a printed manuscript.
 Its use heavily implies, but does not formally require, free fonts you
 can download from Google. In particular, it suggests heavy use of
-Titillium Web, Open Sans, Fira Sans, and Crimson Pro. The package has a
-function to help you download those fonts from Google as well.
+Titillium Web, Open Sans, Fira Sans, and Crimson Pro. The package has
+simple forms of these fonts available for you to install on your
+computer, though you can easily download these fonts (and more) from
+Google as well.
 
 ## Installation
 
