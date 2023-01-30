@@ -4,11 +4,17 @@
 \alias{theme_steve}
 \title{Steve's Preferred \pkg{ggplot2} Themes and Assorted Stuff}
 \usage{
-theme_steve(style = "web", ...)
+theme_steve(style = "web", font, ...)
 }
 \arguments{
 \item{style}{various styles/adjustments to make to the base theme. Must be
-one of the following: "web" (default), "ms", "fira", or "generic".}
+one of the following: "web" (default), "ms", "fira", "custom", or "generic".
+The "custom" style is a fancy way of saying "supply your own fonts". Where
+"custom" is used in this argument, something must be supplied to the font
+argument in this same function.}
+
+\item{font}{a character vector corresponding with a font that the user ideally
+has installed on their operating system.}
 
 \item{...}{no return value, called for side effects}
 }

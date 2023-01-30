@@ -25,3 +25,30 @@ code {
 a {
   color: #0d6efd;
 }
+
+a:hover {
+  color: #002f5f;
+}
+
+
+::selection {
+
+    background-color: #e3f4f7;
+
+}
+
+#navbar a:hover {
+
+    background-color: #e3f4f7;
+
+}
+
+.btn-primary {
+  background-color: #002f5f;
+  border-color: #002f5f;
+}
+
+.btn-primary {
+  background-color: #002f5f;
+  border-color: #002f5f;
+}
