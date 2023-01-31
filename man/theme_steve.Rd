@@ -16,7 +16,11 @@ argument in this same function.}
 \item{font}{a character vector corresponding with a font that the user ideally
 has installed on their operating system.}
 
-\item{...}{no return value, called for side effects}
+\item{...}{optional, called for side effects}
+}
+\value{
+No return value. Function is used for its side effect, which is to
+format a plot made in the \pkg{ggplot2} package.
 }
 \description{
 \code{theme_steve()} is my default theme framework for graphs I

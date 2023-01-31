@@ -29,7 +29,7 @@ cat(
 
 <img src="http://svmiller.com/images/stevethemes-hexlogo.png" alt="stevethemes  hexlogo" align="right" width="200" style="padding: 0 15px; float: right;"/>
 
-`stevethemes` is an R package including various `{ggplot2}` themes and theme elements (like colors and palettes) that I find useful and aesthetically pleasing. It also includes some various helper functions for adjusting plots to taste for either the web or a printed manuscript. Its use heavily implies, but does not formally require, free fonts you can download from Google. In particular, it suggests heavy use of Titillium Web, Open Sans, Fira Sans, and Crimson Pro. The package has simple forms of these fonts available for you to install on your computer, though you can easily download these fonts (and more) from Google as well.
+`stevethemes` is an R package including various `{ggplot2}` themes and theme elements that I find useful and aesthetically pleasing. It also includes some various helper functions for adjusting plots to taste for either the web or a printed manuscript. Its use heavily implies, but does not formally require, free fonts you can download from Google. In particular, it suggests use of Titillium Web, Open Sans, Fira Sans, and Crimson Pro. The package has simple forms of these fonts available for you to install on your computer, though you can easily download these fonts (and more) from Google as well.
 
 ## Installation
 

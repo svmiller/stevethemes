@@ -12,11 +12,14 @@
 #' argument in this same function.
 #' @param font a character vector corresponding with a font that the user ideally
 #' has installed on their operating system.
-#' @param ... no return value, called for side effects
+#' @param ... optional, called for side effects
 #'
 #' @details The best use of this function may involve the fonts you have installed
 #' on your system. The user should experiment with various options to see what they
 #' like. The "generic" style will use default \pkg{ggplot2} fonts.
+#'
+#' @return No return value. Function is used for its side effect, which is to
+#' format a plot made in the \pkg{ggplot2} package.
 #'
 #' @examples
 #' library(ggplot2)

@@ -10,7 +10,7 @@ no_gridlines(...)
 make_classic(...)
 }
 \arguments{
-\item{...}{not necessary for anything; don't put anything here.}
+\item{...}{optional, called for side effects}
 }
 \value{
 \code{no_gridlines()} takes a plot made in \pkg{ggplot2} and removes

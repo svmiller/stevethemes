@@ -14,7 +14,7 @@
 #' you run this before adding a theme over it, the theme you add will probably
 #' overwrite this function.
 #'
-#' @param ... not necessary for anything; don't put anything here.
+#' @param ... optional, called for side effects
 #'
 #' @return \code{no_gridlines()} takes a plot made in \pkg{ggplot2} and removes
 #' the gridlines from the plot before returning it to the user.

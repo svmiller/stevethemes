@@ -11,7 +11,8 @@
 #' @param type a type
 #'
 #' @return \code{example_plot()} returns a plot made in \pkg{ggplot2}, allowing
-#' the user to experiment with different themes to their hearts content.
+#' the user to experiment with different themes to see which ones they like the
+#' best.
 #'
 #' @author Steven V. Miller
 #'

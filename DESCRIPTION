@@ -27,10 +27,10 @@ Authors@R: c(person("Steve", "Miller",
              role = c("ctb"))
                   )
 Maintainer: Steve Miller <steven.v.miller@gmail.com>
-Description: These are a compilation of my preferred themes for 'ggplot2' and
-    related theme elements (like colors and a palettes). I believe these themes
+Description: This is a compilation of my preferred themes and
+    related theme elements for 'ggplot2'. I believe these themes
     and theme elements are aesthetically pleasing, both for pedagogical 
-    instruction and the presentation of applied statistical research to a wide
+    instruction and for the presentation of applied statistical research to a wide
     audience. These themes imply routine use of easily obtained/free fonts, simple
     forms of which are included in this package.
 URL: http://svmiller.com/stevethemes/
@@ -38,7 +38,7 @@ BugReports: https://github.com/svmiller/stevethemes/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Imports:
     ggplot2 (>= 3.3.0),
     rlang (>= 1.0.0),

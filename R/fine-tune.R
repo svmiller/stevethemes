@@ -11,7 +11,7 @@
 #' because the font sizes initialized in the function are defaults from the theme.
 #'
 #' @param x a numeric vector that will adjust the size of all fonts on the plot. Can take decimals and negative numbers.
-#' @param ... no return value, called for side effects
+#' @param ... optional, called for side effects
 #'
 #' @return \code{adj_font_size()} takes a plot made in \pkg{ggplot2} and changes
 #' the font size by some number requested by the user. It returns a plot with

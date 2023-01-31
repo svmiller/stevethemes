@@ -9,7 +9,7 @@ adj_font_size(x, ...)
 \arguments{
 \item{x}{a numeric vector that will adjust the size of all fonts on the plot. Can take decimals and negative numbers.}
 
-\item{...}{no return value, called for side effects}
+\item{...}{optional, called for side effects}
 }
 \value{
 \code{adj_font_size()} takes a plot made in \pkg{ggplot2} and changes

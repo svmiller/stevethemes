@@ -2,6 +2,12 @@
 
 - Pop! OS (22.04), R 4.1.2
 
+## Feeback to CRAN Upon Third Rejection
+
+CRAN is correct that there was a subject/verb disagreement in the DESCRIPTION file, along with some other ambiguity about what exactly was included in this initial development release. I've since fixed this.
+
+I also apologize for frustrating CRAN by not included a \value{} field in one of the core documentation files. That has since been fixed.
+
 ## Feedback to CRAN Upon Second Rejection
 
 I apologize for the lack of title case in the DESCRIPTION field. That's my bad.
