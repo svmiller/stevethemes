@@ -53,3 +53,8 @@ a:hover {
   border-color: #002f5f;
 }
 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #acdee6;
+    border-color: #002f5f
+}
