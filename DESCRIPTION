@@ -2,7 +2,7 @@ Package: stevethemes
 Type: Package
 Title: Steve's 'ggplot2' Themes and Related Theme Elements
 Depends: R (>= 3.5.0)
-Version: 0.1.0
+Version: 0.1.9
 Authors@R: c(person("Steve", "Miller",
                   email = "steven.v.miller@gmail.com", 
                   role = c("aut", "cre"),
@@ -24,6 +24,9 @@ Authors@R: c(person("Steve", "Miller",
              role = c("ctb")),
              person("Jacques", "Le Bailly",
              comment = "Designer of Crimson Pro",
+             role = c("ctb")),
+             person("Eben", "Sorkin",
+             comment = "Designer of Merriweather",
              role = c("ctb"))
                   )
 Maintainer: Steve Miller <steven.v.miller@gmail.com>
