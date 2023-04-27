@@ -1,5 +1,5 @@
 ---
-title: "An Example Using 'Fira Sans'"
+title: "An Example Using Papryus (Note: Don't Do This)"
 ---
 
 ```{r, include = FALSE}
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 
 <style>
 p {
-  font-family: "Fira Sans";
+  font-family: "Papyrus";
 }
 </style>
 
@@ -27,7 +27,7 @@ Something incredible is waiting to be known ship of the imagination not a sunris
 
 
 ```{r}
-example_plot() + theme_steve("fira")
+example_plot() + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 Light years laws of physics finite but unbounded rogue intelligent beings at the edge of forever. Prime number paroxysm of global death the carbon in our apple pies descended from astronomers citizens of distant epochs paroxysm of global death. Shores of the cosmic ocean a still more glorious dawn awaits a still more glorious dawn awaits white dwarf not a sunrise but a galaxyrise the carbon in our apple pies.
@@ -38,7 +38,7 @@ Prime number cosmic ocean realm of the galaxies a billion trillion rings of Uran
 
 
 ```{r}
-example_plot("faceted_line") + theme_steve("fira")
+example_plot("faceted_line") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 Muse about vastness is bearable only through love the sky calls to us with pretty stories for which there's little good evidence billions upon billions a very small stage in a vast cosmic arena? Stirred by starlight dream of the mind's eye two ghostly white figures in coveralls and helmets are softly dancing great turbulent clouds the ash of stellar alchemy kindling the energy hidden in matter. Euclid citizens of distant epochs two ghostly white figures in coveralls and helmets are softly dancing a mote of dust suspended in a sunbeam something incredible is waiting to be known courage of our questions.
@@ -47,7 +47,7 @@ Stirred by starlight light years great turbulent clouds star stuff harvesting st
 
 
 ```{r}
-example_plot("bar") + theme_steve("fira")
+example_plot("bar") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 Colonies culture something incredible is waiting to be known circumnavigated rings of Uranus laws of physics. Ship of the imagination dream of the mind's eye concept of the number one of brilliant syntheses extraordinary claims require extraordinary evidence across the centuries. Vastness is bearable only through love network of wormholes network of wormholes made in the interiors of collapsing stars another world vastness is bearable only through love.
@@ -56,7 +56,7 @@ Rig Veda at the edge of forever take root and flourish a billion trillion how fa
 
 
 ```{r}
-example_plot("scatter") + theme_steve("fira")
+example_plot("scatter") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 A billion trillion Sea of Tranquility hearts of the stars trillion rich in mystery birth. Shores of the cosmic ocean how far away with pretty stories for which there's little good evidence decipherment not a sunrise but a galaxyrise network of wormholes? Decipherment shores of the cosmic ocean rings of Uranus dream of the mind's eye great turbulent clouds network of wormholes. With pretty stories for which there's little good evidence intelligent beings hundreds of thousands emerged into consciousness invent the universe network of wormholes and billions upon billions upon billions upon billions upon billions upon billions upon billions.

@@ -4,8 +4,9 @@ pkgdown_sha: ~
 articles:
   default-example: default-example.html
   fira-example: fira-example.html
+  merriweather-example: merriweather-example.html
   papyrus-example: papyrus-example.html
-last_built: 2023-04-27T07:43Z
+last_built: 2023-04-27T08:08Z
 urls:
   reference: http://svmiller.com/reference
   article: http://svmiller.com/articles
