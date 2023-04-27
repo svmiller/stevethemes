@@ -2,8 +2,10 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  gallery: gallery.html
-last_built: 2023-02-07T10:29Z
+  default-example: default-example.html
+  fira-example: fira-example.html
+  papyrus-example: papyrus-example.html
+last_built: 2023-04-27T07:43Z
 urls:
   reference: http://svmiller.com/reference
   article: http://svmiller.com/articles
