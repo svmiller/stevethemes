@@ -18,8 +18,7 @@
 
   Miscellaneous functions for fine-tuning ggplot2 plots
 
-- [`g_c()`](http://svmiller.com/reference/g_c.md)
-  [`lighten_hex()`](http://svmiller.com/reference/g_c.md) :
+- [`g_c()`](http://svmiller.com/reference/g_c.md) :
 
   Get a Custom Color from `steve_hex`
 
@@ -28,6 +27,9 @@
 
 - [`kwh_gdp`](http://svmiller.com/reference/kwh_gdp.md) : Kilowatt Hours
   per Capita and GDP per Capita, 2010
+
+- [`lighten_hex()`](http://svmiller.com/reference/lighten_hex.md) :
+  Whiten an RGB Hex Value
 
 - [`martel_ratings`](http://svmiller.com/reference/martel_ratings.md) :
   CAGEMATCH Ratings of Rick Martel

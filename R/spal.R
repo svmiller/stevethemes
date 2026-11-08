@@ -12,7 +12,8 @@
 #'
 #' Color palettes available are "d-suFB", "d-suBF", "d-suBR","d-suRB", "d-suBO",
 #' "d-suOB", "d-suFW", "d-suWF", "s-suB", "s-suF", "s-suO", "s-suR", "q-supair",
-#' "q-OI", "q-google", "q-ibm", "q-wong", "q-tol", "q-sciencespo", and "q-martel".
+#' "q-OI", "q-google", "q-ibm", "q-wong", "q-tol", "q-sciencespo", "q-dataroots",
+#' and "q-martel".
 #'
 #' The `n` argument must be specified for sequential palettes and really should
 #' be specified for diverging palettes. If not, diverging palettes run the risk

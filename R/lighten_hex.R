@@ -10,7 +10,7 @@
 #' This function is mostly for internal use, but you're welcome to experiment
 #' with it.
 #'
-#' @name g_c
+#' @name lighten_hex
 #'
 #' @param hex a valid RGB hex value, with leading pound sign (#)
 #' @param p some value between 0 and 1 for whitening the RGB hex value in question.

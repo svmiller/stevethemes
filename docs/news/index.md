@@ -13,9 +13,9 @@
 - Check for installation of Merriweather upon startup.
 - Add colors to `steve_hex`.
 - New data sets for sample graphs: `cowwaryears` and `uspopgengroup`.
-- [`lighten_hex()`](http://svmiller.com/reference/g_c.md) takes a valid
-  RGB hex value and whitens it to be some proportion of its original
-  value.
+- [`lighten_hex()`](http://svmiller.com/reference/lighten_hex.md) takes
+  a valid RGB hex value and whitens it to be some proportion of its
+  original value.
 - [`spal()`](http://svmiller.com/reference/spal.md) is a workhorse
   function, to be used with functions like
   [`scale_fill_manual()`](https://ggplot2.tidyverse.org/reference/scale_manual.html)
