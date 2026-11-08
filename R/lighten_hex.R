@@ -21,8 +21,8 @@
 #' and 1 and returns a HEX code that retains some proportion (`p`) of its original
 #' value. For example, `lighten_hex("#000000", 0)` takes the RGB hex value for
 #' pure black and whitens it to retain none of its original color. This would
-#' be white. Alternatively, `lighten_hex("#002f5f, .8)` takes the color
-#' corresponding with Stockholm University Blue [`g_c("su_blue")`] and whitens
+#' be white. Alternatively, `lighten_hex("#002f5f", .8)` takes the color
+#' corresponding with Stockholm University Blue (`g_c("su_blue")`) and whitens
 #' it to retain 80% of its original value. This procedure closely approximates
 #' what Stockholm University presents as 80% of its original color (`#32587E`
 #' compared to `#33587f` it presents on its website).
