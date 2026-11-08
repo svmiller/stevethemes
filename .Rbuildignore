@@ -10,3 +10,5 @@
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
 ^vignettes$
+^\.positai$
+^\.claude$

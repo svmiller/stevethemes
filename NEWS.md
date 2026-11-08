@@ -4,6 +4,7 @@
 - Add `how_to_install_fonts()` to assist the user in how to install fonts on their operating system.
 - Add support for Merriweather font, which is a close cousin to the Palatino family.
 - Check for installation of Merriweather upon startup.
+- Add colors to `steve_hex`.
 
 # stevethemes 0.1.0
 

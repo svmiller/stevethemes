@@ -22,6 +22,8 @@
 #' @examples
 #'
 #' are_fonts_installed()
+#'
+#' @importFrom systemfonts system_fonts
 
 are_fonts_installed <- function(check="all") {
   my_fonts <- system_fonts()
@@ -78,7 +80,11 @@ are_fonts_installed <- function(check="all") {
   }
 
 
-  message(paste0("The {systemfonts} package in R suggests you have the following fonts in your registry:\n\n", has_open_sans,"; ", has_titillium_web,"; ", has_crimson_pro,"; ",has_fira_sans, "; ",has_merriweather, "\n\nIf you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:\n\n- ",paste0(system.file("fonts", package='stevethemes')),"\n\nYou can also find full versions of these fonts (and more) here:\n\n- https://fonts.google.com\n\nIt might be in your interest to download and install the full fonts."))
+  message(paste0("The {systemfonts} package in R suggests you have the following fonts in your registry:\n\n",
+                 has_open_sans,
+                 "; ", has_titillium_web,"; ", has_crimson_pro,"; ",
+                 has_fira_sans, "; ",has_merriweather,
+                 "\n\nIf you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:\n\n- ",paste0(system.file("fonts", package='stevethemes')),"\n\nYou can also find full versions of these fonts (and more) here:\n\n- https://fonts.google.com\n\nIt might be in your interest to download and install the full fonts."))
 
 }
 

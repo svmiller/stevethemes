@@ -28,6 +28,7 @@ Future functionality will allow you to supply more than "all", but
 \examples{
 
 are_fonts_installed()
+
 }
 \author{
 Steven V. Miller

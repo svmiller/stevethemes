@@ -41,8 +41,9 @@ BugReports: https://github.com/svmiller/stevethemes/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3
 Imports:
     ggplot2 (>= 3.3.0),
     rlang (>= 1.0.0),
-    systemfonts
+    systemfonts,
+    grDevices
