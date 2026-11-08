@@ -1,84 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://svmiller.com/404.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/default-example.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/fira-example.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/gallery.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/merriweather-example.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/articles/papyrus-example.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/authors.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/news/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/are_fonts_installed.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/download_some_fonts.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/example_plot.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/fine-tune.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/g_c.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/hello.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/how_to_install_fonts.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/kwh_gdp.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/martel_ratings.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/no_gridlines.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/print-ready.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/se_counties_gdppc.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/steve_hex.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/theme_steve.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>http://svmiller.com/404.html</loc></url>
+<url><loc>http://svmiller.com/LICENSE-text.html</loc></url>
+<url><loc>http://svmiller.com/LICENSE.html</loc></url>
+<url><loc>http://svmiller.com/articles/default-example.html</loc></url>
+<url><loc>http://svmiller.com/articles/fira-example.html</loc></url>
+<url><loc>http://svmiller.com/articles/gallery.html</loc></url>
+<url><loc>http://svmiller.com/articles/index.html</loc></url>
+<url><loc>http://svmiller.com/articles/merriweather-example.html</loc></url>
+<url><loc>http://svmiller.com/articles/papyrus-example.html</loc></url>
+<url><loc>http://svmiller.com/authors.html</loc></url>
+<url><loc>http://svmiller.com/index.html</loc></url>
+<url><loc>http://svmiller.com/news/index.html</loc></url>
+<url><loc>http://svmiller.com/reference/are_fonts_installed.html</loc></url>
+<url><loc>http://svmiller.com/reference/cowwaryears.html</loc></url>
+<url><loc>http://svmiller.com/reference/download_some_fonts.html</loc></url>
+<url><loc>http://svmiller.com/reference/example_plot.html</loc></url>
+<url><loc>http://svmiller.com/reference/fine-tune.html</loc></url>
+<url><loc>http://svmiller.com/reference/g_c.html</loc></url>
+<url><loc>http://svmiller.com/reference/hello.html</loc></url>
+<url><loc>http://svmiller.com/reference/how_to_install_fonts.html</loc></url>
+<url><loc>http://svmiller.com/reference/index.html</loc></url>
+<url><loc>http://svmiller.com/reference/kwh_gdp.html</loc></url>
+<url><loc>http://svmiller.com/reference/martel_ratings.html</loc></url>
+<url><loc>http://svmiller.com/reference/no_gridlines.html</loc></url>
+<url><loc>http://svmiller.com/reference/print-ready.html</loc></url>
+<url><loc>http://svmiller.com/reference/se_counties_gdppc.html</loc></url>
+<url><loc>http://svmiller.com/reference/spal.html</loc></url>
+<url><loc>http://svmiller.com/reference/steve_hex.html</loc></url>
+<url><loc>http://svmiller.com/reference/theme_steve.html</loc></url>
 </urlset>
+
