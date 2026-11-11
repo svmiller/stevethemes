@@ -29,7 +29,7 @@ spal(
 - n:
 
   a mostly optional argument for how many colors you want. Defaults to
-  `NULL`.
+  `NULL`. The maximum is 9, and even 9 is pushing it.
 
 - even:
 
@@ -39,8 +39,8 @@ spal(
 
   a valid hex code coinciding with a color that should serve as the
   middle color in a palette with an odd-numbered length. Applicable only
-  to diverging palettes. Default value here is "white" (`#f7f7f7`), a
-  color slightly
+  to diverging palettes. Default value here is `#f7f7f7`, a color
+  slightly
 
 - exp:
 
@@ -62,10 +62,9 @@ ggplot2.
 
 ## Details
 
-Color palettes available are "d-suFB", "d-suBF", "d-suBR","d-suRB",
-"d-suBO", "d-suOB", "d-suFW", "d-suWF", "s-suB", "s-suF", "s-suO",
-"s-suR", "q-supair", "q-OI", "q-google", "q-ibm", "q-wong", "q-tol",
-"q-sciencespo", "q-dataroots", and "q-martel".
+Available palettes are listed in the `palettes` data set in this
+package. This function consults that data set for the identity of the
+palettes that this function creates.
 
 The `n` argument must be specified for sequential palettes and really
 should be specified for diverging palettes. If not, diverging palettes

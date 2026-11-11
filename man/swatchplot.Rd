@@ -7,37 +7,39 @@
 swatchplot(palette = NULL, style = "generic", font = NULL)
 }
 \arguments{
-\item{palette}{a label coinciding with a value in the \code{color} column of the
-\code{steve_hex} data frame}
+\item{palette}{must be NULL or one of the palettes included in this package.
+If NULL (the default value), the swatchplot returns swatches for palettes.}
 
-\item{n}{a mostly optional argument for how many colors you want. Defaults to \code{NULL}.}
+\item{style}{passed to \code{theme_steve()} in the construction of the plot. Defautls
+to "generic" for testing purposes. Consult the documentation for \code{theme_steve()}
+for more information.}
 
-\item{even}{logical, defaults to TRUE, used internally for diverging palettes.}
-
-\item{d.mid}{a valid hex code coinciding with a color that should serve as the
-middle color in a palette whose length is an odd number. Applicable only to
-diverging palettes. Default value here is "white" (\verb{#FFFFFF}). I'll be honest
-that I'm thinking of changing this to \verb{#F7F7F7}.}
+\item{font}{defaults to NULL and used only when the \code{style} argument is "custom".
+Used for specifying the font of the user's choice that, one assumes, is available
+on their computer.}
 }
 \value{
-\code{spal()} returns a character vector of hex codes to use as a
-palette in manually supplying colors to adjust the fill or color of a plot
-made by \pkg{ggplot2}.
+\code{swatchplot()} returns a plot of the colors available in a requested
+palette, or all available palettes, as a \pkg{ggplot2} object.
 }
 \description{
-\code{spal()} is a derivation of a palette-loading function in an R package
-I used to use quite regularly. Its intended use is interacting with
-\pkg{ggplot2} functions like \code{scale_fill_manual} and
-\code{scale_color_manual} (in particular, the \code{values} argument). Herein, you
-can change the default \pkg{ggplot2} colors used.
+\code{swatchplot()} creates a plot of color swatches for the various palettes
+included in this package.
 }
 \details{
-dsfdsfs
+The palette argument must be NULL or one of the palettes included in this
+package and listed in the \code{palettes} data frame in this package. If the
+palette requested is a diverging or sequential palette, the swatchplot returns
+all colors in the palette for a length of 2 to 9 (the maximum). If the palette
+requested is qualitative, the swatchplot is all colors in the palette and their
+position in it.
 }
 \examples{
 
-swatchplot(style = 'custom', font='Arial Narrow')
-swatchplot("q-martel", "web")
+swatchplot()
+swatchplot("d-suBF")
+swatchplot("s-suO")
+swatchplot("q-martel")
 
 }
 \author{

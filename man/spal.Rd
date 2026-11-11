@@ -17,13 +17,14 @@ spal(
 \item{palette}{a label coinciding with a value in the \code{color} column of the
 \code{steve_hex} data frame}
 
-\item{n}{a mostly optional argument for how many colors you want. Defaults to \code{NULL}.}
+\item{n}{a mostly optional argument for how many colors you want. Defaults to \code{NULL}.
+The maximum is 9, and even 9 is pushing it.}
 
 \item{even}{logical, defaults to TRUE, used internally for diverging palettes.}
 
 \item{d.mid}{a valid hex code coinciding with a color that should serve as the
 middle color in a palette with an odd-numbered length. Applicable only to
-diverging palettes. Default value here is "white" (\verb{#f7f7f7}), a color slightly}
+diverging palettes. Default value here is \verb{#f7f7f7}, a color slightly}
 
 \item{exp}{logical, defaults to FALSE, and applicable only to sequential
 palettes. If FALSE, palettes whiten by consistent amount each time across
@@ -46,10 +47,9 @@ I used to use quite regularly. Its intended use is interacting with
 can change the default \pkg{ggplot2} colors used.
 }
 \details{
-Color palettes available are "d-suFB", "d-suBF", "d-suBR","d-suRB", "d-suBO",
-"d-suOB", "d-suFW", "d-suWF", "s-suB", "s-suF", "s-suO", "s-suR", "q-supair",
-"q-OI", "q-google", "q-ibm", "q-wong", "q-tol", "q-sciencespo", "q-dataroots",
-and "q-martel".
+Available palettes are listed in the \code{palettes} data set in this package. This
+function consults that data set for the identity of the palettes that this
+function creates.
 
 The \code{n} argument must be specified for sequential palettes and really should
 be specified for diverging palettes. If not, diverging palettes run the risk

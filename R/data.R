@@ -111,4 +111,31 @@
 #'
 #' @details This mostly for internal use.
 #'
+#' @examples
+#'
+#' print(palettes)
+#'
 "palettes"
+
+
+#' Oil Rents and GDP per Capita, Over Time
+#'
+#' This is a simple data set on oil rents, GDP per capita, and annual growth
+#' in GDP per capita.
+#'
+#' @format A data frame with seven columns columns
+#' \describe{
+#' \item{\code{country}}{an English country name}
+#' \item{\code{iso3c}}{a three-character ISO code}
+#' \item{\code{year}}{a referent year}
+#' \item{\code{gdppc}}{GDP per capita in constant 2015 USD}
+#' \item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
+#' \item{\code{orpgdp}}{oil rents as a percentage of GDP}
+#' \item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with values of
+#' "0-9%", "10-19%", "20-29%", "30-39%", "40-49%", and ">50%"}
+#' }
+#'
+#' @details Data come from the World Bank's Open Data repository. Data generated
+#' by the use of the \pkg{WDI} package.
+
+"oilrents"

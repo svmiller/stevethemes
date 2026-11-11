@@ -35,6 +35,7 @@
 #'
 
 #' @rdname print-ready
+#' @md
 #' @export
 #'
 no_gridlines <- function(...) {

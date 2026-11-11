@@ -29,9 +29,9 @@ adds solid axes to the plot.
 
 `no_gridlines()` is a simple wrapper for some basic ggplot2 code that
 will allow you to remove gridlines from the plot. `make_classic()`
-removes gridlines, removes the default gray background, \*and\* imposes
-a black, solid line on both axes. It will also hard code the axis text
-to be black. Using the latter with the former is likely redundant.
+removes gridlines, removes the default gray background, *and* imposes a
+black, solid line on both axes. It will also hard code the axis text to
+be black. Using the latter with the former is likely redundant.
 
 You will want to put these functions after a theme you've declared. If
 you run this before adding a theme over it, the theme you add will

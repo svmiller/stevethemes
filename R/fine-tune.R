@@ -29,6 +29,7 @@
 #'
 
 #' @rdname fine-tune
+#' @md
 #' @export
 #'
 adj_font_size <- function(x, ...) {

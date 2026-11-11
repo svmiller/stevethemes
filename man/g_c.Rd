@@ -16,7 +16,7 @@ that coincides with the label supplied in the function. Use it for specifying
 a custom fill or color in a plot.
 }
 \description{
-\code{g_c()} (i.e. *g*et *c*olor) is a simple function that
+\code{g_c()} (i.e. \emph{g}et \emph{c}olor) is a simple function that
 interfaces with the \code{steve_hex} data frame to return a hex value
 associated with a named color.
 }

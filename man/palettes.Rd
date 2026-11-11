@@ -21,4 +21,9 @@ package.
 \details{
 This mostly for internal use.
 }
+\examples{
+
+print(palettes)
+
+}
 \keyword{datasets}

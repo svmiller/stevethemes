@@ -18,6 +18,7 @@
 #'
 #' @author Steven V. Miller
 #'
+#' @md
 #' @examples
 #'
 #' g_c("su_blue")

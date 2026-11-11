@@ -44,7 +44,7 @@ are_fonts_installed()
 #> 
 #> If you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:
 #> 
-#> - /tmp/RtmpsBhl1X/temp_libpath6bc21060f70f/stevethemes/fonts
+#> - /tmp/RtmpYRbREV/temp_libpath3054ae2c44fe0a/stevethemes/fonts
 #> 
 #> You can also find full versions of these fonts (and more) here:
 #> 

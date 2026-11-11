@@ -28,6 +28,10 @@ should change the \code{os} argument.
 }
 \examples{
 
+how_to_install_fonts("any")
+
+how_to_install_fonts("linux")
+
 how_to_install_fonts("windows")
 
 how_to_install_fonts("mac")

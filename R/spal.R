@@ -10,10 +10,9 @@
 #'
 #' @details
 #'
-#' Color palettes available are "d-suFB", "d-suBF", "d-suBR","d-suRB", "d-suBO",
-#' "d-suOB", "d-suFW", "d-suWF", "s-suB", "s-suF", "s-suO", "s-suR", "q-supair",
-#' "q-OI", "q-google", "q-ibm", "q-wong", "q-tol", "q-sciencespo", "q-dataroots",
-#' and "q-martel".
+#' Available palettes are listed in the `palettes` data set in this package. This
+#' function consults that data set for the identity of the palettes that this
+#' function creates.
 #'
 #' The `n` argument must be specified for sequential palettes and really should
 #' be specified for diverging palettes. If not, diverging palettes run the risk
@@ -57,10 +56,11 @@
 #' @param palette a label coinciding with a value in the \code{color} column of the
 #' \code{steve_hex} data frame
 #' @param n a mostly optional argument for how many colors you want. Defaults to `NULL`.
+#' The maximum is 9, and even 9 is pushing it.
 #' @param even logical, defaults to TRUE, used internally for diverging palettes.
 #' @param d.mid a valid hex code coinciding with a color that should serve as the
 #' middle color in a palette with an odd-numbered length. Applicable only to
-#' diverging palettes. Default value here is "white" (`#f7f7f7`), a color slightly
+#' diverging palettes. Default value here is `#f7f7f7`, a color slightly
 #" off-white.
 #' @param exp logical, defaults to FALSE, and applicable only to sequential
 #' palettes. If FALSE, palettes whiten by consistent amount each time across

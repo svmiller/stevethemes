@@ -34,6 +34,9 @@
 - [`martel_ratings`](http://svmiller.com/reference/martel_ratings.md) :
   CAGEMATCH Ratings of Rick Martel
 
+- [`oilrents`](http://svmiller.com/reference/oilrents.md) : Oil Rents
+  and GDP per Capita, Over Time
+
 - [`palettes`](http://svmiller.com/reference/palettes.md) : Palettes
   Available in This Package
 

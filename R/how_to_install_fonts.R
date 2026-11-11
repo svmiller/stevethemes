@@ -22,6 +22,10 @@
 #'
 #' @examples
 #'
+#' how_to_install_fonts("any")
+#'
+#' how_to_install_fonts("linux")
+#'
 #' how_to_install_fonts("windows")
 #'
 #' how_to_install_fonts("mac")
@@ -29,7 +33,7 @@
 how_to_install_fonts <- function(os="any") {
 
   if(!(os %in% c("any", "windows", "mac", "linux"))) {
-    stop("The 'check' argument only takes ''all'' for the time being. The extent of what it is checking is not so large or time-consuming to burden the user, at least I don't think.")
+    stop("The `os` argument must be one of 'any', 'windows', 'mac', or 'linux'.")
   }
 
   if (os == "any") {
@@ -44,7 +48,7 @@ how_to_install_fonts <- function(os="any") {
 
   } else if (os == "linux") {
 
-    message(paste0("Because you are among the proud, the few, the elite---the Linux user---you probably know how to do this already. Linux users self-select into being Linux users. However, I'll write it out for you anyway just in case.\n\nOpen up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'.\n\nNow, go to your home directory in another tab in your file browser. For you, this directory would be: ",paste0(Sys.getenv('HOME')),". Create a directory in your user home directory called '.fonts'. The leading dot in '.fonts' is important because this is a kind of 'hidden' directory that will become immediately invisible once you create it. However, it's there. Once you create it, press Ctrl+H to reveal hidden directories in the home directory and you'll see it. Once you see it, open it. Move all the font files you want into this directory (", paste0(Sys.getenv('HOME'),"/.fonts"),"). Easy as that. That's the installation procedure.\n\nAfter creating this directory and moving the font files into that directory, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly."))
+    message(paste0("Because you are among the proud, the few, the elite---the Linux user---you probably know how to do this already. Linux users self-select into being Linux users. However, I'll write it out for you anyway because you asked.\n\nOpen up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'.\n\nNow, go to your home directory in another tab in your file browser. For you, this directory would be: ",paste0(Sys.getenv('HOME')),". Create a directory in your user home directory called '.fonts'. The leading dot in '.fonts' is important because this is a kind of 'hidden' directory that will become immediately invisible once you create it. However, it's there. Once you create it, press Ctrl+H to reveal hidden directories in the home directory and you'll see it. Once you see it, open it. Move all the font files you want into this directory (", paste0(Sys.getenv('HOME'),"/.fonts"),"). Easy as that. That's the installation procedure.\n\nAfter creating this directory and moving the font files into that directory, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly."))
 }
 
 }

@@ -1,11 +1,7 @@
 # Create a Swatchplot of Palettes
 
-[`spal()`](http://svmiller.com/reference/spal.md) is a derivation of a
-palette-loading function in an R package I used to use quite regularly.
-Its intended use is interacting with ggplot2 functions like
-`scale_fill_manual` and `scale_color_manual` (in particular, the
-`values` argument). Herein, you can change the default ggplot2 colors
-used.
+`swatchplot()` creates a plot of color swatches for the various palettes
+included in this package.
 
 ## Usage
 
@@ -17,34 +13,37 @@ swatchplot(palette = NULL, style = "generic", font = NULL)
 
 - palette:
 
-  a label coinciding with a value in the `color` column of the
-  `steve_hex` data frame
+  must be NULL or one of the palettes included in this package. If NULL
+  (the default value), the swatchplot returns swatches for palettes.
 
-- n:
+- style:
 
-  a mostly optional argument for how many colors you want. Defaults to
-  `NULL`.
+  passed to
+  [`theme_steve()`](http://svmiller.com/reference/theme_steve.md) in the
+  construction of the plot. Defautls to "generic" for testing purposes.
+  Consult the documentation for
+  [`theme_steve()`](http://svmiller.com/reference/theme_steve.md) for
+  more information.
 
-- even:
+- font:
 
-  logical, defaults to TRUE, used internally for diverging palettes.
-
-- d.mid:
-
-  a valid hex code coinciding with a color that should serve as the
-  middle color in a palette whose length is an odd number. Applicable
-  only to diverging palettes. Default value here is "white" (`#FFFFFF`).
-  I'll be honest that I'm thinking of changing this to `#F7F7F7`.
+  defaults to NULL and used only when the `style` argument is "custom".
+  Used for specifying the font of the user's choice that, one assumes,
+  is available on their computer.
 
 ## Value
 
-[`spal()`](http://svmiller.com/reference/spal.md) returns a character
-vector of hex codes to use as a palette in manually supplying colors to
-adjust the fill or color of a plot made by ggplot2.
+`swatchplot()` returns a plot of the colors available in a requested
+palette, or all available palettes, as a ggplot2 object.
 
 ## Details
 
-dsfdsfs
+The palette argument must be NULL or one of the palettes included in
+this package and listed in the `palettes` data frame in this package. If
+the palette requested is a diverging or sequential palette, the
+swatchplot returns all colors in the palette for a length of 2 to 9 (the
+maximum). If the palette requested is qualitative, the swatchplot is all
+colors in the palette and their position in it.
 
 ## Author
 
@@ -54,8 +53,12 @@ Steven V. Miller
 
 ``` r
 
-swatchplot(style = 'custom', font='Arial Narrow')
+swatchplot()
 
-swatchplot("q-martel", "web")
+swatchplot("d-suBF")
+
+swatchplot("s-suO")
+
+swatchplot("q-martel")
 
 ```
