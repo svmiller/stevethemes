@@ -34,6 +34,9 @@
 - [`martel_ratings`](http://svmiller.com/reference/martel_ratings.md) :
   CAGEMATCH Ratings of Rick Martel
 
+- [`palettes`](http://svmiller.com/reference/palettes.md) : Palettes
+  Available in This Package
+
 - [`no_gridlines()`](http://svmiller.com/reference/print-ready.md)
   [`make_classic()`](http://svmiller.com/reference/print-ready.md) :
 
@@ -48,6 +51,9 @@
 
 - [`steve_hex`](http://svmiller.com/reference/steve_hex.md) : Some Hex
   Triplets I Find Useful/Interesting/Fun
+
+- [`swatchplot()`](http://svmiller.com/reference/swatchplot.md) : Create
+  a Swatchplot of Palettes
 
 - [`theme_steve()`](http://svmiller.com/reference/theme_steve.md) :
 

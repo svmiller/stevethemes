@@ -98,3 +98,17 @@
 "cowwaryears"
 
 
+#' Palettes Available in This Package
+#'
+#' This is a simple data set I'll use for managing the available palettes in this
+#' package.
+#'
+#' @format A data frame with two columns
+#' \describe{
+#' \item{\code{palette}}{the palette, as you would enter it into \code{spal()} in this package}
+#' \item{\code{description}}{a description of the palette}
+#' }
+#'
+#' @details This mostly for internal use.
+#'
+"palettes"

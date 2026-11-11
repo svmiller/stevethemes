@@ -4,7 +4,14 @@
 \alias{spal}
 \title{Load a palette in \verb{scale_*_manual()}}
 \usage{
-spal(palette, n = NULL, even = TRUE, d.mid = "white")
+spal(
+  palette,
+  n = NULL,
+  even = TRUE,
+  d.mid = "#F7F7F7",
+  exp = FALSE,
+  lambda = 1.25
+)
 }
 \arguments{
 \item{palette}{a label coinciding with a value in the \code{color} column of the
@@ -13,6 +20,18 @@ spal(palette, n = NULL, even = TRUE, d.mid = "white")
 \item{n}{a mostly optional argument for how many colors you want. Defaults to \code{NULL}.}
 
 \item{even}{logical, defaults to TRUE, used internally for diverging palettes.}
+
+\item{d.mid}{a valid hex code coinciding with a color that should serve as the
+middle color in a palette with an odd-numbered length. Applicable only to
+diverging palettes. Default value here is "white" (\verb{#f7f7f7}), a color slightly}
+
+\item{exp}{logical, defaults to FALSE, and applicable only to sequential
+palettes. If FALSE, palettes whiten by consistent amount each time across
+the range of colors (maximum: 9). If TRUE, palettes whiten as an exponential
+decay factor.}
+
+\item{lambda}{the parameter governing the rate of decay. Called only when
+\code{exp} is TRUE. Higher values mean a faster rate of decay.}
 }
 \value{
 \code{spal()} returns a character vector of hex codes to use as a
@@ -35,6 +54,10 @@ and "q-martel".
 The \code{n} argument must be specified for sequential palettes and really should
 be specified for diverging palettes. If not, diverging palettes run the risk
 of being indistinguishable from sequential palettes.
+
+Exponential decays are mostly experimental. I don't even know how much I would
+use this function. Use as you see fit. Exponential decays are min-max transformed
+to start at 1 and end at 1/n before applying the whitening factor to \code{lighten_hex()}.
 }
 \section{Description of Color Palettes}{
 \tabular{cl}{
@@ -51,13 +74,15 @@ of being indistinguishable from sequential palettes.
    \code{s-suF} \tab sequential palette, in shades of Stockholm University "Fire" \cr
    \code{s-suO} \tab sequential palette, in shades of Stockholm University "Olive" \cr
    \code{s-suR} \tab sequential palette, in shades of Stockholm University "Red" \cr
+   \code{s-suS} \tab sequential palette, in shades of Stockholm University "Sky" \cr
+   \code{s-suW} \tab sequential palette, in shades of Stockholm University "Water" \cr
    \code{q-supair} \tab qualitative palette, using colors pairs of Stockholm University's template \cr
-   \code{q-OI} \tab qualitative palette, Okabe-Ito \cr
+   \code{q-OI} \tab qualitative palette, Okabe-Ito (Colorbind Friendly) \cr
    \code{q-google} \tab qualitative palette, using Google colors \cr
    \code{q-ibm} \tab qualitative palette, using IBM Design Colorblind Safe Palette \cr
    \code{q-wong} \tab qualitative palette, using Wong Colorblind Safe Palette \cr
-   \code{q-tol} \tab qualitative palette, using Paul Tol's Qualitative Palette \cr
-   \code{q-sciencespo} \tab qualitative palette, using Sciences-Po's Medialab (hard, force vector) \cr
+   \code{q-tolm} \tab qualitative palette, using Paul Tol's Muted Qualitative Palette \cr
+   \code{q-sciencespo} \tab qualitative palette, using Sciences-Po's Médialab (hard) \cr
    \code{q-dataroots} \tab qualitative palette, paired, using Dataroots' colors \cr
    \code{q-martel} \tab qualitative palette, using a palette of colors inspired by Rick Martel \cr
 }

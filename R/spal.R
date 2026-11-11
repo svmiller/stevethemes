@@ -19,6 +19,10 @@
 #' be specified for diverging palettes. If not, diverging palettes run the risk
 #' of being indistinguishable from sequential palettes.
 #'
+#' Exponential decays are mostly experimental. I don't even know how much I would
+#' use this function. Use as you see fit. Exponential decays are min-max transformed
+#' to start at 1 and end at 1/n before applying the whitening factor to `lighten_hex()`.
+#'
 #' # Description of Color Palettes
 #'
 #' | **Name** | **Description** |
@@ -35,13 +39,15 @@
 #' | `s-suF`  | sequential palette, in shades of Stockholm University "Fire" |
 #' | `s-suO`  | sequential palette, in shades of Stockholm University "Olive" |
 #' | `s-suR`  | sequential palette, in shades of Stockholm University "Red" |
+#' | `s-suS`  | sequential palette, in shades of Stockholm University "Sky" |
+#' | `s-suW`  | sequential palette, in shades of Stockholm University "Water" |
 #' | `q-supair`  | qualitative palette, using colors pairs of Stockholm University's template |
-#' | `q-OI`  | qualitative palette, Okabe-Ito |
+#' | `q-OI`  | qualitative palette, Okabe-Ito (Colorbind Friendly) |
 #' | `q-google`  | qualitative palette, using Google colors |
 #' | `q-ibm`  | qualitative palette, using IBM Design Colorblind Safe Palette |
 #' | `q-wong`  | qualitative palette, using Wong Colorblind Safe Palette |
-#' | `q-tol`  | qualitative palette, using Paul Tol's Qualitative Palette |
-#' | `q-sciencespo`  | qualitative palette, using Sciences-Po's Medialab (hard, force vector) |
+#' | `q-tolm`  | qualitative palette, using Paul Tol's Muted Qualitative Palette |
+#' | `q-sciencespo`  | qualitative palette, using Sciences-Po's Médialab (hard) |
 #' | `q-dataroots` | qualitative palette, paired, using Dataroots' colors |
 #' | `q-martel`  | qualitative palette, using a palette of colors inspired by Rick Martel |
 #'
@@ -52,6 +58,16 @@
 #' \code{steve_hex} data frame
 #' @param n a mostly optional argument for how many colors you want. Defaults to `NULL`.
 #' @param even logical, defaults to TRUE, used internally for diverging palettes.
+#' @param d.mid a valid hex code coinciding with a color that should serve as the
+#' middle color in a palette with an odd-numbered length. Applicable only to
+#' diverging palettes. Default value here is "white" (`#f7f7f7`), a color slightly
+#" off-white.
+#' @param exp logical, defaults to FALSE, and applicable only to sequential
+#' palettes. If FALSE, palettes whiten by consistent amount each time across
+#' the range of colors (maximum: 9). If TRUE, palettes whiten as an exponential
+#' decay factor.
+#' @param lambda the parameter governing the rate of decay. Called only when
+#' `exp` is TRUE. Higher values mean a faster rate of decay.
 #'
 #' @return \code{spal()} returns a character vector of hex codes to use as a
 #' palette in manually supplying colors to adjust the fill or color of a plot
@@ -70,7 +86,8 @@
 #' @md
 #' @export
 
-spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
+spal <- function(palette, n = NULL, even = TRUE, d.mid = "#F7F7F7",
+                 exp = FALSE, lambda = 1.25) {
 
   # d: diverging, s: sequential, q: qualitative
   ### B: blue
@@ -82,11 +99,13 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
 
   dmid <- d.mid
 
-  PALETTES <- c("d-suFB", "d-suBF", "d-suBR","d-suRB",
-                "d-suBO", "d-suOB", "d-suFW", "d-suWF",
-                "s-suB", "s-suO", "s-suR", "s-suF",
-                "q-supair", "q-OI", "q-google", "q-ibm", "q-wong", "q-tol",
-                "q-martel", "q-sciencespo", "q-dataroots")
+  # PALETTES <- c("d-suFB", "d-suBF", "d-suBR","d-suRB",
+  #               "d-suBO", "d-suOB", "d-suFW", "d-suWF",
+  #               "s-suB", "s-suO", "s-suR", "s-suF", "s-suS", "s-suW",
+  #               "q-supair", "q-OI", "q-google", "q-ibm", "q-wong", "q-tol",
+  #               "q-martel", "q-sciencespo", "q-dataroots")
+
+  PALETTES <- palettes$palette
 
   if(!palette %in% PALETTES) {
 
@@ -99,13 +118,11 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
     stop("Sequential palettes require the n argument to be specified.")
   }
 
-  dispatch <- list(
-    d = .pal_diverging,
-    s = .pal_sequential,
-    q = .pal_qual
-  )
+  dispatch <- list(d = .pal_diverging,
+                   s = .pal_sequential,
+                   q = .pal_qual)
 
-  x <- dispatch[[pal.type]](palette, n, even, dmid)
+  x <- dispatch[[pal.type]](palette, n, even, dmid, exp, lambda)
 
   return(x)
 }
@@ -113,17 +130,19 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
 # #' @keywords internal
 # #' @noRd
 
-.pal_diverging <- function(palette, n = NULL, even = TRUE, dmid) {
+.pal_diverging <- function(palette, n = NULL, even = TRUE, dmid, exp, lambda) {
 
   if(!is.null(n) && n > 9) {
-    stop("I don't think these diverging palettes can handle more than nine unique colors.")
+    stop("I don't think these diverging palettes can handle more than nine unique colors. Even 9 might be pushing it.")
   }
 
-  if(dmid == "white") {
-    midcol <- "#ffffff"
-  } else { # You're on your own here for a valid HEX color...
+  if(dmid != "#f7f7f7") { # You're on your own here for a valid HEX color...
 
     midcol <- dmid
+
+  } else {
+
+    midcol <- "#f7f7f7"
 
   }
 
@@ -158,10 +177,10 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
 # #' @keywords internal
 # #' @noRd
 
-.pal_sequential <- function(palette, n, even = TRUE, dmid) {
+.pal_sequential <- function(palette, n, even = TRUE, dmid, exp, lambda) {
 
   if(!is.null(n) && n > 9) {
-    stop("I don't think these sequential palettes can handle more than nine unique colors.")
+    stop("I don't think these sequential palettes can handle more than nine unique colors. Even 9 might be pushing it.")
   }
 
   COLORS <- c(B = g_c("su_blue"),
@@ -174,11 +193,40 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
   cc <- substr(palette, 5, 5)
   cc <- unname(COLORS[cc])
 
-  x <- cc
 
+
+  if(exp == FALSE) {
+
+    x <- cc
 
     for(i in seq(1, 1/n, length.out = n)[-1]) {
       x <- c(x, lighten_hex(cc, i))
+    }
+
+  } else if (exp == TRUE) {
+
+    nn <- n
+    decay <- lambda
+
+    t <- seq(0, 1, length.out = nn)
+
+    v <- exp(-decay*t)
+    d <- (1/n) + (((v - min(v))/(max(v) - min(v)))*(1 - (1/n)))
+
+    # for(i in seq(1, 1/n, length.out = n)[-1]) {
+    #   x <- c(x, lighten_hex(cc, i))
+    # }
+
+    x <- c()
+
+    for(i in c(d)) {
+
+      x <- c(x, lighten_hex(cc,i))
+
+      }
+
+
+
     }
 
   x
@@ -188,7 +236,7 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
 # #' @keywords internal
 # #' @noRd
 
-.pal_qual <- function(palette, n = NULL, even, dmid) {
+.pal_qual <- function(palette, n = NULL, even, dmid, exp, lambda) {
 
   qq <- substr(palette, 3, nchar(palette))
 
@@ -235,7 +283,7 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "white") {
     x <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
            "#D55E00", "#CC79A7")
 
-  } else if (qq == "tol") {
+  } else if (qq == "tolm") {
 
     x <- c("#332288", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77",
            "#CC6677", "#AA4499")
