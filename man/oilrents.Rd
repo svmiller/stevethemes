@@ -5,7 +5,16 @@
 \alias{oilrents}
 \title{Oil Rents and GDP per Capita, Over Time}
 \format{
-
+A data frame with seven columns
+\describe{
+\item{\code{country}}{an English country name}
+\item{\code{iso3c}}{a three-character ISO code}
+\item{\code{year}}{a referent year}
+\item{\code{gdppc}}{GDP per capita in constant 2015 USD}
+\item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
+\item{\code{orpgdp}}{oil rents as a percentage of GDP}
+\item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with six categories}
+}
 }
 \usage{
 oilrents
@@ -15,7 +24,7 @@ This is a simple data set on oil rents, GDP per capita, and annual growth
 in GDP per capita.
 }
 \details{
-Data come from the World Bank's Open Data repository. Data generated
-by the use of the \pkg{WDI} package.
+Data come from the World Bank's Open Data repository. Data retrieved
+using the \pkg{WDI} package.
 }
 \keyword{datasets}
