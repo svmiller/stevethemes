@@ -24,7 +24,7 @@ A data frame with two columns
 
 ## Details
 
-This mostly for internal use.
+This is mostly for internal use.
 
 ## Examples
 

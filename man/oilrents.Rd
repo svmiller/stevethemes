@@ -13,7 +13,7 @@ A data frame with seven columns
 \item{\code{gdppc}}{GDP per capita in constant 2015 USD}
 \item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
 \item{\code{orpgdp}}{oil rents as a percentage of GDP}
-\item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with six categories}
+\item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with six ordered categories}
 }
 }
 \usage{

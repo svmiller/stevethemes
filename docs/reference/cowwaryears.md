@@ -34,10 +34,9 @@ peacesciencer. Data are version 4.0, except for intra-state wars (v.
 
 ## References
 
-Dixon, Jeffrey, and Meredith Sarkees. 2016. \*A Guide to Intra-State
-Wars: An Examination of Civil Wars, 1816-2014.\* Thousand Oaks, CA:
-Sage.
+Dixon, Jeffrey, and Meredith Sarkees. 2016. *A Guide to Intra-State
+Wars: An Examination of Civil Wars, 1816-2014.* Thousand Oaks, CA: Sage.
 
-Sarkees, Meredith Reid, and Frank Wheldon Wayman. 2010. \*Resort to War:
+Sarkees, Meredith Reid, and Frank Wheldon Wayman. 2010. *Resort to War:
 A Data Guide to Inter-State, Extra-State, Intra-State, and Non-State
-Wars, 1816-2007.\* Washington DC: CQ Press.
+Wars, 1816-2007.* Washington DC: CQ Press.

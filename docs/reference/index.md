@@ -25,6 +25,9 @@
 - [`how_to_install_fonts()`](http://svmiller.com/reference/how_to_install_fonts.md)
   : Learn how to install fonts on your computer
 
+- [`imfquotas`](http://svmiller.com/reference/imfquotas.md) : IMF
+  Quotas, Special Drawing Rights
+
 - [`kwh_gdp`](http://svmiller.com/reference/kwh_gdp.md) : Kilowatt Hours
   per Capita and GDP per Capita, 2010
 
@@ -61,3 +64,7 @@
 - [`theme_steve()`](http://svmiller.com/reference/theme_steve.md) :
 
   Steve's Preferred ggplot2 Theme
+
+- [`uspopgengroup`](http://svmiller.com/reference/uspopgengroup.md) :
+  U.S. Population Size, by Birth Cohort (Generation) and Race/Ethnic
+  Category

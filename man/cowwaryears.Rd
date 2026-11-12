@@ -24,11 +24,11 @@ CoW inter-state wars and intra-state wars come pre-processed in
 \pkg{peacesciencer}. Data are version 4.0, except for intra-state wars (v. 4.1).
 }
 \references{
-Dixon, Jeffrey, and Meredith Sarkees. 2016. *A Guide to Intra-State Wars: An
-Examination of Civil Wars, 1816-2014.* Thousand Oaks, CA: Sage.
+Dixon, Jeffrey, and Meredith Sarkees. 2016. \emph{A Guide to Intra-State Wars: An
+Examination of Civil Wars, 1816-2014.} Thousand Oaks, CA: Sage.
 
-Sarkees, Meredith Reid, and Frank Wheldon Wayman. 2010. *Resort to War: A Data
-Guide to Inter-State, Extra-State, Intra-State, and Non-State Wars, 1816-2007.*
+Sarkees, Meredith Reid, and Frank Wheldon Wayman. 2010. \emph{Resort to War: A Data
+Guide to Inter-State, Extra-State, Intra-State, and Non-State Wars, 1816-2007.}
 Washington DC: CQ Press.
 }
 \keyword{datasets}

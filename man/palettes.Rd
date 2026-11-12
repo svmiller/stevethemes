@@ -19,7 +19,7 @@ This is a simple data set I'll use for managing the available palettes in this
 package.
 }
 \details{
-This mostly for internal use.
+This is mostly for internal use.
 }
 \examples{
 

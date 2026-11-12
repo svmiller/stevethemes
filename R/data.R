@@ -94,6 +94,8 @@
 #' Guide to Inter-State, Extra-State, Intra-State, and Non-State Wars, 1816-2007.*
 #' Washington DC: CQ Press.
 #'
+#' @md
+#'
 
 "cowwaryears"
 
@@ -109,7 +111,7 @@
 #' \item{\code{description}}{a description of the palette}
 #' }
 #'
-#' @details This mostly for internal use.
+#' @details This is mostly for internal use.
 #'
 #' @examples
 #'
@@ -131,10 +133,52 @@
 #' \item{\code{gdppc}}{GDP per capita in constant 2015 USD}
 #' \item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
 #' \item{\code{orpgdp}}{oil rents as a percentage of GDP}
-#' \item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with six categories}
+#' \item{\code{orcat}}{a factor of oil rents as a percentage of GDP, with six ordered categories}
 #' }
 #'
 #' @details Data come from the World Bank's Open Data repository. Data retrieved
 #' using the \pkg{WDI} package.
 
 "oilrents"
+
+#' U.S. Population Size, by Birth Cohort (Generation) and Race/Ethnic Category
+#'
+#' This is a simple data set on the population size of various racial/ethnic
+#' groups across generations in the United States.
+#'
+#' @format A data frame with 30 rows and five columns
+#' \describe{
+#' \item{\code{generation}}{a character vector for the birth cohort (generation)}
+#' \item{\code{gen}}{a factor vector of the `generation` column, slightly less verbose}
+#' \item{\code{group}}{a race/ethnic category}
+#' \item{\code{groupc}}{a slightly condensed/less verbose recode of the `group` column}
+#' \item{\code{value}}{the estimated population size}
+#' }
+#'
+#' @details Data come from the Annie E. Casey Foundation, informed by data made
+#' available by the U.S. Census Bureau, Population Division.
+
+"uspopgengroup"
+
+#' IMF Quotas, Special Drawing Rights
+#'
+#' This is a simple data set on quotas held by a few key actors/groupings in
+#' the International Monetary Fund.
+#'
+#' @format A data frame with 3234 rows and four columns
+#' \describe{
+#' \item{\code{cat}}{a character vector an actor/grouping of interest}
+#' \item{\code{year}}{a numeric vector for the year}
+#' \item{\code{value}}{the value of the quota (in millions SDRs)}
+#' \item{\code{prop}}{the proportion of the quota to all available quotas in a year}
+#' }
+#'
+#' @details Data provided by the International Monetary Fund, Fund Account.
+#' Quotas determine both members' financial contributions to the Fund and the
+#' bulk of their voting power, with larger quotas conferring greater influence
+#' over decision-making. Although this measure does not account for the equal
+#' allocation of basic votes to all members (itself about 5.5% of the overall voting
+#' power), it provides a useful approximation of the distribution of voting power
+#' between wealthier and poorer countries.
+
+"imfquotas"
