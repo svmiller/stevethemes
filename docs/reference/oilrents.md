@@ -25,6 +25,10 @@ A data frame with seven columns
 
   a referent year
 
+- `decade`:
+
+  a decade
+
 - `gdppc`:
 
   GDP per capita in constant 2015 USD

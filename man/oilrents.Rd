@@ -10,6 +10,7 @@ A data frame with seven columns
 \item{\code{country}}{an English country name}
 \item{\code{iso3c}}{a three-character ISO code}
 \item{\code{year}}{a referent year}
+\item{\code{decade}}{a decade}
 \item{\code{gdppc}}{GDP per capita in constant 2015 USD}
 \item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
 \item{\code{orpgdp}}{oil rents as a percentage of GDP}

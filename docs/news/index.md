@@ -17,8 +17,8 @@
   [`swatchplot()`](http://svmiller.com/reference/swatchplot.md).
 - [`swatchplot()`](http://svmiller.com/reference/swatchplot.md) allows
   you to see what colors come with various palettes in this package.
-- New data sets for sample graphs: `cowwaryears`, `uspopgengroup`,
-  `oilrents`, and `imfquotas`.
+- New data sets for sample graphs: `britneywork`, `brandy`,
+  `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
 - [`lighten_hex()`](http://svmiller.com/reference/lighten_hex.md) takes
   a valid RGB hex value and whitens it to be some proportion of its
   original value.

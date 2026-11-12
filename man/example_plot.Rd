@@ -4,10 +4,26 @@
 \alias{example_plot}
 \title{Create an example plot (in \pkg{ggplot2}) for experimenting with different styles}
 \usage{
-example_plot(type = "bar")
+example_plot(type = "bar", alpha = 1, color = NULL, fill = NULL, family = NULL)
 }
 \arguments{
 \item{type}{a type}
+
+\item{alpha}{defaults to 1 and passed through to example plots (e.g. "britney")
+where there is use of the fill argument. Values less than 1 induce transparency
+to the fill.}
+
+\item{color}{defaults to NULL and passed through to example plots (e.g. "scatter")
+where there is use of the color argument. Specifies the color of the color.
+Default is "#002f5f" ("SU Blue")}
+
+\item{fill}{defaults to NULL and passed through to example plots (e.g. "britney")
+where there is use of the fill argument. Specifies the color of the fill.
+Default is "#9bb2ce" ("SU Water")}
+
+\item{family}{defaults to NULL and passed through to example plots (e.g.
+"britney" where there is a text annotation). Specifies the font you want for
+the annotation. Default is the use of the default graphics-device font.}
 }
 \value{
 \code{example_plot()} returns a plot made in \pkg{ggplot2}, allowing
@@ -20,17 +36,14 @@ best.
 some example plots.
 }
 \details{
-I'll add more here in a little bit.
+Valid entries for 'type' are "bar", "faceted-line", "scatter", "stacked-bar",
+"britney"
 }
 \examples{
 
 library(ggplot2)
 
 example_plot()
-
-example_plot(type = "faceted_line")
-
-example_plot(type = "scatter")
 
 }
 \author{

@@ -6,7 +6,7 @@ those in this package, by seeing them applied to some example plots.
 ## Usage
 
 ``` r
-example_plot(type = "bar")
+example_plot(type = "bar", alpha = 1, color = NULL, fill = NULL, family = NULL)
 ```
 
 ## Arguments
@@ -15,6 +15,30 @@ example_plot(type = "bar")
 
   a type
 
+- alpha:
+
+  defaults to 1 and passed through to example plots (e.g. "britney")
+  where there is use of the fill argument. Values less than 1 induce
+  transparency to the fill.
+
+- color:
+
+  defaults to NULL and passed through to example plots (e.g. "scatter")
+  where there is use of the color argument. Specifies the color of the
+  color. Default is "#002f5f" ("SU Blue")
+
+- fill:
+
+  defaults to NULL and passed through to example plots (e.g. "britney")
+  where there is use of the fill argument. Specifies the color of the
+  fill. Default is "#9bb2ce" ("SU Water")
+
+- family:
+
+  defaults to NULL and passed through to example plots (e.g. "britney"
+  where there is a text annotation). Specifies the font you want for the
+  annotation. Default is the use of the default graphics-device font.
+
 ## Value
 
 `example_plot()` returns a plot made in ggplot2, allowing the user to
@@ -22,7 +46,8 @@ experiment with different themes to see which ones they like the best.
 
 ## Details
 
-I'll add more here in a little bit.
+Valid entries for 'type' are "bar", "faceted-line", "scatter",
+"stacked-bar", "britney"
 
 ## Author
 
@@ -35,12 +60,5 @@ Steven V. Miller
 library(ggplot2)
 
 example_plot()
-
-
-example_plot(type = "faceted_line")
-
-
-example_plot(type = "scatter")
-#> `geom_smooth()` using formula = 'y ~ x'
 
 ```

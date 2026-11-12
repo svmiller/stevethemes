@@ -130,6 +130,7 @@
 #' \item{\code{country}}{an English country name}
 #' \item{\code{iso3c}}{a three-character ISO code}
 #' \item{\code{year}}{a referent year}
+#' \item{\code{decade}}{a decade}
 #' \item{\code{gdppc}}{GDP per capita in constant 2015 USD}
 #' \item{\code{dgdppc}}{annual growth in GDP per capita (percentage)}
 #' \item{\code{orpgdp}}{oil rents as a percentage of GDP}
@@ -182,3 +183,43 @@
 #' between wealthier and poorer countries.
 
 "imfquotas"
+
+
+#' The Civilian Unemployment Rate, 2013-2018
+#'
+#' This is a simple data set on the monthly civilian unemployment rate in the
+#' United States from 2013 to 2018. This is useful for illustrating the powerful
+#' effect Britney Spears had on the job prospects of American workers.
+#'
+#' @format A data frame with 63 rows and two columns
+#' \describe{
+#' \item{\code{date}}{a date}
+#' \item{\code{value}}{the civilian unemployment rate}
+#' }
+#'
+#' @details Data from the U.S. Bureau of Labor Statistics, by way of the
+#' Federal Reserve Bank of St. Louis. Inspired by a claim Donald Trump made early
+#' into his first presidential tenure about how he single-handedly decreased the
+#' unemployment rate in the United States. He didn't do that; Britney Spears did.
+
+"britneywork"
+
+#' "Brandys", 1942-2017
+#'
+#' This is a simple data set on the yearly registration of new "Brandy"s by the
+#' Social Security Administration.
+#'
+#' @format A data frame with 76 rows and 5 columns
+#' \describe{
+#' \item{\code{year}}{a year}
+#' \item{\code{sex}}{a character of "F" for "female"}
+#' \item{\code{name}}{a character, "Brandy"}
+#' \item{\code{n}}{the number of new "Brandy"s registered that year}
+#' \item{\code{prop}}{the proportion of all registrations of that name for that sex in that year}
+#' }
+#'
+#' @details Data come from the Social Security Administration, by way of the
+#' \pkg{babynames} package. Entries only here for names with at least 5 new
+#' registrations in a year.
+
+"brandy"

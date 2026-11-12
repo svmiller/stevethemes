@@ -46,6 +46,12 @@ devtools::install_github("svmiller/stevethemes")
   : Check if you have the fonts you need already installed on your
   computer
 
+- [`brandy`](http://svmiller.com/reference/brandy.md) : "Brandys",
+  1942-2017
+
+- [`britneywork`](http://svmiller.com/reference/britneywork.md) : The
+  Civilian Unemployment Rate, 2013-2018
+
 - [`cowwaryears`](http://svmiller.com/reference/cowwaryears.md) :
   Correlates of War War Counts, by Year (1816-2007)
 

@@ -7,7 +7,7 @@
 - Add colors to `steve_hex`.
 - `palettes` is used, mostly internally, for managing available palettes and describing them in `swatchplot()`.
 - `swatchplot()` allows you to see what colors come with various palettes in this package.
-- New data sets for sample graphs: `cowwaryears`, `uspopgengroup`, `oilrents`, and `imfquotas`.
+- New data sets for sample graphs: `britneywork`, `brandy`, `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
 - `lighten_hex()` takes a valid RGB hex value and whitens it to be some proportion of its original value.
 - `spal()` is a workhorse function, to be used with functions like `scale_fill_manual()` or `scale_color_manual()` in `{ggplot2}`, for applying color palettes from this package.
 
