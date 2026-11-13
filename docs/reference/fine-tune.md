@@ -32,7 +32,7 @@ smaller fonts, per the user's request.
 will allow you to adjust the font size on the plot by some number.
 
 Right now, `adj_font_size()` assumes you are using
-[`theme_steve()`](http://svmiller.com/reference/theme_steve.md) because
+[`theme_steve()`](https://svmiller.com/reference/theme_steve.md) because
 the font sizes initialized in the function are defaults from the theme.
 
 ## Author

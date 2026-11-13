@@ -57,7 +57,7 @@ alchemy.
 
 ``` r
 
-example_plot("faceted_line") + theme_steve(style = "custom", font = "Papyrus")
+example_plot("britney") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 ![](papyrus-example_files/figure-html/unnamed-chunk-4-1.png)

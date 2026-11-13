@@ -16,7 +16,7 @@ A data frame with two columns
 - `palette`:
 
   the palette, as you would enter it into
-  [`spal()`](http://svmiller.com/reference/spal.md) in this package
+  [`spal()`](https://svmiller.com/reference/spal.md) in this package
 
 - `description`:
 

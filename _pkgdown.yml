@@ -1,4 +1,4 @@
-url: http://svmiller.com
+url: https://svmiller.com
 
 template:
   bootstrap: 5
@@ -6,4 +6,16 @@ template:
     bootswatch: journal
 
 figures:
-  fig.width: 9
+  fig.width: 11
+
+reference:
+  - title: Functions
+    desc: Functions included in this data set.
+    contents:
+      - lacks_concepts("datasets")
+      - -has_keyword("datasets")
+
+  - title: Datasets
+    desc: Example data sets available to use for illustration purposes.
+    contents:
+      - has_keyword("datasets")

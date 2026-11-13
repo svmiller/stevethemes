@@ -57,7 +57,7 @@ alchemy.
 
 ``` r
 
-example_plot("faceted_line") + theme_steve(style = "merri")
+example_plot("britney") + theme_steve(style = "merri")
 ```
 
 ![](merriweather-example_files/figure-html/unnamed-chunk-4-1.png)

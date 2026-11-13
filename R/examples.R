@@ -6,8 +6,9 @@
 #'
 #' @details
 #'
-#' Valid entries for 'type' are "bar", "faceted-line", "scatter", "stacked-bar",
-#' "britney"
+#' Valid entries for 'type' are "bar" (alias: "martel"), "brandy", "britney",
+#' "faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "scatter",
+#' and "stacked-bar".
 #'
 #' @name example_plot
 #'
@@ -51,7 +52,7 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
 
   }
 
-  if(type == "bar") {
+  if(type %in% c("bar", "martel")) {
     ggplot(martel_ratings, aes(as.factor(.data$value))) +
       labs(title = "A Bar Chart of CAGEMATCH Ratings for Rick Martel",
            x = "Rating on 1-10 Scale", y ="Count",
@@ -59,7 +60,7 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
            subtitle = "This is just a simple bar chart. Experiment with customization options!") +
       geom_bar(fill=fill, alpha=alpha, color='black') -> p
 
-  } else if (type == "faceted_line" | type == "faceted-line") {
+  } else if (type == "faceted-line") {
 
     ggplot(se_counties_gdppc, aes(.data$year, .data$value)) +
       geom_line() +
@@ -89,7 +90,6 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
       #guides(fill = "none")  +
       labs(fill = "", y = "Number of Wars in a Given Year", x = "",
            title = "A Stacked Bar Chart of Wars by Type, 1816-2007",
-           # caption = "Data: Correlates of War War Data (v. 4.0 [v. 4.1 for intra-state wars])",
            subtitle = "This is just a simple bar chart Experiment with customization options!") -> p
 
 
@@ -128,10 +128,32 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
                family= if (is.null(family)) "" else family) +
       labs(y = 'The Number of Female Births Named "Brandy"', x = "",
            title = 'The Number of "Brandy" Births, 1942-2017',
-           subtitle = "This is just a simple line chart (you're a fine girl). Experiment with customization options! (such a fine girl)",
+           subtitle = "This is just a simple line chart (you're a fine girl). Experiment with customization options (such a fine girl)...",
            caption = '...but my life, my love, and my lady, is the sea (Do do do do do do do do). Seriously, "Brandy" increased 195.73% from 1971 to 1972.
        Data: Social Security Administration (via {babynames} in R).') -> p
 
+
+  } else if (type == "faceted-boxplot") {
+
+    ggplot(oilrents, aes(.data$orcat, .data$dgdppc, fill=.data$orcat)) +
+      geom_boxplot(outliers = FALSE) +
+      geom_hline(yintercept = 0, linetype = 'dashed') +
+      facet_wrap(~.data$decade, scales="free_y") +
+      labs(x = "Oil Rents % of GDP (Categorized)",
+           title = "Oil Rents as a % of GDP and Annual GDP Growth, by Decade",
+           subtitle = "This is just a simple faceted boxplot. Experiment with some customization options!",
+           caption = "Data: World Bank Open Data Repository",
+           y = "GDP per capita growth (annual %)",
+           fill = "") -> p
+  } else if (type %in% c("line", "imfquotas")) {
+
+    ggplot(imfquotas, aes(.data$year, .data$prop, color=.data$cat, linetype=.data$cat)) +
+      geom_line(linewidth=1.1) +
+      labs(y = "Proportion of Quotas (SDRs)", x = "",
+           title = "The Proportion of IMF Quotas for Select Actors/Groupings, 1945-2025",
+           subtitle = "This is just a simple line chart. Experiment with customization options!",
+           color = "", linetype = "",
+           caption = "Data: International Monetary Fund, Fund Account") -> p
 
   }
 

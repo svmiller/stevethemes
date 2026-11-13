@@ -1,12 +1,12 @@
 pandoc: 3.8.3
-pkgdown: 2.2.1
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   default-example: default-example.html
   fira-example: fira-example.html
   merriweather-example: merriweather-example.html
   papyrus-example: papyrus-example.html
-last_built: 2026-11-12T15:41Z
+last_built: 2026-11-13T09:05Z
 urls:
-  reference: http://svmiller.com/reference
-  article: http://svmiller.com/articles
+  reference: https://svmiller.com/reference
+  article: https://svmiller.com/articles

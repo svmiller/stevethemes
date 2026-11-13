@@ -23,5 +23,5 @@ A data frame the following 2 variables.
 
 ## Details
 
-Data exist to be used by [`g_c()`](http://svmiller.com/reference/g_c.md)
-in this same package.
+Data exist to be used by
+[`g_c()`](https://svmiller.com/reference/g_c.md) in this same package.

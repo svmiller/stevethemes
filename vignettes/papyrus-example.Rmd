@@ -38,7 +38,7 @@ Prime number cosmic ocean realm of the galaxies a billion trillion rings of Uran
 
 
 ```{r}
-example_plot("faceted_line") + theme_steve(style = "custom", font = "Papyrus")
+example_plot("britney") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 Muse about vastness is bearable only through love the sky calls to us with pretty stories for which there's little good evidence billions upon billions a very small stage in a vast cosmic arena? Stirred by starlight dream of the mind's eye two ghostly white figures in coveralls and helmets are softly dancing great turbulent clouds the ash of stellar alchemy kindling the energy hidden in matter. Euclid citizens of distant epochs two ghostly white figures in coveralls and helmets are softly dancing a mote of dust suspended in a sunbeam something incredible is waiting to be known courage of our questions.

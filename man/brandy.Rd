@@ -3,7 +3,7 @@
 \docType{data}
 \name{brandy}
 \alias{brandy}
-\title{"Brandys", 1942-2017}
+\title{Brandy, 1942-2017}
 \format{
 A data frame with 76 rows and 5 columns
 \describe{

@@ -57,7 +57,7 @@ alchemy.
 
 ``` r
 
-example_plot("faceted_line") + theme_steve()
+example_plot("faceted-line") + theme_steve()
 ```
 
 ![](default-example_files/figure-html/unnamed-chunk-4-1.png)
@@ -82,7 +82,7 @@ dawn awaits intelligent beings Cambrian explosion?
 
 ``` r
 
-example_plot("bar") + theme_steve()
+example_plot("britney") + theme_steve()
 ```
 
 ![](default-example_files/figure-html/unnamed-chunk-5-1.png)

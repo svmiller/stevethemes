@@ -57,7 +57,7 @@ alchemy.
 
 ``` r
 
-example_plot("faceted_line") + theme_steve("fira")
+example_plot("britney") + theme_steve("fira")
 ```
 
 ![](fira-example_files/figure-html/unnamed-chunk-4-1.png)

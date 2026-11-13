@@ -75,7 +75,7 @@ swatchplot <- function(palette = NULL, style = "generic", font = NULL) {
     swatches$name <- factor(swatches$name, levels = unique(swatches$name))
     swatches$k <- as.factor(swatches$k)
 
-    ggplot(swatches, aes(x = k, y=name, fill=col)) +
+    ggplot(swatches, aes(x = .data$k, y=.data$name, fill=col)) +
       geom_tile(color='black') +
       scale_fill_identity() +
       theme_steve(style = style, font= font) +
@@ -113,7 +113,7 @@ swatchplot <- function(palette = NULL, style = "generic", font = NULL) {
     descr <- palettes[palettes$palette == palette,]$description
     plottitle <- paste0('A Swatchplot of a ', descr)
 
-    ggplot(swatches, aes(x = as.factor(k), y=as.factor(n), fill=col)) +
+    ggplot(swatches, aes(x = as.factor(.data$k), y=as.factor(.data$n), fill=col)) +
       geom_tile(color='black') +
       scale_fill_identity() +
       theme_steve(style = style, font= font) +
@@ -142,7 +142,7 @@ swatchplot <- function(palette = NULL, style = "generic", font = NULL) {
     descr <- palettes[palettes$palette == palette,]$description
     plottitle <- paste0('A Swatchplot of a ', descr)
 
-    ggplot(swatches, aes(x = k, y = y, fill= col)) + geom_tile(color='black') +
+    ggplot(swatches, aes(x = .data$k, y = .data$y, fill= .data$col)) + geom_tile(color='black') +
       theme_steve(style = style, font= font) +
       scale_fill_identity() +
       scale_x_discrete(labels = swatches$lab) +

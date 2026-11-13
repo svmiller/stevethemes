@@ -46,8 +46,9 @@ experiment with different themes to see which ones they like the best.
 
 ## Details
 
-Valid entries for 'type' are "bar", "faceted-line", "scatter",
-"stacked-bar", "britney"
+Valid entries for 'type' are "bar" (alias: "martel"), "brandy",
+"britney", "faceted-boxplot", "faceted-line", "line" (alias:
+"imfquotas"), "scatter", and "stacked-bar".
 
 ## Author
 

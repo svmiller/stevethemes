@@ -204,7 +204,7 @@
 
 "britneywork"
 
-#' "Brandys", 1942-2017
+#' Brandy, 1942-2017
 #'
 #' This is a simple data set on the yearly registration of new "Brandy"s by the
 #' Social Security Administration.
