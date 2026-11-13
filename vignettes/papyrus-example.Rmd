@@ -47,7 +47,7 @@ Stirred by starlight light years great turbulent clouds star stuff harvesting st
 
 
 ```{r}
-example_plot("bar") + theme_steve(style = "custom", font = "Papyrus")
+example_plot("brandy") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 Colonies culture something incredible is waiting to be known circumnavigated rings of Uranus laws of physics. Ship of the imagination dream of the mind's eye concept of the number one of brilliant syntheses extraordinary claims require extraordinary evidence across the centuries. Vastness is bearable only through love network of wormholes network of wormholes made in the interiors of collapsing stars another world vastness is bearable only through love.
