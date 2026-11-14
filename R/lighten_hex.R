@@ -2,7 +2,7 @@
 #'
 #' @description
 #'
-#' `lighten_hex()` whitens an RGB hex value to be some proportion of its original
+#' `lighten_hex()` whitens a hex triplet to be some proportion of its original
 #' value.
 #'
 #' @details
@@ -12,14 +12,14 @@
 #'
 #' @name lighten_hex
 #'
-#' @param hex a valid RGB hex value, with leading pound sign (#)
-#' @param p some value between 0 and 1 for whitening the RGB hex value in question.
+#' @param hex a valid hex triplet, with leading pound sign (#)
+#' @param p some value between 0 and 1 for whitening the hex triplet in question.
 #'
 #' @return
 #'
-#' `lighten_hex()` takes an RGB hex value and a value between (and including) 0
-#' and 1 and returns a HEX code that retains some proportion (`p`) of its original
-#' value. For example, `lighten_hex("#000000", 0)` takes the RGB hex value for
+#' `lighten_hex()` takes an RGB hex triplet and a value between (and including) 0
+#' and 1 and returns a hex triplet that retains some proportion (`p`) of its original
+#' value. For example, `lighten_hex("#000000", 0)` takes the RGB hex triplet for
 #' pure black and whitens it to retain none of its original color. This would
 #' be white. Alternatively, `lighten_hex("#002f5f", .8)` takes the color
 #' corresponding with Stockholm University Blue (`g_c("su_blue")`) and whitens

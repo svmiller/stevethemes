@@ -8,9 +8,9 @@
 A data frame with 30 rows and five columns
 \describe{
 \item{\code{generation}}{a character vector for the birth cohort (generation)}
-\item{\code{gen}}{a factor vector of the `generation` column, slightly less verbose}
+\item{\code{gen}}{a factor vector of the \code{generation} column, slightly less verbose}
 \item{\code{group}}{a race/ethnic category}
-\item{\code{groupc}}{a slightly condensed/less verbose recode of the `group` column}
+\item{\code{groupc}}{a slightly condensed/less verbose recode of the \code{group} column}
 \item{\code{value}}{the estimated population size}
 }
 }

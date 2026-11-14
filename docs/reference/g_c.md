@@ -1,8 +1,8 @@
 # Get a Custom Color from `steve_hex`
 
 `g_c()` (i.e. *g*et *c*olor) is a simple function that interfaces with
-the `steve_hex` data frame to return a hex value associated with a named
-color.
+the `steve_hex` data frame to return a hex triplet associated with a
+named color.
 
 ## Usage
 
@@ -25,7 +25,7 @@ a custom fill or color in a plot.
 
 ## Details
 
-Check `steve_hex` in this same package for the custom colors included
+Check `steve_hex` in this same package for the custom colors included.
 
 ## Author
 

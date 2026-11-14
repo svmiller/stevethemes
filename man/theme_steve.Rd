@@ -40,13 +40,13 @@ R package websites.
 For greater clarity, the user should understand "ms" is code for the Crimson
 Pro font, which resembles the "cochineal" font family in the LaTeX font
 catalogue. "cochineal" is a fork of the Crimson font and its use is heavily
-implied by my preferred article template (`article2`) in \pkg{stevetemplates}.
+implied by my preferred article template (\code{article2}) in \pkg{stevetemplates}.
 
 "fira" is shorthand for "Fira Sans". "merri" is shorthand for "Merriweather".
 The former features prominently in Firefox as well as my current operating
 system (Pop! OS). The latter incorporates the Merriweather font, which is a
 close cousin of the Palatino font. Palatino is the implied default font of
-my first article template (`article`) in \pkg{stevetemplates}.
+my first article template (\code{article}) in \pkg{stevetemplates}.
 }
 \examples{
 library(ggplot2)

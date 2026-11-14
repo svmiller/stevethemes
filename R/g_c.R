@@ -1,11 +1,11 @@
 #' Get a Custom Color from \code{steve_hex}
 #'
 #' @description \code{g_c()} (i.e. *g*et *c*olor) is a simple function that
-#' interfaces with the \code{steve_hex} data frame to return a hex value
+#' interfaces with the \code{steve_hex} data frame to return a hex triplet
 #' associated with a named color.
 #'
 #' @details Check \code{steve_hex} in this same package for the custom colors
-#' included
+#' included.
 #'
 #' @name g_c
 #'

@@ -19,7 +19,7 @@ A data frame with 30 rows and five columns
 
 - `gen`:
 
-  a factor vector of the \`generation\` column, slightly less verbose
+  a factor vector of the `generation` column, slightly less verbose
 
 - `group`:
 
@@ -27,7 +27,7 @@ A data frame with 30 rows and five columns
 
 - `groupc`:
 
-  a slightly condensed/less verbose recode of the \`group\` column
+  a slightly condensed/less verbose recode of the `group` column
 
 - `value`:
 

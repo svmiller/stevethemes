@@ -82,7 +82,7 @@ dawn awaits intelligent beings Cambrian explosion?
 
 ``` r
 
-example_plot("bar") + theme_steve(style = "custom", font = "Papyrus")
+example_plot("brandy") + theme_steve(style = "custom", font = "Papyrus")
 ```
 
 ![](papyrus-example_files/figure-html/unnamed-chunk-5-1.png)

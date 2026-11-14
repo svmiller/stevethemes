@@ -35,6 +35,6 @@ Data provided by the International Monetary Fund, Fund Account. Quotas
 determine both members' financial contributions to the Fund and the bulk
 of their voting power, with larger quotas conferring greater influence
 over decision-making. Although this measure does not account for the
-equal allocation of basic votes to all members (itself about 5.5 power),
-it provides a useful approximation of the distribution of voting power
-between wealthier and poorer countries.
+equal allocation of basic votes to all members (itself about 5.5% of the
+overall voting power), it provides a useful approximation of the
+distribution of voting power between wealthier and poorer countries.

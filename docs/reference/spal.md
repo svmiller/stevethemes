@@ -2,9 +2,12 @@
 
 `spal()` is a derivation of a palette-loading function in an R package I
 used to use quite regularly. Its intended use is interacting with
-ggplot2 functions like `scale_fill_manual` and `scale_color_manual` (in
-particular, the `values` argument). Herein, you can change the default
-ggplot2 colors used.
+ggplot2 functions like
+[`scale_fill_manual()`](https://ggplot2.tidyverse.org/reference/scale_manual.html)
+and
+[`scale_color_manual()`](https://ggplot2.tidyverse.org/reference/scale_manual.html)
+(in particular, the `values` argument). Herein, you can change the
+default ggplot2 colors used.
 
 ## Usage
 
@@ -37,7 +40,7 @@ spal(
 
 - d.mid:
 
-  a valid hex code coinciding with a color that should serve as the
+  a valid hex triplet coinciding with a color that should serve as the
   middle color in a palette with an odd-numbered length. Applicable only
   to diverging palettes. Default value here is `#f7f7f7`, a color
   slightly
@@ -56,9 +59,9 @@ spal(
 
 ## Value
 
-`spal()` returns a character vector of hex codes to use as a palette in
-manually supplying colors to adjust the fill or color of a plot made by
-ggplot2.
+`spal()` returns a character vector of hex triplets to use as a palette
+in manually supplying colors to adjust the fill or color of a plot made
+by ggplot2.
 
 ## Details
 
@@ -80,30 +83,31 @@ whitening factor to
 
 |  |  |
 |----|----|
-| **Name** | **Description** |
-| `d-suFB` | diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Blue" |
-| `d-suBF` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Fire" |
-| `d-suBR` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Red" |
-| `d-suRB` | diverging palette, ranging from Stockholm University "Red" to Stockholm University "Blue" |
-| `d-suBO` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Olive" |
-| `d-suOB` | diverging palette, ranging from Stockholm University "Olive" to Stockholm University "Blue" |
-| `d-suFW` | diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Water" |
-| `d-suWF` | diverging palette, ranging from Stockholm University "Water" to Stockholm University "Fire" |
-| `s-suB` | sequential palette, in shades of Stockholm University "Blue" |
-| `s-suF` | sequential palette, in shades of Stockholm University "Fire" |
-| `s-suO` | sequential palette, in shades of Stockholm University "Olive" |
-| `s-suR` | sequential palette, in shades of Stockholm University "Red" |
-| `s-suS` | sequential palette, in shades of Stockholm University "Sky" |
-| `s-suW` | sequential palette, in shades of Stockholm University "Water" |
-| `q-supair` | qualitative palette, using colors pairs of Stockholm University's template |
-| `q-OI` | qualitative palette, Okabe-Ito (Colorbind Friendly) |
-| `q-google` | qualitative palette, using Google colors |
-| `q-ibm` | qualitative palette, using IBM Design Colorblind Safe Palette |
-| `q-wong` | qualitative palette, using Wong Colorblind Safe Palette |
-| `q-tolm` | qualitative palette, using Paul Tol's Muted Qualitative Palette |
-| `q-sciencespo` | qualitative palette, using Sciences-Po's Médialab (hard) |
-| `q-dataroots` | qualitative palette, paired, using Dataroots' colors |
-| `q-martel` | qualitative palette, using a palette of colors inspired by Rick Martel |
+| **Palette Name** | **Description** |
+| `d-suFB` | Diverging Palette (SU "Fire" to SU Blue) |
+| `d-suBF` | Diverging Palette (SU Blue to SU "Fire") |
+| `d-suRB` | Diverging Palette (SU Red to SU Blue) |
+| `d-suBR` | Diverging Palette (SU Blue to SU Red) |
+| `d-suBO` | Diverging Palette (SU Blue to SU Olive) |
+| `d-suOB` | Diverging Palette (SU Olive to SU Blue) |
+| `d-suFW` | Diverging Palette (SU "Fire" to SU "Water") |
+| `d-suWF` | Diverging Palette (SU "Water" to SU "Fire") |
+| `s-suB` | Sequential Palette (SU Blue) |
+| `s-suO` | Sequential Palette (SU Olive) |
+| `s-suR` | Sequential Palette (SU Red) |
+| `s-suF` | Sequential Palette (SU "Fire") |
+| `s-suS` | Sequential Palette (SU "Sky") |
+| `s-suW` | Sequential Palette (SU "Water") |
+| `q-supair` | Qualitative Palette of Stockholm University Color Pairs |
+| `q-su70` | Qualitative Palette of Stockholm University Colors (Muted, 70%) |
+| `q-OI` | Qualitative Palette of Colorblind-Friendly Colors (Okabe-Ito) |
+| `q-google` | Qualitative Palette of Google Colors |
+| `q-ibm` | Qualitative Palette (IBM Design Colorblind Safe) |
+| `q-wong` | Qualitative Palette (Bang Wong Colorblind Safe, Nature Methods \[2011\]) |
+| `q-tolm` | Qualitative Palette (Paul Tol Colorblind Safe, Muted) |
+| `q-sciencespo` | Qualitative Palette (Sciences-Po's Médialab \[hard\]) |
+| `q-dataroots` | Qualitative Palette (Dataroots) |
+| `q-martel` | Qualitative Palette (Inspired by Rick Martel) |
 
 ## Author
 

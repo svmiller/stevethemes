@@ -17,12 +17,12 @@ a custom fill or color in a plot.
 }
 \description{
 \code{g_c()} (i.e. \emph{g}et \emph{c}olor) is a simple function that
-interfaces with the \code{steve_hex} data frame to return a hex value
+interfaces with the \code{steve_hex} data frame to return a hex triplet
 associated with a named color.
 }
 \details{
 Check \code{steve_hex} in this same package for the custom colors
-included
+included.
 }
 \examples{
 

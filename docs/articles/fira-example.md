@@ -82,7 +82,7 @@ dawn awaits intelligent beings Cambrian explosion?
 
 ``` r
 
-example_plot("bar") + theme_steve("fira")
+example_plot("brandy") + theme_steve("fira")
 ```
 
 ![](fira-example_files/figure-html/unnamed-chunk-5-1.png)

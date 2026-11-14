@@ -22,7 +22,7 @@ The maximum is 9, and even 9 is pushing it.}
 
 \item{even}{logical, defaults to TRUE, used internally for diverging palettes.}
 
-\item{d.mid}{a valid hex code coinciding with a color that should serve as the
+\item{d.mid}{a valid hex triplet coinciding with a color that should serve as the
 middle color in a palette with an odd-numbered length. Applicable only to
 diverging palettes. Default value here is \verb{#f7f7f7}, a color slightly}
 
@@ -35,15 +35,15 @@ decay factor.}
 \code{exp} is TRUE. Higher values mean a faster rate of decay.}
 }
 \value{
-\code{spal()} returns a character vector of hex codes to use as a
+\code{spal()} returns a character vector of hex triplets to use as a
 palette in manually supplying colors to adjust the fill or color of a plot
 made by \pkg{ggplot2}.
 }
 \description{
 \code{spal()} is a derivation of a palette-loading function in an R package
 I used to use quite regularly. Its intended use is interacting with
-\pkg{ggplot2} functions like \code{scale_fill_manual} and
-\code{scale_color_manual} (in particular, the \code{values} argument). Herein, you
+\pkg{ggplot2} functions like \code{scale_fill_manual()} and
+\code{scale_color_manual()} (in particular, the \code{values} argument). Herein, you
 can change the default \pkg{ggplot2} colors used.
 }
 \details{
@@ -61,30 +61,31 @@ to start at 1 and end at 1/n before applying the whitening factor to \code{light
 }
 \section{Description of Color Palettes}{
 \tabular{cl}{
-   \strong{Name} \tab \strong{Description} \cr
-   \code{d-suFB} \tab diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Blue" \cr
-   \code{d-suBF} \tab diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Fire" \cr
-   \code{d-suBR} \tab diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Red" \cr
-   \code{d-suRB} \tab diverging palette, ranging from Stockholm University "Red" to Stockholm University "Blue" \cr
-   \code{d-suBO} \tab diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Olive" \cr
-   \code{d-suOB} \tab diverging palette, ranging from Stockholm University "Olive" to Stockholm University "Blue" \cr
-   \code{d-suFW} \tab diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Water" \cr
-   \code{d-suWF} \tab diverging palette, ranging from Stockholm University "Water" to Stockholm University "Fire" \cr
-   \code{s-suB} \tab sequential palette, in shades of Stockholm University "Blue" \cr
-   \code{s-suF} \tab sequential palette, in shades of Stockholm University "Fire" \cr
-   \code{s-suO} \tab sequential palette, in shades of Stockholm University "Olive" \cr
-   \code{s-suR} \tab sequential palette, in shades of Stockholm University "Red" \cr
-   \code{s-suS} \tab sequential palette, in shades of Stockholm University "Sky" \cr
-   \code{s-suW} \tab sequential palette, in shades of Stockholm University "Water" \cr
-   \code{q-supair} \tab qualitative palette, using colors pairs of Stockholm University's template \cr
-   \code{q-OI} \tab qualitative palette, Okabe-Ito (Colorbind Friendly) \cr
-   \code{q-google} \tab qualitative palette, using Google colors \cr
-   \code{q-ibm} \tab qualitative palette, using IBM Design Colorblind Safe Palette \cr
-   \code{q-wong} \tab qualitative palette, using Wong Colorblind Safe Palette \cr
-   \code{q-tolm} \tab qualitative palette, using Paul Tol's Muted Qualitative Palette \cr
-   \code{q-sciencespo} \tab qualitative palette, using Sciences-Po's Médialab (hard) \cr
-   \code{q-dataroots} \tab qualitative palette, paired, using Dataroots' colors \cr
-   \code{q-martel} \tab qualitative palette, using a palette of colors inspired by Rick Martel \cr
+   \strong{Palette Name} \tab \strong{Description} \cr
+   \code{d-suFB} \tab Diverging Palette (SU "Fire" to SU Blue) \cr
+   \code{d-suBF} \tab Diverging Palette (SU Blue to SU "Fire") \cr
+   \code{d-suRB} \tab Diverging Palette (SU Red to SU Blue) \cr
+   \code{d-suBR} \tab Diverging Palette (SU Blue to SU Red) \cr
+   \code{d-suBO} \tab Diverging Palette (SU Blue to SU Olive) \cr
+   \code{d-suOB} \tab Diverging Palette (SU Olive to SU Blue) \cr
+   \code{d-suFW} \tab Diverging Palette (SU "Fire" to SU "Water") \cr
+   \code{d-suWF} \tab Diverging Palette (SU "Water" to SU "Fire") \cr
+   \code{s-suB} \tab Sequential Palette (SU Blue) \cr
+   \code{s-suO} \tab Sequential Palette (SU Olive) \cr
+   \code{s-suR} \tab Sequential Palette (SU Red) \cr
+   \code{s-suF} \tab Sequential Palette (SU "Fire") \cr
+   \code{s-suS} \tab Sequential Palette (SU "Sky") \cr
+   \code{s-suW} \tab Sequential Palette (SU "Water") \cr
+   \code{q-supair} \tab Qualitative Palette of Stockholm University Color Pairs \cr
+   \code{q-su70} \tab Qualitative Palette of Stockholm University Colors (Muted, 70\%) \cr
+   \code{q-OI} \tab Qualitative Palette of Colorblind-Friendly Colors (Okabe-Ito) \cr
+   \code{q-google} \tab Qualitative Palette of Google Colors \cr
+   \code{q-ibm} \tab Qualitative Palette (IBM Design Colorblind Safe) \cr
+   \code{q-wong} \tab Qualitative Palette (Bang Wong Colorblind Safe, Nature Methods [2011]) \cr
+   \code{q-tolm} \tab Qualitative Palette (Paul Tol Colorblind Safe, Muted) \cr
+   \code{q-sciencespo} \tab Qualitative Palette (Sciences-Po's Médialab [hard]) \cr
+   \code{q-dataroots} \tab Qualitative Palette (Dataroots) \cr
+   \code{q-martel} \tab Qualitative Palette (Inspired by Rick Martel) \cr
 }
 }
 

@@ -2,10 +2,10 @@
 #'
 #' @description
 #'
-#' \code{spal()} is a derivation of a palette-loading function in an R package
+#' `spal()` is a derivation of a palette-loading function in an R package
 #' I used to use quite regularly. Its intended use is interacting with
-#' \pkg{ggplot2} functions like \code{scale_fill_manual} and
-#' \code{scale_color_manual} (in particular, the `values` argument). Herein, you
+#' \pkg{ggplot2} functions like `scale_fill_manual()` and
+#' `scale_color_manual()` (in particular, the `values` argument). Herein, you
 #' can change the default \pkg{ggplot2} colors used.
 #'
 #' @details
@@ -24,32 +24,24 @@
 #'
 #' # Description of Color Palettes
 #'
-#' | **Name** | **Description** |
-#' |:-----------:|:----------------|
-#' | `d-suFB` | diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Blue" |
-#' | `d-suBF` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Fire" |
-#' | `d-suBR` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Red" |
-#' | `d-suRB` | diverging palette, ranging from Stockholm University "Red" to Stockholm University "Blue" |
-#' | `d-suBO` | diverging palette, ranging from Stockholm University "Blue" to Stockholm University "Olive" |
-#' | `d-suOB` | diverging palette, ranging from Stockholm University "Olive" to Stockholm University "Blue" |
-#' | `d-suFW` | diverging palette, ranging from Stockholm University "Fire" to Stockholm University "Water" |
-#' | `d-suWF` | diverging palette, ranging from Stockholm University "Water" to Stockholm University "Fire" |
-#' | `s-suB`  | sequential palette, in shades of Stockholm University "Blue" |
-#' | `s-suF`  | sequential palette, in shades of Stockholm University "Fire" |
-#' | `s-suO`  | sequential palette, in shades of Stockholm University "Olive" |
-#' | `s-suR`  | sequential palette, in shades of Stockholm University "Red" |
-#' | `s-suS`  | sequential palette, in shades of Stockholm University "Sky" |
-#' | `s-suW`  | sequential palette, in shades of Stockholm University "Water" |
-#' | `q-supair`  | qualitative palette, using colors pairs of Stockholm University's template |
-#' | `q-OI`  | qualitative palette, Okabe-Ito (Colorbind Friendly) |
-#' | `q-google`  | qualitative palette, using Google colors |
-#' | `q-ibm`  | qualitative palette, using IBM Design Colorblind Safe Palette |
-#' | `q-wong`  | qualitative palette, using Wong Colorblind Safe Palette |
-#' | `q-tolm`  | qualitative palette, using Paul Tol's Muted Qualitative Palette |
-#' | `q-sciencespo`  | qualitative palette, using Sciences-Po's Médialab (hard) |
-#' | `q-dataroots` | qualitative palette, paired, using Dataroots' colors |
-#' | `q-martel`  | qualitative palette, using a palette of colors inspired by Rick Martel |
-#'
+#' ```{r, evel=T, echo=F, results='asis'}
+#' palettes <- stevethemes::palettes
+#' palettes$palette <- paste0("`", palettes$palette, "`")
+#' palettes$description <- gsub(
+#'   "([]\\[\\[])",
+#'   "\\\\\\1",
+#'   palettes$description
+#' )
+#' knitr::kable(palettes, escape = TRUE,
+#'             align = c("cl"),
+#'             col.names = c("**Palette Name**", "**Description**"))
+#' #library(tinytable)
+#' #tt(palettes, theme = 'empty') |>
+#'   # style_tt(j = 1, monospace = TRUE, align = "c") |>
+#'   # style_tt(i = 0, monospace = FALSE, bold = TRUE) |>
+#'   # setNames(c("Palette Name", "Description")) |>
+#'   # print("latex")
+#' ```
 #'
 #' @name spal
 #'
@@ -58,7 +50,7 @@
 #' @param n a mostly optional argument for how many colors you want. Defaults to `NULL`.
 #' The maximum is 9, and even 9 is pushing it.
 #' @param even logical, defaults to TRUE, used internally for diverging palettes.
-#' @param d.mid a valid hex code coinciding with a color that should serve as the
+#' @param d.mid a valid hex triplet coinciding with a color that should serve as the
 #' middle color in a palette with an odd-numbered length. Applicable only to
 #' diverging palettes. Default value here is `#f7f7f7`, a color slightly
 #" off-white.
@@ -69,7 +61,7 @@
 #' @param lambda the parameter governing the rate of decay. Called only when
 #' `exp` is TRUE. Higher values mean a faster rate of decay.
 #'
-#' @return \code{spal()} returns a character vector of hex codes to use as a
+#' @return \code{spal()} returns a character vector of hex triplets to use as a
 #' palette in manually supplying colors to adjust the fill or color of a plot
 #' made by \pkg{ggplot2}.
 #'
@@ -296,6 +288,11 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "#F7F7F7",
   } else if (qq == "dataroots") {
 
     x <- c("#52BE7F", "#27ae60", "#3498db", "#2980b9", "#34495e", "#2c3e50")
+
+  } else if (qq == "su70") {
+
+    x <- c(lighten_hex(g_c("su_blue"), .7), g_c("su_fire70"), g_c("su_olive70"),
+           g_c("su_water70"), g_c("su_sky70"))
 
   }
 

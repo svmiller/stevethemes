@@ -31,7 +31,7 @@ This is mostly for internal use.
 ``` r
 
 print(palettes)
-#> # A tibble: 23 × 2
+#> # A tibble: 24 × 2
 #>    palette description                                      
 #>    <chr>   <chr>                                            
 #>  1 d-suFB  "Diverging Palette (SU \"Fire\" to SU Blue)"     
@@ -44,5 +44,5 @@ print(palettes)
 #>  8 d-suWF  "Diverging Palette (SU \"Water\" to SU \"Fire\")"
 #>  9 s-suB   "Sequential Palette (SU Blue)"                   
 #> 10 s-suO   "Sequential Palette (SU Olive)"                  
-#> # ℹ 13 more rows
+#> # ℹ 14 more rows
 ```
