@@ -25,6 +25,7 @@
 #' @param font defaults to NULL and used only when the `style` argument is "custom".
 #' Used for specifying the font of the user's choice that, one assumes, is available
 #' on their computer.
+#' @param ... called to make the shortcut of `splt()` work.
 #'
 #' @author Steven V. Miller
 #'
@@ -142,7 +143,8 @@ swatchplot <- function(palette = NULL, style = "generic", font = NULL) {
     descr <- palettes[palettes$palette == palette,]$description
     plottitle <- paste0('A Swatchplot of a ', descr)
 
-    ggplot(swatches, aes(x = .data$k, y = .data$y, fill= .data$col)) + geom_tile(color='black') +
+    ggplot(swatches, aes(x = .data$k, y = .data$y, fill= .data$col)) +
+      geom_tile(color='black', height = .75) +
       theme_steve(style = style, font= font) +
       scale_fill_identity() +
       scale_x_discrete(labels = swatches$lab) +
@@ -161,3 +163,10 @@ swatchplot <- function(palette = NULL, style = "generic", font = NULL) {
 
 
 }
+
+
+
+#' @rdname swatchplot
+#' @export
+
+splt <- function(...) stevethemes::swatchplot(...)

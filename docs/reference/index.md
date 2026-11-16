@@ -8,6 +8,12 @@ Functions included in this data set.
   : Check if you have the fonts you need already installed on your
   computer
 
+- [`deut()`](https://svmiller.com/reference/cvd-simulator.md)
+  [`prot()`](https://svmiller.com/reference/cvd-simulator.md)
+  [`trit()`](https://svmiller.com/reference/cvd-simulator.md)
+  [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) : Color
+  Vision Deficiency Simulation Tools
+
 - [`example_plot()`](https://svmiller.com/reference/example_plot.md) :
 
   Create an example plot (in ggplot2) for experimenting with different
@@ -36,8 +42,9 @@ Functions included in this data set.
 
   Load a palette in `scale_*_manual()`
 
-- [`swatchplot()`](https://svmiller.com/reference/swatchplot.md) :
-  Create a Swatchplot of Palettes
+- [`swatchplot()`](https://svmiller.com/reference/swatchplot.md)
+  [`splt()`](https://svmiller.com/reference/swatchplot.md) : Create a
+  Swatchplot of Palettes
 
 - [`theme_steve()`](https://svmiller.com/reference/theme_steve.md) :
 

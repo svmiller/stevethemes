@@ -12,11 +12,17 @@
   Palatino family.
 - Check for installation of Merriweather upon startup.
 - Add colors to `steve_hex`.
-- `palettes` is used, mostly internally, for managing available palettes
-  and describing them in
+- `palettes` is used, mostly internally, for managing available
+  palettes, defining them in
+  [`spal()`](https://svmiller.com/reference/spal.md), and describing
+  them in
   [`swatchplot()`](https://svmiller.com/reference/swatchplot.md).
 - [`swatchplot()`](https://svmiller.com/reference/swatchplot.md) allows
   you to see what colors come with various palettes in this package.
+  [`splt()`](https://svmiller.com/reference/swatchplot.md) is a shortcut
+  for it in case you’re experimenting with the
+  [colorspace](https://colorspace.R-Forge.R-project.org/) package as
+  well.
 - New data sets for sample graphs: `britneywork`, `brandy`,
   `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
 - [`example_plot()`](https://svmiller.com/reference/example_plot.md) has
@@ -31,6 +37,12 @@
   [`scale_color_manual()`](https://ggplot2.tidyverse.org/reference/scale_manual.html)
   in [ggplot2](https://ggplot2.tidyverse.org), for applying color
   palettes from this package.
+- [`deut()`](https://svmiller.com/reference/cvd-simulator.md),
+  [`prot()`](https://svmiller.com/reference/cvd-simulator.md),
+  [`trit()`](https://svmiller.com/reference/cvd-simulator.md), and
+  [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) are
+  functions to simulate color palettes under varying conditions of color
+  vision defiency.
 
 ## stevethemes 0.1.0
 

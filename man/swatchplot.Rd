@@ -2,9 +2,12 @@
 % Please edit documentation in R/swatchplot.R
 \name{swatchplot}
 \alias{swatchplot}
+\alias{splt}
 \title{Create a Swatchplot of Palettes}
 \usage{
 swatchplot(palette = NULL, style = "generic", font = NULL)
+
+splt(...)
 }
 \arguments{
 \item{palette}{must be NULL or one of the palettes included in this package.
@@ -17,6 +20,8 @@ for more information.}
 \item{font}{defaults to NULL and used only when the \code{style} argument is "custom".
 Used for specifying the font of the user's choice that, one assumes, is available
 on their computer.}
+
+\item{...}{called to make the shortcut of \code{splt()} work.}
 }
 \value{
 \code{swatchplot()} returns a plot of the colors available in a requested

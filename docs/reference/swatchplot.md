@@ -7,6 +7,8 @@ included in this package.
 
 ``` r
 swatchplot(palette = NULL, style = "generic", font = NULL)
+
+splt(...)
 ```
 
 ## Arguments
@@ -30,6 +32,10 @@ swatchplot(palette = NULL, style = "generic", font = NULL)
   defaults to NULL and used only when the `style` argument is "custom".
   Used for specifying the font of the user's choice that, one assumes,
   is available on their computer.
+
+- ...:
+
+  called to make the shortcut of `splt()` work.
 
 ## Value
 
