@@ -10,7 +10,7 @@ A data frame with 76 rows and 5 columns
 \item{\code{year}}{a year}
 \item{\code{sex}}{a character of "F" for "female"}
 \item{\code{name}}{a character, "Brandy"}
-\item{\code{n}}{the number of new "Brandy"s registered that year}
+\item{\code{n}}{the number of new "Brandy" registrations that year}
 \item{\code{prop}}{the proportion of all registrations of that name for that sex in that year}
 }
 }
@@ -18,8 +18,8 @@ A data frame with 76 rows and 5 columns
 brandy
 }
 \description{
-This is a simple data set on the yearly registration of new "Brandy"s by the
-Social Security Administration.
+This is a simple data set on the yearly registration of new "Brandy"
+registrations by the Social Security Administration.
 }
 \details{
 Data come from the Social Security Administration, by way of the

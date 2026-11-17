@@ -74,9 +74,9 @@ should be specified for diverging palettes. If not, diverging palettes
 run the risk of being indistinguishable from sequential palettes.
 
 Exponential decays are mostly experimental. I don't even know how much I
-would use this function. Use as you see fit. Exponential decays are
-min-max transformed to start at 1 and end at 1/n before applying the
-whitening factor to
+would use these arguments so much. Use as you see fit. Exponential
+decays are min-max transformed to start at 1 and end at 1/n before
+applying the whitening factor to
 [`lighten_hex()`](https://svmiller.com/reference/lighten_hex.md).
 
 ## Description of Color Palettes

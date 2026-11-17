@@ -1,7 +1,7 @@
 # Brandy, 1942-2017
 
-This is a simple data set on the yearly registration of new "Brandy"s by
-the Social Security Administration.
+This is a simple data set on the yearly registration of new "Brandy"
+registrations by the Social Security Administration.
 
 ## Usage
 
@@ -27,7 +27,7 @@ A data frame with 76 rows and 5 columns
 
 - `n`:
 
-  the number of new "Brandy"s registered that year
+  the number of new "Brandy" registrations that year
 
 - `prop`:
 

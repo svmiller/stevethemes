@@ -251,6 +251,7 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "#F7F7F7",
   } else if (qq == "google") {
 
     # dput(artyfarty::pal("google"))
+    # http://bl.ocks.org/aaizemberg/78bd3dade9593896a59d
 
     x <- c("#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#0099C6",
            "#DD4477", "#66AA00", "#B82E2E", "#316395")
