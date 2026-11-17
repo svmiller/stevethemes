@@ -13,7 +13,7 @@ splt(...)
 \item{palette}{must be NULL or one of the palettes included in this package.
 If NULL (the default value), the swatchplot returns swatches for palettes.}
 
-\item{style}{passed to \code{theme_steve()} in the construction of the plot. Defautls
+\item{style}{passed to \code{theme_steve()} in the construction of the plot. Defaults
 to "generic" for testing purposes. Consult the documentation for \code{theme_steve()}
 for more information.}
 

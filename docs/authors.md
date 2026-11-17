@@ -32,13 +32,13 @@ Source:
 [`DESCRIPTION`](https://github.com/svmiller/stevethemes/blob/HEAD/DESCRIPTION)
 
 Miller S (2026). *stevethemes: Steve's 'ggplot2' Themes and Related
-Theme Elements*. R package version 0.1.9,
-<http://svmiller.com/stevethemes/>.
+Theme Elements*. R package version 0.2.0,
+<https://svmiller.com/stevethemes/>.
 
     @Manual{,
       title = {stevethemes: Steve's 'ggplot2' Themes and Related Theme Elements},
       author = {Steve Miller},
       year = {2026},
-      note = {R package version 0.1.9},
-      url = {http://svmiller.com/stevethemes/},
+      note = {R package version 0.2.0},
+      url = {https://svmiller.com/stevethemes/},
     }

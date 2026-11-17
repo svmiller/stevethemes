@@ -19,7 +19,7 @@
 #'
 #' @param palette must be NULL or one of the palettes included in this package.
 #' If NULL (the default value), the swatchplot returns swatches for palettes.
-#' @param style passed to `theme_steve()` in the construction of the plot. Defautls
+#' @param style passed to `theme_steve()` in the construction of the plot. Defaults
 #' to "generic" for testing purposes. Consult the documentation for `theme_steve()`
 #' for more information.
 #' @param font defaults to NULL and used only when the `style` argument is "custom".

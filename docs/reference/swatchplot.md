@@ -22,7 +22,7 @@ splt(...)
 
   passed to
   [`theme_steve()`](https://svmiller.com/reference/theme_steve.md) in
-  the construction of the plot. Defautls to "generic" for testing
+  the construction of the plot. Defaults to "generic" for testing
   purposes. Consult the documentation for
   [`theme_steve()`](https://svmiller.com/reference/theme_steve.md) for
   more information.

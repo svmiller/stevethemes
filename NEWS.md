@@ -11,7 +11,7 @@
 - `example_plot()` has a host of new examples.
 - `lighten_hex()` takes a valid RGB hex value and whitens it to be some proportion of its original value.
 - `spal()` is a workhorse function, to be used with functions like `scale_fill_manual()` or `scale_color_manual()` in `{ggplot2}`, for applying color palettes from this package.
-- `deut()`, `prot()`, `trit()`, and `cvdplot()` are functions to simulate color palettes under varying conditions of color vision defiency.
+- `deut()`, `prot()`, `trit()`, `achrom()`, and `cvdplot()` are functions to simulate color palettes under varying conditions of color vision defiency.
 
 # stevethemes 0.1.0
 

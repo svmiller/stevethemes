@@ -21,7 +21,7 @@
   you to see what colors come with various palettes in this package.
   [`splt()`](https://svmiller.com/reference/swatchplot.md) is a shortcut
   for it in case you’re experimenting with the
-  [colorspace](https://colorspace.R-Forge.R-project.org/) package as
+  [colorspace](https://zeileis.codeberg.page/colorspace/) package as
   well.
 - New data sets for sample graphs: `britneywork`, `brandy`,
   `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
@@ -39,7 +39,8 @@
   palettes from this package.
 - [`deut()`](https://svmiller.com/reference/cvd-simulator.md),
   [`prot()`](https://svmiller.com/reference/cvd-simulator.md),
-  [`trit()`](https://svmiller.com/reference/cvd-simulator.md), and
+  [`trit()`](https://svmiller.com/reference/cvd-simulator.md),
+  [`achrom()`](https://svmiller.com/reference/cvd-simulator.md), and
   [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) are
   functions to simulate color palettes under varying conditions of color
   vision defiency.

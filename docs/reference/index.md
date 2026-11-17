@@ -11,6 +11,7 @@ Functions included in this data set.
 - [`deut()`](https://svmiller.com/reference/cvd-simulator.md)
   [`prot()`](https://svmiller.com/reference/cvd-simulator.md)
   [`trit()`](https://svmiller.com/reference/cvd-simulator.md)
+  [`achrom()`](https://svmiller.com/reference/cvd-simulator.md)
   [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) : Color
   Vision Deficiency Simulation Tools
 
@@ -38,9 +39,8 @@ Functions included in this data set.
 
   Miscellaneous functions to make your ggplot2 plot "print-ready"
 
-- [`spal()`](https://svmiller.com/reference/spal.md) :
-
-  Load a palette in `scale_*_manual()`
+- [`spal()`](https://svmiller.com/reference/spal.md) : Load a palette as
+  a character vector
 
 - [`swatchplot()`](https://svmiller.com/reference/swatchplot.md)
   [`splt()`](https://svmiller.com/reference/swatchplot.md) : Create a

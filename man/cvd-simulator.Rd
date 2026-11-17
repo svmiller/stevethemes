@@ -6,6 +6,7 @@
 \alias{cvdplot}
 \alias{prot}
 \alias{trit}
+\alias{achrom}
 \title{Color Vision Deficiency Simulation Tools}
 \usage{
 deut(pal)
@@ -13,6 +14,8 @@ deut(pal)
 prot(pal)
 
 trit(pal)
+
+achrom(pal)
 
 cvdplot(pal)
 }
@@ -34,10 +37,14 @@ protanomaly.
 hex triplets) and returns their adjusted hex triplets under conditions of
 tritanomaly.
 
+\code{achrom()} takes a palette from this package (or a character vector of valid
+hex triplets) and returns their adjusted hex triplets under conditions that
+simulation complete achromatopsia.
+
 \code{cvdplot()} takes a palette from this package (or a character vector of valid
 hex triplets) and returns a graph that juxtaposes the palette vis-a-vis what
-they would look like under varying conditions of color vision deficiency
-(deuteranomaly, protanomaly, and tritanomaly).
+it would look like under varying conditions of color vision deficiency
+(deuteranomaly, protanomaly, tritanomaly, and complete achromatopsia).
 }
 \description{
 These are various color vision deficiency simulation tools for evaluating
@@ -48,17 +55,33 @@ These functions take valid hex triplets of any length \emph{or} a character that
 matches one of the palettes available in this package. Check the \code{palettes}
 data frame for those.
 
+The functions I write are inspired by \pkg{colorspace}, but have a slight
+difference in the threshold used to determine whether an sRGB color channel
+should be linearized using the linear or nonlinear portion of the sRGB transfer
+function. The original WCAG 2.0 specification used a threshold of .03928, which
+\pkg{colorspace} uses. This was apparently in error, per a WCAG 2.1 errata
+document from 22 Feb. 2022. The revised value is .04045, which is used here.
+This difference is negligible for most practical purposes and should affect
+only a narrow range of low-intensity channel values.
+
 The functions simulate the palettes under \emph{maximum} conditions of color vision
 deficiency. Future extensions of these functions will likely allow the user
 to specify the severity of color vision deficiency they want to simulate. For
 now, the simulations assume the maximum severity of deuteranomaly, protanomaly,
-and tritanomaly.
+tritanomaly, and achromatopsia.
+
+I'm using "achromatopsia" here, though with some hesitation. I'm reluctant
+to say this is a physiologically accurate simulation of complete achromatopsia.
+It is certainly a visual simulation of grayscale and may approximate a complete
+loss of chromatic information using photopic relative luminance. These terms
+can be used interchangably, but with important caveats.
 }
 \examples{
 
 deut("q-martel")
 prot("q-martel")
 trit("q-martel")
+achrom("q-martel")
 
 cvdplot("q-martel")
 

@@ -1,7 +1,7 @@
 # Steve's Preferred ggplot2 Theme
 
 `theme_steve()` is my default theme framework for graphs I make with
-ggplot2. It starts
+ggplot2. It starts with
 [`theme_bw()`](https://ggplot2.tidyverse.org/reference/ggtheme.html),
 which is available in ggplot2, but adjusts the margins and axes a bit to
 my liking. The end result is, I think, a lovely template for graphs I
@@ -49,7 +49,7 @@ my website and most of my R package websites.
 
 For greater clarity, the user should understand "ms" is code for the
 Crimson Pro font, which resembles the "cochineal" font family in the
-LaTeX font catalogue. "cochineal" is a fork of the Crimson font and its
+LaTeX font catalog. "cochineal" is a fork of the Crimson font and its
 use is heavily implied by my preferred article template (`article2`) in
 stevetemplates.
 

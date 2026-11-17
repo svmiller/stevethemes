@@ -24,8 +24,8 @@ format a plot made in the \pkg{ggplot2} package.
 }
 \description{
 \code{theme_steve()} is my default theme framework for graphs I
-make with \pkg{ggplot2}. It starts \code{theme_bw()}, which is available in
-\pkg{ggplot2}, but adjusts the margins and axes a bit to my liking. The end
+make with \pkg{ggplot2}. It starts with \code{theme_bw()}, which is available
+in \pkg{ggplot2}, but adjusts the margins and axes a bit to my liking. The end
 result is, I think, a lovely template for graphs I make in R.
 }
 \details{
@@ -39,7 +39,7 @@ R package websites.
 
 For greater clarity, the user should understand "ms" is code for the Crimson
 Pro font, which resembles the "cochineal" font family in the LaTeX font
-catalogue. "cochineal" is a fork of the Crimson font and its use is heavily
+catalog. "cochineal" is a fork of the Crimson font and its use is heavily
 implied by my preferred article template (\code{article2}) in \pkg{stevetemplates}.
 
 "fira" is shorthand for "Fira Sans". "merri" is shorthand for "Merriweather".

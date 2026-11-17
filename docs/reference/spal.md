@@ -1,4 +1,4 @@
-# Load a palette in `scale_*_manual()`
+# Load a palette as a character vector
 
 `spal()` is a derivation of a palette-loading function in an R package I
 used to use quite regularly. Its intended use is interacting with
@@ -43,7 +43,7 @@ spal(
   a valid hex triplet coinciding with a color that should serve as the
   middle color in a palette with an odd-numbered length. Applicable only
   to diverging palettes. Default value here is `#f7f7f7`, a color
-  slightly
+  slightly off-white.
 
 - exp:
 

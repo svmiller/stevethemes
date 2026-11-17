@@ -1,4 +1,4 @@
-#' Load a palette in `scale_*_manual()`
+#' Load a palette as a character vector
 #'
 #' @description
 #'
@@ -53,7 +53,7 @@
 #' @param d.mid a valid hex triplet coinciding with a color that should serve as the
 #' middle color in a palette with an odd-numbered length. Applicable only to
 #' diverging palettes. Default value here is `#f7f7f7`, a color slightly
-#" off-white.
+#' off-white.
 #' @param exp logical, defaults to FALSE, and applicable only to sequential
 #' palettes. If FALSE, palettes whiten by consistent amount each time across
 #' the range of colors (maximum: 9). If TRUE, palettes whiten as an exponential
@@ -283,7 +283,7 @@ spal <- function(palette, n = NULL, even = TRUE, d.mid = "#F7F7F7",
   } else if (qq == "martel") {
 
     x <- c(g_c("martel_pink"), g_c("martel_purple"), g_c("martel_eau"),
-           g_c("martel_red"), "#000000")
+           g_c("martel_red"), "#000000") # #FFD700 is "gold"; #f7b539 is on QC's flag
 
   } else if (qq == "dataroots") {
 

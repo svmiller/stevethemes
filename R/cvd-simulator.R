@@ -11,11 +11,26 @@
 #' matches one of the palettes available in this package. Check the `palettes`
 #' data frame for those.
 #'
+#' The functions I write are inspired by \pkg{colorspace}, but have a slight
+#' difference in the threshold used to determine whether an sRGB color channel
+#' should be linearized using the linear or nonlinear portion of the sRGB transfer
+#' function. The original WCAG 2.0 specification used a threshold of .03928, which
+#' \pkg{colorspace} uses. This was apparently in error, per a WCAG 2.1 errata
+#' document from 22 Feb. 2022. The revised value is .04045, which is used here.
+#' This difference is negligible for most practical purposes and should affect
+#' only a narrow range of low-intensity channel values.
+#'
 #' The functions simulate the palettes under *maximum* conditions of color vision
 #' deficiency. Future extensions of these functions will likely allow the user
 #' to specify the severity of color vision deficiency they want to simulate. For
 #' now, the simulations assume the maximum severity of deuteranomaly, protanomaly,
-#' and tritanomaly.
+#' tritanomaly, and achromatopsia.
+#'
+#' I'm using "achromatopsia" here, though with some hesitation. I'm reluctant
+#' to say this is a physiologically accurate simulation of complete achromatopsia.
+#' It is certainly a visual simulation of grayscale and may approximate a complete
+#' loss of chromatic information using photopic relative luminance. These terms
+#' can be used interchangably, but with important caveats.
 #'
 #'
 #' @param pal a character vector of valid hex triplets (with leading pound
@@ -36,10 +51,14 @@
 #' hex triplets) and returns their adjusted hex triplets under conditions of
 #' tritanomaly.
 #'
+#' `achrom()` takes a palette from this package (or a character vector of valid
+#' hex triplets) and returns their adjusted hex triplets under conditions that
+#' simulation complete achromatopsia.
+#'
 #' `cvdplot()` takes a palette from this package (or a character vector of valid
 #' hex triplets) and returns a graph that juxtaposes the palette vis-a-vis what
-#' they would look like under varying conditions of color vision deficiency
-#' (deuteranomaly, protanomaly, and tritanomaly).
+#' it would look like under varying conditions of color vision deficiency
+#' (deuteranomaly, protanomaly, tritanomaly, and complete achromatopsia).
 #'
 #' @author Steven V. Miller
 #'
@@ -48,6 +67,7 @@
 #' deut("q-martel")
 #' prot("q-martel")
 #' trit("q-martel")
+#' achrom("q-martel")
 #'
 #' cvdplot("q-martel")
 #'
@@ -81,6 +101,41 @@ trit <- function(pal) {
 
 #' @rdname cvd-simulator
 #' @export
+
+achrom <- function(pal) {
+
+  PALETTES <- palettes$palette
+
+  if(length(pal) == 1 && pal %in% PALETTES) {
+    pal <- spal(pal)
+  }
+
+  RGB <- col2rgb(pal) # makes grDevices a dependency for this function
+
+  x <- RGB/255
+
+  # This is a difference from {colorspace}, which uses the older threshold of .03928.
+  # Current threshold is .04045. See:
+  # https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+  RGB <- matrix(ifelse(x <= 0.04045, x/12.92,
+                       ((x + 0.055)/1.055)^2.4), nrow = 3)
+
+  # Calculate relative luminance
+  gray <- drop(c(0.2126, 0.7152, 0.0722) %*% RGB)
+
+  # Convert linear luminance back to sRGB
+  gray <- ifelse(gray <= 0.0031308, 12.92*gray,
+                 1.055*gray^(1/2.4) - 0.055)*255
+
+  # Return grayscale hex colors
+  x <- rgb(round(gray), round(gray), round(gray), maxColorValue = 255)
+
+  return(x)
+}
+
+
+#' @rdname cvd-simulator
+#' @export
 cvdplot <- function(pal) {
 
   PALETTES <- palettes$palette
@@ -101,6 +156,7 @@ cvdplot <- function(pal) {
   dc <- deut(pal)
   pc <- prot(pal)
   tc <- trit(pal)
+  ac <- achrom(pal)
 
   paldata <- data.frame(name = "Original Palette",
                         value = pal,
@@ -114,11 +170,14 @@ cvdplot <- function(pal) {
   tcdata <- data.frame(name = "Tritanomaly",
                        value = tc,
                        y = paldata$y)
+  acdata <- data.frame(name = "Achromatopsia",
+                       value = ac,
+                       y = paldata$y)
 
-  rbind(paldata, dcdata, pcdata, tcdata) -> cvddat
+  rbind(paldata, dcdata, pcdata, tcdata, acdata) -> cvddat
   cvddat$name <- factor(cvddat$name, levels = rev(unique(cvddat$name)))
 
-  ggplot(cvddat, aes(x = name, y = y, fill = value)) +
+  ggplot(cvddat, aes(x = .data$name, y = .data$y, fill = .data$value)) +
     geom_tile(width = .7, color='black') +
     scale_fill_identity() +
     coord_flip() +
@@ -182,7 +241,7 @@ cvdplot <- function(pal) {
                        1.055*x^(1/2.4) - 0.055), nrow = 3)*255
 
   # Rounding here is a judgment call, but it's standard for converting to hex triplets as I understand it.
-  x <- grDevices::rgb(round(RGB[1, ]), round(RGB[2, ]), round(RGB[3, ]), maxColorValue = 255)
+  x <- rgb(round(RGB[1, ]), round(RGB[2, ]), round(RGB[3, ]), maxColorValue = 255)
 
   return(x)
 

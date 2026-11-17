@@ -2,7 +2,7 @@
 % Please edit documentation in R/spal.R
 \name{spal}
 \alias{spal}
-\title{Load a palette in \verb{scale_*_manual()}}
+\title{Load a palette as a character vector}
 \usage{
 spal(
   palette,
@@ -24,7 +24,8 @@ The maximum is 9, and even 9 is pushing it.}
 
 \item{d.mid}{a valid hex triplet coinciding with a color that should serve as the
 middle color in a palette with an odd-numbered length. Applicable only to
-diverging palettes. Default value here is \verb{#f7f7f7}, a color slightly}
+diverging palettes. Default value here is \verb{#f7f7f7}, a color slightly
+off-white.}
 
 \item{exp}{logical, defaults to FALSE, and applicable only to sequential
 palettes. If FALSE, palettes whiten by consistent amount each time across
