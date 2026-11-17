@@ -21,7 +21,7 @@
   you to see what colors come with various palettes in this package.
   [`splt()`](https://svmiller.com/reference/swatchplot.md) is a shortcut
   for it in case you’re experimenting with the
-  [colorspace](https://zeileis.codeberg.page/colorspace/) package as
+  [colorspace](https://colorspace.R-Forge.R-project.org/) package as
   well.
 - New data sets for sample graphs: `britneywork`, `brandy`,
   `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.

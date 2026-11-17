@@ -7,8 +7,8 @@
 #' @details
 #'
 #' Valid entries for 'type' are "bar" (alias: "martel"), "brandy", "britney",
-#' "faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "scatter",
-#' and "stacked-bar".
+#' "faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "prop-bar"
+#' (alias: "uspopgengroup"), "scatter", and "stacked-bar".
 #'
 #' @name example_plot
 #'
@@ -155,9 +155,29 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
            color = "", linetype = "",
            caption = "Data: International Monetary Fund, Fund Account") -> p
 
+  } else if (type %in% c("prop-bar", "uspopgengroup")) {
+
+    Data <- stats::aggregate(value ~ groupc + gen, data = uspopgengroup, FUN = sum)
+    Data$prop <- with(Data, value/ave(value, gen, FUN = sum))
+    Data$lbl <- paste0(round((Data$prop * 100), 0), "%")
+
+    ggplot(Data, aes(.data$gen, .data$prop, fill=.data$groupc)) +
+      geom_bar(aes(fill=.data$groupc), stat="identity", alpha=alpha, color="black") +
+      #scale_y_continuous(labels=scales::percent_format()) +
+      coord_flip() +
+      geom_text(aes(x = .data$gen, y = .data$prop, label = .data$lbl, hjust = 0.5),
+                size=4, position=position_stack(vjust = 0.5),
+                family = if (is.null(family)) "" else family) +
+      labs(title = "The Composition of Americans, by Generation and Racial/Ethnic Category",
+           subtitle = "This is just a simple proportional bar chart. Experiment with customization options!",
+           fill = "",
+           y = "", x = "",
+           caption = "Data: U.S. Census Bureau, Population Division, by wya of the Annie E. Casey Foundation.") -> p
+
   }
 
   return(p)
+
 }
 
 

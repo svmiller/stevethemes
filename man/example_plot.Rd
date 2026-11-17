@@ -37,8 +37,8 @@ some example plots.
 }
 \details{
 Valid entries for 'type' are "bar" (alias: "martel"), "brandy", "britney",
-"faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "scatter",
-and "stacked-bar".
+"faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "prop-bar" (
+alias: "uspopgengroup"), "scatter", and "stacked-bar".
 }
 \examples{
 
