@@ -8,5 +8,7 @@
   Sans](https://svmiller.com/articles/fira-example.md):
 - [An Example Using
   Merriweather](https://svmiller.com/articles/merriweather-example.md):
+- [An Example Using Crimson
+  Pro](https://svmiller.com/articles/ms-example.md):
 - [An Example Using Papryus (Note: Don't Do
   This)](https://svmiller.com/articles/papyrus-example.md):

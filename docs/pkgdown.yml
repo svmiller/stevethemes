@@ -5,8 +5,9 @@ articles:
   default-example: default-example.html
   fira-example: fira-example.html
   merriweather-example: merriweather-example.html
+  ms-example: ms-example.html
   papyrus-example: papyrus-example.html
-last_built: 2026-11-17T09:06Z
+last_built: 2026-11-17T09:15Z
 urls:
   reference: https://svmiller.com/reference
   article: https://svmiller.com/articles
