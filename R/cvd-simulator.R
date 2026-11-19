@@ -144,7 +144,7 @@ cvdplot <- function(pal) {
 
     i <- match(pal, palettes$palette)
 
-    descr <- paste("A Simulation of a", palettes$description[i], "Under Color Vision Defiency")
+    descr <- paste("A Simulation of a", palettes$description[i], "Under Color Vision Deficiency")
     pal <- spal(pal)
 
   } else {
