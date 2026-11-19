@@ -1,6 +1,12 @@
 # Changelog
 
+## stevethemes 0.3.0
+
+- Documentation updates
+
 ## stevethemes 0.2.0
+
+CRAN release: 2026-11-19
 
 - Add
   [`are_fonts_installed()`](https://svmiller.com/reference/are_fonts_installed.md)

@@ -10,7 +10,7 @@ library(ggplot2)
 
 [stevethemes](https://svmiller.com/stevethemes/) is one of a litany of
 [ggplot2](https://ggplot2.tidyverse.org) theme packages that users can
-consider for their own purposes. The package itself was very much
+consider for their graphing purposes. The package itself was very much
 inspired by [Bob Rudis’
 `{hrbrthemes}`](https://hrbrmstr.github.io/hrbrthemes/) and emerged as a
 fork of [my own miscellaneous R functions
@@ -97,9 +97,10 @@ something in the `font` argument that matches a font available on the
 user’s system. I have a vignette that shows [what this looks like in
 Papyrus](https://svmiller.com/stevethemes/articles/papyrus-example.html).
 Perhaps a better use of this is a font that Bob Rudis highlights is
-underappreciated: Arial Narrow. Arial Narrow is a great font that’s
-widely available, often by default, and has great solid default kerning
-pairs. Here is what it would look like paired with
+underappreciated: [Arial
+Narrow](https://online-fonts.com/fonts/arial-narrow). Arial Narrow is a
+great font that’s widely available, often by default, and has great
+solid default kerning pairs. Here is what it would look like paired with
 [`theme_steve()`](https://svmiller.com/reference/theme_steve.md).
 
 ``` r
@@ -156,7 +157,7 @@ steve_hex[steve_hex$color == "su_water",]
 For context, this is the color that Stockholm University describes as
 [its “water”
 color](https://medarbetare.su.se/en/our-su/communicate-su/graphic-profile/colours).
-`steve_hex` has a host of available colors for that
+`steve_hex` has a host of available colors that
 [`g_c()`](https://svmiller.com/reference/g_c.md) will get. For example,
 as this is Rick Martel, I can use his particular baby blue color, which
 I call `martel_eau` in homage to both his character and his French
@@ -179,11 +180,15 @@ ggplot(martel_ratings, aes(as.factor(value))) +
 ![](stevethemes_files/figure-html/unnamed-chunk-8-1.png)
 
 `steve_hex` is a simple data set of hex triplets that I like and/or find
-useful and interesting. [`g_c()`](https://svmiller.com/reference/g_c.md)
-is a convenience function that extracts those hex triplets by some kind
-of more intuitive name to use for simple cases where color or fill are
+useful. [`g_c()`](https://svmiller.com/reference/g_c.md) is a
+convenience function that extracts those hex triplets by some kind of
+more intuitive name to use for simple cases where color or fill are
 identified in the particular geom in
-[ggplot2](https://ggplot2.tidyverse.org).
+[ggplot2](https://ggplot2.tidyverse.org). It saves me the hassle of
+having to memorize my favorite hex triplets. For example,
+[“#619cff”](https://www.colorhexa.com/619cff) was an old go-to in my
+class presentations because it was a hex triplet I could commit to
+memory. I’d rather have a name/label for them.
 
 ### Load a palette with `spal()`
 
@@ -286,17 +291,17 @@ spal("q-martel")
 #### Diverging Palettes
 
 Diverging palettes fill or color-code differences when the underlying
-thing being colored or filled have polar opposites. Consider a
+thing being colored or filled has polar opposites. Consider a
 hypothetical Likert item from 1 (“Strongly Disagree”) to 5 (“Strongly
 Agree”) or, as you’ll see next, an American partisanship example where
 devout Democrats and devout Republicans sit on opposite ends of the
 scale. In this case, going from a 7 (“Strong Republican”) to a 1
 (“Strong Democrat”) is doing more than just communicating the absence of
-Republican affinity.
+Republican affinity. It’s a polar opposite.
 
-I’m working on a project now with a colleague about attitudes about
-trade protectionism for which the United States is interesting for any
-number of reasons. When I would teach American students about trade
+I’m working on a project now with a colleague about attitudes on trade
+protectionism for which the United States is interesting for any number
+of reasons. When I would teach American students about trade
 protectionism, I would mention how easy it is to prime Americans to do
 things that are impermissible under the rules of the World Trade
 Organization if you add an American flag or some other jingoistic prompt
@@ -322,9 +327,9 @@ example_plot("anes-protect") + theme_steve()
 
 Right now, this plot isn’t terribly readable because the default fill
 [ggplot2](https://ggplot2.tidyverse.org) is using thinks these are
-qualitative categories. They’re not; they’re ordered categorical and the
-extremes map to party colors of blue (for Democrats) and red (for
-Republicans). This fill wants to be diverging.
+qualitative categories without any order. They’re not; they’re ordered
+categories and the extremes map to party colors of blue (for Democrats)
+and red (for Republicans). This fill wants to be diverging.
 [stevethemes](https://svmiller.com/stevethemes/) has a suite of
 diverging palettes using Stockholm University colors. In particular,
 “d-suBR” (`d`iverging, using `S`tockholm `U`niversity `B`lue to `R`ed)
@@ -346,12 +351,13 @@ ordered categorical scale. The max right now is 9. If you have fewer
 than nine categories, which we have here, you’ll want to specify how
 many you have (here: `n = 7`) to help
 [`spal()`](https://svmiller.com/reference/spal.md) find the optimal
-balance between coloring both extremes. This isn’t necessary, but it’s
-helpful. Observe the `d.mid` argument here too. You can optionally set a
-color to be the midway point when the number of colors requested is an
-odd number (which we have here). The default is “#F7F7F7” (a color
-slightly off-white). I’m basically specifying it here to show that you
-can adjust this to your taste if you like.
+balance between coloring both extremes. This isn’t necessary for the
+function to generate a diverging palette, but it’s for sure helpful.
+Observe the `d.mid` argument here too. You can optionally set a color to
+be the midway point when the number of colors requested is an odd number
+(which we have here). The default is “#F7F7F7” (a color slightly
+off-white). I’m basically specifying it here to show that you can adjust
+this to your taste if you like.
 
 #### Sequential Palettes
 
@@ -359,12 +365,13 @@ Sequential palettes fill or color-code differences that are functionally
 granular and quantitative, even if they may manifest in an
 ordered-categorical scale. They differ from diverging palettes because
 they are intended for quantitative information in which there is no
-“fence” or where the middle of scale has no real qualitative meaning. In
-the above examples referencing American partisanship and Likert items,
-the middle points constitute a kind of “fence”. In a Likert item, these
-are people who neither agree nor disagree. On either side of that
-particular midway point, they agree or disagree. In American
-partisanship, the fence are those who ([are likely a bit dishonest when
+“fence” or where the middle of the scale has no real qualitative
+meaning. In the above examples referencing American partisanship and
+Likert items, the middle points constitute a kind of “fence”. In a
+Likert item, these are people who neither agree nor disagree. On either
+side of that particular midway point, they agree or disagree. In
+American partisanship, the fence consists of those who ([are likely a
+bit dishonest when
 they](https://www.politico.com/magazine/story/2014/01/independent-voters-partisans-in-the-closet-101931/))
 say they are pure independents. On either side, they must at least lean
 in one direction. By contrast, sequential palettes are appropriate when
@@ -524,8 +531,8 @@ internally for whitening colors to form diverging and sequential
 palettes. It takes a hex triplet, and some proportion between 0 and 1,
 and returns a triplet that retains some proportion of its original
 color. For example, `lighten_hex("#000000" , 0)` takes pure black and
-returns a hex triplet that retains none of its original color. This
-would incidentally be white. Observe:
+returns a hex triplet that whitens it to retain none of its original
+color. This would incidentally be white. Observe:
 
 ``` r
 
@@ -553,10 +560,11 @@ example_plot("brandy", fill = g_c("martel_eau"),
 
 ### Installation and Diagnostic Checks (`are_fonts_installed()` and `how_to_install_fonts()`)
 
-Students of mine who may want to make use of these finer themes, but
-don’t know how to get started, can consult thes two intuitively named
-functions that will tell you if you have the fonts installed *and* will
-tell you how to install them if you don’t already have them.
+Students of mine who may want to make use of the themes that reference
+specific fonts, but don’t know how to get started, can consult these two
+intuitively named functions. One will tell you if you have the fonts
+installed and the other will tell you how to install them if you don’t
+already have them.
 
 ``` r
 
@@ -567,7 +575,7 @@ are_fonts_installed()
 #> 
 #> If you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:
 #> 
-#> - /tmp/RtmpNqAnyV/temp_libpath36a79f56d73202/stevethemes/fonts
+#> - /tmp/RtmpLjKlJS/temp_libpath370f9959da7a7a/stevethemes/fonts
 #> 
 #> You can also find full versions of these fonts (and more) here:
 #> 
@@ -601,12 +609,34 @@ how_to_install_fonts("linux")
 #> After creating this directory and moving the font files into that directory, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.
 ```
 
+This one is for Mac users.
+
+``` r
+
+how_to_install_fonts("mac")
+#> Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'. Then, hit Cmd-Space and ask Mac to open the Font Book app. In the Font Book app, choose File > Add Fonts to Current User. In the directory containing the fonts you want to install, double-click the font file.
+#> 
+#> Mac users should have a few more options, all of which are doing the same basic thing. You can right-click on the font file(s) in question and ask to open it in Font Book (which should trigger an installation procedure). You can double-click the font file in Finder and click 'Install' in the dialog that appears. Either way, fonts in Mac are centrally managed through the Font Book app.
+#> 
+#> After installing these fonts, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.
+```
+
+And, for Windows users…
+
+``` r
+
+how_to_install_fonts("windows")
+#> Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'. Then, select all the fonts you want to install in this directory. Right click, then select 'Install'. You may have to spam your way through a few permission overrides because Windows installs things at a system-level and can behave like it's paranoid about what you're installing. However, these are just simple font files. Communicate to Windows, ''Yes, I want to install these things because they are just simple fonts.''
+#> 
+#> After installing these fonts, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.
+```
+
 ### Color Vision Deficiency Tools
 
 [stevethemes](https://svmiller.com/stevethemes/) also has a suite of
 tools to help users understand what their palettes might look like under
-varying conditions of color vision deficiency. Please consult [the
-documentation for more
+conditions of color vision deficiency. Please consult [the documentation
+for more
 details](https://svmiller.com/stevethemes/reference/cvd-simulator.html).
 The most basic thing to do would be to use
 [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) to get an
@@ -620,4 +650,11 @@ the Rick Martel palette, which is rather color-blind friendly.
 cvdplot("q-martel") + theme_steve()
 ```
 
-![](stevethemes_files/figure-html/unnamed-chunk-27-1.png)
+![](stevethemes_files/figure-html/unnamed-chunk-29-1.png)
+
+Color vision deficiency affects a fraction of the population and these
+diagnostics tell you what the palettes look like under the maximum
+severity. Consider it illustrative in helping you understand what your
+palette looks like for those who are colorblind in some way. The
+achromatopsia simulation, to be transparent, only approximates extreme
+achromatopsia and may better serve as a grayscale simulator.
