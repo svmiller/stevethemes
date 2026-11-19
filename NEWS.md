@@ -1,3 +1,7 @@
+# stevethemes 0.3.0
+
+- Documentation updates
+
 # stevethemes 0.2.0
 
 - Add `are_fonts_installed()` for further user diagnostics.
