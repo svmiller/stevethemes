@@ -23,7 +23,7 @@ library(ggplot2)
 # An Introduction
 
 `{stevethemes}` is one of a litany of `{ggplot2}` theme packages that users can
-consider for their own purposes. The package itself was very much inspired by
+consider for their graphing purposes. The package itself was very much inspired by
 [Bob Rudis' `{hrbrthemes}`](https://hrbrmstr.github.io/hrbrthemes/) and emerged
 as a fork of [my own miscellaneous R functions package](https://svmiller.com/stevemisc/news/index.html#stevemisc-150)
 in order to keep my ecosystem of R packages somewhat discrete. Part of this is
@@ -83,9 +83,9 @@ the user must also specify something in the `font` argument that matches a font
 available on the user's system. I have a vignette that shows [what this looks
 like in Papyrus](https://svmiller.com/stevethemes/articles/papyrus-example.html).
 Perhaps a better use of this is a font that Bob Rudis highlights is underappreciated:
-Arial Narrow. Arial Narrow is a great font that's widely available, often by 
-default, and has great solid default kerning pairs. Here is what it would look
-like paired with `theme_steve()`.
+[Arial Narrow](https://online-fonts.com/fonts/arial-narrow). Arial Narrow is a 
+great font that's widely available, often by default, and has great solid 
+default kerning pairs. Here is what it would look like paired with `theme_steve()`.
 
 ```{r}
 example_plot() + theme_steve(style = 'custom', font = "Arial Narrow")
@@ -120,7 +120,7 @@ steve_hex[steve_hex$color == "su_water",]
 
 For context, this is the color that Stockholm University describes as [its
 "water" color](https://medarbetare.su.se/en/our-su/communicate-su/graphic-profile/colours).
-`steve_hex` has a host of available colors for that `g_c()` will get. For example,
+`steve_hex` has a host of available colors that `g_c()` will get. For example,
 as this is Rick Martel, I can use his particular baby blue color, which I call 
 `martel_eau` in homage to both his character and his French Canadian heritage.
 
@@ -136,10 +136,13 @@ ggplot(martel_ratings, aes(as.factor(value))) +
   theme_steve()
 ```
 
-`steve_hex` is a simple data set of hex triplets that I like and/or find useful
-and interesting. `g_c()` is a convenience function that extracts those hex triplets
-by some kind of more intuitive name to use for simple cases where color or fill
-are identified in the particular geom in `{ggplot2}`.
+`steve_hex` is a simple data set of hex triplets that I like and/or find useful. 
+`g_c()` is a convenience function that extracts those hex triplets by some kind 
+of more intuitive name to use for simple cases where color or fill are 
+identified in the particular geom in `{ggplot2}`. It saves me the hassle of having
+to memorize my favorite hex triplets. For example, ["#619cff"](https://www.colorhexa.com/619cff)
+was an old go-to in my class presentations because it was a hex triplet I could
+commit to memory. I'd rather have a name/label for them.
 
 ## Load a palette with `spal()`
 
@@ -200,14 +203,14 @@ spal("q-martel")
 ### Diverging Palettes
 
 Diverging palettes fill or color-code differences when the underlying thing 
-being colored or filled have polar opposites. Consider a hypothetical Likert item
+being colored or filled has polar opposites. Consider a hypothetical Likert item
 from 1 ("Strongly Disagree") to 5 ("Strongly Agree") or, as you'll see next,
 an American partisanship example where devout Democrats and devout Republicans 
 sit on opposite ends of the scale. In this case, going from a 7 ("Strong Republican")
 to a 1 ("Strong Democrat") is doing more than just communicating the absence of
-Republican affinity.
+Republican affinity. It's a polar opposite.
 
-I'm working on a project now with a colleague about attitudes about trade
+I'm working on a project now with a colleague about attitudes on trade
 protectionism for which the United States is interesting for any number of reasons.
 When I would teach American students about trade protectionism, I would mention
 how easy it is to prime Americans to do things that are impermissible under the
@@ -226,13 +229,13 @@ example_plot("anes-protect") + theme_steve()
 ```
 
 Right now, this plot isn't terribly readable because the default fill `{ggplot2}`
-is using thinks these are qualitative categories. They're not; they're ordered
-categorical and the extremes map to party colors of blue (for Democrats) and
-red (for Republicans). This fill wants to be diverging. `{stevethemes}` has a 
-suite of diverging palettes using Stockholm University colors. In particular,
-"d-suBR" (`d`iverging, using `S`tockholm `U`niversity `B`lue to `R`ed) is a 
-good candidate for these data. I could call it using the `spal()` function in
-the `scale_fill_manual()` function from `{ggplot2}`.
+is using thinks these are qualitative categories without any order. They're not; 
+they're ordered  categories and the extremes map to party colors of blue 
+(for Democrats) and red (for Republicans). This fill wants to be diverging. 
+`{stevethemes}` has a suite of diverging palettes using Stockholm University 
+colors. In particular, "d-suBR" (`d`iverging, using `S`tockholm `U`niversity 
+`B`lue to `R`ed) is a good candidate for these data. I could call it using the 
+`spal()` function in the `scale_fill_manual()` function from `{ggplot2}`.
 
 ```{r, fig.width = 11, fig.height = 6}
 example_plot("anes-protect") + theme_steve() +
@@ -243,23 +246,24 @@ Diverging palettes, as they are right now, are built around use on an ordered
 categorical scale. The max right now is 9. If you have fewer than nine categories,
 which we have here, you'll want to specify how many you have (here: `n = 7`) to
 help `spal()` find the optimal balance between coloring both extremes. This isn't 
-necessary, but it's helpful. Observe the `d.mid` argument here too. You can
-optionally set a color to be the midway point when the number of colors requested
-is an odd number (which we have here). The default is "#F7F7F7" (a color
-slightly off-white). I'm basically specifying it here to show that you can 
-adjust this to your taste if you like.
+necessary for the function to generate a diverging palette, but it's for sure 
+helpful. Observe the `d.mid` argument here too. You can optionally set a color 
+to be the midway point when the number of colors requested is an odd number 
+(which we have here). The default is "#F7F7F7" (a color slightly off-white). 
+I'm basically specifying it here to show that you can adjust this to your taste 
+if you like.
 
 ### Sequential Palettes
 
 Sequential palettes fill or color-code differences that are functionally granular
 and quantitative, even if they may manifest in an ordered-categorical scale.
 They differ from diverging palettes because they are intended for quantitative
-information in which there is no "fence" or where the middle of scale has no
+information in which there is no "fence" or where the middle of the scale has no
 real qualitative meaning. In the above examples referencing American partisanship
 and Likert items, the middle points constitute a kind of "fence". In a Likert item,
 these are people who neither agree nor disagree. On either side of that particular
-midway point, they agree or disagree. In American partisanship, the fence are
-those who ([are likely a bit dishonest when they](https://www.politico.com/magazine/story/2014/01/independent-voters-partisans-in-the-closet-101931/)) 
+midway point, they agree or disagree. In American partisanship, the fence consists
+of those who ([are likely a bit dishonest when they](https://www.politico.com/magazine/story/2014/01/independent-voters-partisans-in-the-closet-101931/)) 
 say they are pure independents. On either side, they must at least lean in one
 direction. By contrast, sequential palettes are appropriate when the thing
 being colored or filled has a midway point that has no real meaning.
@@ -373,8 +377,8 @@ package, which also has a function with this name.
 sequential palettes. It takes a hex triplet, and some proportion between 0 and 1,
 and returns a triplet that retains some proportion of its original color. For
 example, `lighten_hex("#000000" , 0)` takes pure black and returns a hex triplet
-that retains none of its original color. This would incidentally be white. 
-Observe:
+that whitens it to retain none of its original color. This would incidentally 
+be white. Observe:
 
 ```{r}
 lighten_hex("#000000", 0)
@@ -396,10 +400,10 @@ example_plot("brandy", fill = g_c("martel_eau"),
 
 ## Installation and Diagnostic Checks (`are_fonts_installed()` and `how_to_install_fonts()`)
 
-Students of mine who may want to make use of these finer themes, but don't know
-how to get started, can consult thes two intuitively named functions that will
-tell you if you have the fonts installed *and* will tell you how to install them
-if you don't already have them.
+Students of mine who may want to make use of the themes that reference
+specific fonts, but don't know how to get started, can consult these two 
+intuitively named functions. One will tell you if you have the fonts installed 
+and the other will tell you how to install them if you don't already have them.
 
 ```{r}
 are_fonts_installed()
@@ -414,10 +418,22 @@ more detailed information for them if they want it.
 how_to_install_fonts("linux")
 ```
 
+This one is for Mac users.
+
+```{r}
+how_to_install_fonts("mac")
+```
+
+And, for Windows users...
+
+```{r}
+how_to_install_fonts("windows")
+```
+
 ## Color Vision Deficiency Tools
 
 `{stevethemes}` also has a suite of tools to help users understand what their
-palettes might look like under varying conditions of color vision deficiency.
+palettes might look like under conditions of color vision deficiency.
 Please consult [the documentation for more details](https://svmiller.com/stevethemes/reference/cvd-simulator.html).
 The most basic thing to do would be to use `cvdplot()` to get an idea what a palette
 (of any length, of any form, included in this package or not) would look like
@@ -428,3 +444,10 @@ friendly.
 ```{r, fig.width = 11}
 cvdplot("q-martel") + theme_steve()
 ```
+
+Color vision deficiency affects a fraction of the population and these diagnostics
+tell you what the palettes look like under the maximum severity. Consider it
+illustrative in helping you understand what your palette looks like for those
+who are colorblind in some way. The achromatopsia simulation, to be transparent,
+only approximates extreme achromatopsia and may better serve as a grayscale
+simulator.

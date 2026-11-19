@@ -79,7 +79,7 @@
 </h2>
 <p><a href="https://svmiller.com/stevethemes/">stevethemes</a> is one of a litany of
 <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> theme packages that users can consider for their
-own purposes. The package itself was very much inspired by <a href="https://hrbrmstr.github.io/hrbrthemes/" class="external-link">Bob Rudis’
+graphing purposes. The package itself was very much inspired by <a href="https://hrbrmstr.github.io/hrbrthemes/" class="external-link">Bob Rudis’
 <code>{hrbrthemes}</code></a> and emerged as a fork of <a href="https://svmiller.com/stevemisc/news/index.html#stevemisc-150">my
 own miscellaneous R functions package</a> in order to keep my ecosystem
 of R packages somewhat discrete. Part of this is admittedly my own
@@ -142,10 +142,10 @@ function references. If <code>style</code> is “custom”, the user must
 also specify something in the <code>font</code> argument that matches a
 font available on the user’s system. I have a vignette that shows <a href="https://svmiller.com/stevethemes/articles/papyrus-example.html">what
 this looks like in Papyrus</a>. Perhaps a better use of this is a font
-that Bob Rudis highlights is underappreciated: Arial Narrow. Arial
-Narrow is a great font that’s widely available, often by default, and
-has great solid default kerning pairs. Here is what it would look like
-paired with <code><a href="../reference/theme_steve.html">theme_steve()</a></code>.</p>
+that Bob Rudis highlights is underappreciated: <a href="https://online-fonts.com/fonts/arial-narrow" class="external-link">Arial Narrow</a>.
+Arial Narrow is a great font that’s widely available, often by default,
+and has great solid default kerning pairs. Here is what it would look
+like paired with <code><a href="../reference/theme_steve.html">theme_steve()</a></code>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/example_plot.html">example_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_steve.html">theme_steve</a></span><span class="op">(</span>style <span class="op">=</span> <span class="st">'custom'</span>, font <span class="op">=</span> <span class="st">"Arial Narrow"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="stevethemes_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="864"></p>
@@ -186,8 +186,8 @@ the character is describing. Observe:</p>
 <p>For context, this is the color that Stockholm University describes as
 <a href="https://medarbetare.su.se/en/our-su/communicate-su/graphic-profile/colours" class="external-link">its
 “water” color</a>. <code>steve_hex</code> has a host of available colors
-for that <code><a href="../reference/g_c.html">g_c()</a></code> will get. For example, as this is Rick
-Martel, I can use his particular baby blue color, which I call
+that <code><a href="../reference/g_c.html">g_c()</a></code> will get. For example, as this is Rick Martel, I
+can use his particular baby blue color, which I call
 <code>martel_eau</code> in homage to both his character and his French
 Canadian heritage.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -203,10 +203,13 @@ Canadian heritage.</p>
 <span>  <span class="fu"><a href="../reference/theme_steve.html">theme_steve</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="stevethemes_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="" width="864"></p>
 <p><code>steve_hex</code> is a simple data set of hex triplets that I
-like and/or find useful and interesting. <code><a href="../reference/g_c.html">g_c()</a></code> is a
-convenience function that extracts those hex triplets by some kind of
-more intuitive name to use for simple cases where color or fill are
-identified in the particular geom in <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>.</p>
+like and/or find useful. <code><a href="../reference/g_c.html">g_c()</a></code> is a convenience function
+that extracts those hex triplets by some kind of more intuitive name to
+use for simple cases where color or fill are identified in the
+particular geom in <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>. It saves me the hassle of
+having to memorize my favorite hex triplets. For example, <a href="https://www.colorhexa.com/619cff" class="external-link">“#619cff”</a> was an old go-to
+in my class presentations because it was a hex triplet I could commit to
+memory. I’d rather have a name/label for them.</p>
 </div>
 <div class="section level3">
 <h3 id="load-a-palette-with-spal">Load a palette with <code>spal()</code><a class="anchor" aria-label="anchor" href="#load-a-palette-with-spal"></a>
@@ -289,14 +292,14 @@ red in Strike Force.</p>
 <h4 id="diverging-palettes">Diverging Palettes<a class="anchor" aria-label="anchor" href="#diverging-palettes"></a>
 </h4>
 <p>Diverging palettes fill or color-code differences when the underlying
-thing being colored or filled have polar opposites. Consider a
+thing being colored or filled has polar opposites. Consider a
 hypothetical Likert item from 1 (“Strongly Disagree”) to 5 (“Strongly
 Agree”) or, as you’ll see next, an American partisanship example where
 devout Democrats and devout Republicans sit on opposite ends of the
 scale. In this case, going from a 7 (“Strong Republican”) to a 1
 (“Strong Democrat”) is doing more than just communicating the absence of
-Republican affinity.</p>
-<p>I’m working on a project now with a colleague about attitudes about
+Republican affinity. It’s a polar opposite.</p>
+<p>I’m working on a project now with a colleague about attitudes on
 trade protectionism for which the United States is interesting for any
 number of reasons. When I would teach American students about trade
 protectionism, I would mention how easy it is to prime Americans to do
@@ -316,12 +319,13 @@ exactly what happened.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/example_plot.html">example_plot</a></span><span class="op">(</span><span class="st">"anes-protect"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_steve.html">theme_steve</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="stevethemes_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" alt="" width="1056"></p>
 <p>Right now, this plot isn’t terribly readable because the default fill
-<a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> is using thinks these are qualitative categories.
-They’re not; they’re ordered categorical and the extremes map to party
-colors of blue (for Democrats) and red (for Republicans). This fill
-wants to be diverging. <a href="https://svmiller.com/stevethemes/">stevethemes</a> has a suite of
-diverging palettes using Stockholm University colors. In particular,
-“d-suBR” (<code>d</code>iverging, using <code>S</code>tockholm
+<a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> is using thinks these are qualitative categories
+without any order. They’re not; they’re ordered categories and the
+extremes map to party colors of blue (for Democrats) and red (for
+Republicans). This fill wants to be diverging.
+<a href="https://svmiller.com/stevethemes/">stevethemes</a> has a suite of diverging palettes using
+Stockholm University colors. In particular, “d-suBR”
+(<code>d</code>iverging, using <code>S</code>tockholm
 <code>U</code>niversity <code>B</code>lue to <code>R</code>ed) is a good
 candidate for these data. I could call it using the <code><a href="../reference/spal.html">spal()</a></code>
 function in the <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual()</a></code> function from
@@ -335,12 +339,12 @@ ordered categorical scale. The max right now is 9. If you have fewer
 than nine categories, which we have here, you’ll want to specify how
 many you have (here: <code>n = 7</code>) to help <code><a href="../reference/spal.html">spal()</a></code>
 find the optimal balance between coloring both extremes. This isn’t
-necessary, but it’s helpful. Observe the <code>d.mid</code> argument
-here too. You can optionally set a color to be the midway point when the
-number of colors requested is an odd number (which we have here). The
-default is “#F7F7F7” (a color slightly off-white). I’m basically
-specifying it here to show that you can adjust this to your taste if you
-like.</p>
+necessary for the function to generate a diverging palette, but it’s for
+sure helpful. Observe the <code>d.mid</code> argument here too. You can
+optionally set a color to be the midway point when the number of colors
+requested is an odd number (which we have here). The default is
+“#F7F7F7” (a color slightly off-white). I’m basically specifying it here
+to show that you can adjust this to your taste if you like.</p>
 </div>
 <div class="section level4">
 <h4 id="sequential-palettes">Sequential Palettes<a class="anchor" aria-label="anchor" href="#sequential-palettes"></a>
@@ -349,12 +353,12 @@ like.</p>
 functionally granular and quantitative, even if they may manifest in an
 ordered-categorical scale. They differ from diverging palettes because
 they are intended for quantitative information in which there is no
-“fence” or where the middle of scale has no real qualitative meaning. In
-the above examples referencing American partisanship and Likert items,
-the middle points constitute a kind of “fence”. In a Likert item, these
-are people who neither agree nor disagree. On either side of that
-particular midway point, they agree or disagree. In American
-partisanship, the fence are those who (<a href="https://www.politico.com/magazine/story/2014/01/independent-voters-partisans-in-the-closet-101931/" class="external-link">are
+“fence” or where the middle of the scale has no real qualitative
+meaning. In the above examples referencing American partisanship and
+Likert items, the middle points constitute a kind of “fence”. In a
+Likert item, these are people who neither agree nor disagree. On either
+side of that particular midway point, they agree or disagree. In
+American partisanship, the fence consists of those who (<a href="https://www.politico.com/magazine/story/2014/01/independent-voters-partisans-in-the-closet-101931/" class="external-link">are
 likely a bit dishonest when they</a>) say they are pure independents. On
 either side, they must at least lean in one direction. By contrast,
 sequential palettes are appropriate when the thing being colored or
@@ -478,8 +482,8 @@ form diverging and sequential palettes. It takes a hex triplet, and some
 proportion between 0 and 1, and returns a triplet that retains some
 proportion of its original color. For example,
 <code>lighten_hex("#000000" , 0)</code> takes pure black and returns a
-hex triplet that retains none of its original color. This would
-incidentally be white. Observe:</p>
+hex triplet that whitens it to retain none of its original color. This
+would incidentally be white. Observe:</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/lighten_hex.html">lighten_hex</a></span><span class="op">(</span><span class="st">"#000000"</span>, <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "#FFFFFF"</span></span></code></pre></div>
@@ -505,11 +509,11 @@ on a plot-by-plot basis.</p>
 (<code>are_fonts_installed()</code> and
 <code>how_to_install_fonts()</code>)<a class="anchor" aria-label="anchor" href="#installation-and-diagnostic-checks-are_fonts_installed-and-how_to_install_fonts"></a>
 </h3>
-<p>Students of mine who may want to make use of these finer themes, but
-don’t know how to get started, can consult thes two intuitively named
-functions that will tell you if you have the fonts installed
-<em>and</em> will tell you how to install them if you don’t already have
-them.</p>
+<p>Students of mine who may want to make use of the themes that
+reference specific fonts, but don’t know how to get started, can consult
+these two intuitively named functions. One will tell you if you have the
+fonts installed and the other will tell you how to install them if you
+don’t already have them.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/are_fonts_installed.html">are_fonts_installed</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; The {systemfonts} package in R suggests you have the following fonts in your registry:</span></span>
@@ -518,7 +522,7 @@ them.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; If you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; - /tmp/RtmpNqAnyV/temp_libpath36a79f56d73202/stevethemes/fonts</span></span>
+<span><span class="co">#&gt; - /home/steve/R/x86_64-pc-linux-gnu-library/4.5/stevethemes/fonts</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; You can also find full versions of these fonts (and more) here:</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -546,22 +550,42 @@ want it.</p>
 <span><span class="co">#&gt; Now, go to your home directory in another tab in your file browser. For you, this directory would be: /home/steve. Create a directory in your user home directory called '.fonts'. The leading dot in '.fonts' is important because this is a kind of 'hidden' directory that will become immediately invisible once you create it. However, it's there. Once you create it, press Ctrl+H to reveal hidden directories in the home directory and you'll see it. Once you see it, open it. Move all the font files you want into this directory (/home/steve/.fonts). Easy as that. That's the installation procedure.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; After creating this directory and moving the font files into that directory, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.</span></span></code></pre></div>
+<p>This one is for Mac users.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/how_to_install_fonts.html">how_to_install_fonts</a></span><span class="op">(</span><span class="st">"mac"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'. Then, hit Cmd-Space and ask Mac to open the Font Book app. In the Font Book app, choose File &gt; Add Fonts to Current User. In the directory containing the fonts you want to install, double-click the font file.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Mac users should have a few more options, all of which are doing the same basic thing. You can right-click on the font file(s) in question and ask to open it in Font Book (which should trigger an installation procedure). You can double-click the font file in Finder and click 'Install' in the dialog that appears. Either way, fonts in Mac are centrally managed through the Font Book app.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; After installing these fonts, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.</span></span></code></pre></div>
+<p>And, for Windows users…</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/how_to_install_fonts.html">how_to_install_fonts</a></span><span class="op">(</span><span class="st">"windows"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'. Then, select all the fonts you want to install in this directory. Right click, then select 'Install'. You may have to spam your way through a few permission overrides because Windows installs things at a system-level and can behave like it's paranoid about what you're installing. However, these are just simple font files. Communicate to Windows, ''Yes, I want to install these things because they are just simple fonts.''</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; After installing these fonts, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="color-vision-deficiency-tools">Color Vision Deficiency Tools<a class="anchor" aria-label="anchor" href="#color-vision-deficiency-tools"></a>
 </h3>
 <p><a href="https://svmiller.com/stevethemes/">stevethemes</a> also has a suite of tools to help users
-understand what their palettes might look like under varying conditions
-of color vision deficiency. Please consult <a href="https://svmiller.com/stevethemes/reference/cvd-simulator.html">the
+understand what their palettes might look like under conditions of color
+vision deficiency. Please consult <a href="https://svmiller.com/stevethemes/reference/cvd-simulator.html">the
 documentation for more details</a>. The most basic thing to do would be
 to use <code><a href="../reference/cvd-simulator.html">cvdplot()</a></code> to get an idea what a palette (of any
 length, of any form, included in this package or not) would look like
 under conditions of deuteranomaly, protanomaly, tritanomaly, and
 achromatopsia. Let’s showcase this with the Rick Martel palette, which
 is rather color-blind friendly.</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/cvd-simulator.html">cvdplot</a></span><span class="op">(</span><span class="st">"q-martel"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_steve.html">theme_steve</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="stevethemes_files/figure-html/unnamed-chunk-27-1.png" class="r-plt" alt="" width="1056"></p>
+<p><img src="stevethemes_files/figure-html/unnamed-chunk-29-1.png" class="r-plt" alt="" width="1056"></p>
+<p>Color vision deficiency affects a fraction of the population and
+these diagnostics tell you what the palettes look like under the maximum
+severity. Consider it illustrative in helping you understand what your
+palette looks like for those who are colorblind in some way. The
+achromatopsia simulation, to be transparent, only approximates extreme
+achromatopsia and may better serve as a grayscale simulator.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
