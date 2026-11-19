@@ -88,6 +88,8 @@ applying the whitening factor to
 | `d-suBF` | Diverging Palette (SU Blue to SU "Fire") |
 | `d-suRB` | Diverging Palette (SU Red to SU Blue) |
 | `d-suBR` | Diverging Palette (SU Blue to SU Red) |
+| `d-suRW` | Diverging Palette (SU Red to SU "Water") |
+| `d-suWR` | Diverging Palette (SU "Water" to SU Red) |
 | `d-suBO` | Diverging Palette (SU Blue to SU Olive) |
 | `d-suOB` | Diverging Palette (SU Olive to SU Blue) |
 | `d-suFW` | Diverging Palette (SU "Fire" to SU "Water") |

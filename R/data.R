@@ -223,3 +223,64 @@
 #' registrations in a year.
 
 "brandy"
+
+
+#' 2026 United States Senate election in South Carolina
+#'
+#' This is a simple data set on the results of the 2026 United States Senate
+#' election in South Carolina.
+#'
+#' @format A data frame with 2185 rows and 17 columns
+#' \describe{
+#' \item{\code{long}}{a longitude coordinate}
+#' \item{\code{lat}}{a latitude coordinate}
+#' \item{\code{group}}{identifies the polygon to which a coordinate belongs}
+#' \item{\code{order}}{an integer that determines the sequence in which coordinates are connected}
+#' \item{\code{county}}{a county name for South Carolina}
+#' \item{\code{aan}}{the number of votes Annie Andrews received in the county}
+#' \item{\code{aap}}{the percentage of votes Annie Andrews received in the county}
+#' \item{\code{dgn}}{the number of votes Darline Graham received in the county}
+#' \item{\code{dgp}}{the percentage of votes Darline Graham received in the county}
+#' \item{\code{mn}}{the vote margin in the count of votes in the county (Andrews' count minus Graham's count)}
+#' \item{\code{mp}}{the vote margin in the percentage of votes in the county (Andrews' count minus Graham's count)}
+#' \item{\code{tv}}{the total number of votes cast in the Senate race in the county}
+#' \item{\code{pop}}{the estimated county population size from 2025}
+#' \item{\code{area}}{the area of the county (in square kilometers)}
+#' \item{\code{whitep}}{the percentage of the county that is white, non-hispanic, per the 2020 Census}
+#' \item{\code{blackp}}{the percentage of the county that is black, non-hispanic, per the 2020 Census}
+#' \item{\code{mcat}}{a factor categorizing the percentage vote margin}
+#' }
+#'
+#' @details
+#'
+#' This is a Wikipedia scrape job from Nov. 18, 2026. It stands to reason this
+#' information is not 100% of all votes cast, but the counting has just about
+#' stopped completely and the outcome of the race is already known prior to
+#' creating these data.
+#'
+#' The `mcat` column has values of "<= -20", "-20 to -10", "-5 to <0", ">0 to 5",
+#' "5 to 10", "10 to 20", and ">= 20". Intervals are left-closed (e.g. [5, 10),
+#' [10, 20)) and not the default right-closed. This doesn't matter so much in
+#' cases like these as you will never observe actual integers in data like these,
+#' nor will you observe actual zero.
+#'
+
+"SC26SE"
+
+#' Support for Trade Protectionism in the U.S., 2012 and 2020
+#'
+#' This is a simple data set on the partisan breakdown of support for limiting
+#' foreign imports to protect American workers in both 2012 and 2020.
+#'
+#' @format A data frame with 14 rows and 3 columns
+#' \describe{
+#' \item{\code{year}}{a year}
+#' \item{\code{pid7}}{a factor of partisanship on a 7-point scale from "Strong Democrat" to "Strong Republican"}
+#' \item{\code{prop}}{the proportion of repsondents in that category that would favor limiting imports}
+#' }
+#'
+#' @details Data come from the American National Election Studies in 2012 and
+#' 2020. Be mindful that, if given the option, most Americans will say they
+#' haven't thought too much about this question.
+
+"anesprotect"

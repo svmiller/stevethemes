@@ -34,8 +34,7 @@
 #'
 adj_font_size <- function(x, ...) {
 
-  theme(
-        plot.caption = element_text(size = 9 + x),
+  theme(plot.caption = element_text(size = 9 + x),
         plot.title = element_text(size = 18 + x),
         plot.subtitle = element_text(size = 11 + x),
         axis.title.y = element_text(size = 10 + x),

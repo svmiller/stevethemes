@@ -7,11 +7,12 @@
 - Add colors to `steve_hex`.
 - `palettes` is used, mostly internally, for managing available palettes, defining them in `spal()`, and describing them in `swatchplot()`.
 - `swatchplot()` allows you to see what colors come with various palettes in this package. `splt()` is a shortcut for it in case you're experimenting with the `{colorspace}` package as well.
-- New data sets for sample graphs: `britneywork`, `brandy`, `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
+- New data sets for sample graphs: `britneywork`, `brandy`, `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`, `SC26SE`, `anesprotect`.
 - `example_plot()` has a host of new examples.
 - `lighten_hex()` takes a valid RGB hex value and whitens it to be some proportion of its original value.
 - `spal()` is a workhorse function, to be used with functions like `scale_fill_manual()` or `scale_color_manual()` in `{ggplot2}`, for applying color palettes from this package.
 - `deut()`, `prot()`, `trit()`, `achrom()`, and `cvdplot()` are functions to simulate color palettes under varying conditions of color vision defiency.
+- `no_axes()` removes ticks and lines on the x- and y-axis. Useful if you're making a map.
 
 # stevethemes 0.1.0
 

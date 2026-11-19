@@ -24,7 +24,8 @@
   [colorspace](https://colorspace.R-Forge.R-project.org/) package as
   well.
 - New data sets for sample graphs: `britneywork`, `brandy`,
-  `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`.
+  `cowwaryears`, `uspopgengroup`, `oilrents`, `imfquotas`, `SC26SE`,
+  `anesprotect`.
 - [`example_plot()`](https://svmiller.com/reference/example_plot.md) has
   a host of new examples.
 - [`lighten_hex()`](https://svmiller.com/reference/lighten_hex.md) takes
@@ -44,6 +45,8 @@
   [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) are
   functions to simulate color palettes under varying conditions of color
   vision defiency.
+- [`no_axes()`](https://svmiller.com/reference/print-ready.md) removes
+  ticks and lines on the x- and y-axis. Useful if you’re making a map.
 
 ## stevethemes 0.1.0
 

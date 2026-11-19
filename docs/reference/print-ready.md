@@ -1,8 +1,8 @@
 # Miscellaneous functions to make your ggplot2 plot "print-ready"
 
-These are assorted functions that will make your plot "print-ready" by
-removing gridlines and giving hard-line axes to the plot. These are
-typically changes requested by publishes for the printing process.
+These are assorted functions that will make your plot "print-ready".
+These are context-dependent adjustments for things like ticks,
+gridlines, and axes.
 
 ## Usage
 
@@ -10,28 +10,39 @@ typically changes requested by publishes for the printing process.
 no_gridlines(...)
 
 make_classic(...)
+
+no_axes(...)
 ```
 
 ## Arguments
 
 - ...:
 
-  optional, called for side effects
+  called for side effects
 
 ## Value
 
 `no_gridlines()` takes a plot made in ggplot2 and removes the gridlines
-from the plot before returning it to the user. `make_classic()` takes a
-plot made in ggplot2 and removes the gridlines, gray background, and
-adds solid axes to the plot.
+from the plot before returning it to the user.
+
+`make_classic()` takes a plot made in ggplot2 and removes the gridlines,
+gray background, and adds solid axes to the plot.
+
+`no_axes()` removes the x- and y-axes.
 
 ## Details
 
 `no_gridlines()` is a simple wrapper for some basic ggplot2 code that
-will allow you to remove gridlines from the plot. `make_classic()`
-removes gridlines, removes the default gray background, *and* imposes a
-black, solid line on both axes. It will also hard code the axis text to
-be black. Using the latter with the former is likely redundant.
+will allow you to remove gridlines from the plot.
+
+`make_classic()` removes gridlines, removes the default gray background,
+*and* imposes a black, solid line on both axes. It will also hard code
+the axis text to be black. Using the latter with the former is likely
+redundant.
+
+`no_axes()` removes the x- and y-axis from the plot. You'll want this
+for making maps, unless it's really pertinent that the user knows the
+latitude and longitude coordinates on the y- and x-axis.
 
 You will want to put these functions after a theme you've declared. If
 you run this before adding a theme over it, the theme you add will

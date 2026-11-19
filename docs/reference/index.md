@@ -35,7 +35,8 @@ Functions included in this data set.
   Whiten an RGB Hex Value
 
 - [`no_gridlines()`](https://svmiller.com/reference/print-ready.md)
-  [`make_classic()`](https://svmiller.com/reference/print-ready.md) :
+  [`make_classic()`](https://svmiller.com/reference/print-ready.md)
+  [`no_axes()`](https://svmiller.com/reference/print-ready.md) :
 
   Miscellaneous functions to make your ggplot2 plot "print-ready"
 
@@ -54,6 +55,10 @@ Functions included in this data set.
 
 Example data sets available to use for illustration purposes.
 
+- [`SC26SE`](https://svmiller.com/reference/SC26SE.md) : 2026 United
+  States Senate election in South Carolina
+- [`anesprotect`](https://svmiller.com/reference/anesprotect.md) :
+  Support for Trade Protectionism in the U.S., 2012 and 2020
 - [`brandy`](https://svmiller.com/reference/brandy.md) : Brandy,
   1942-2017
 - [`britneywork`](https://svmiller.com/reference/britneywork.md) : The

@@ -7,8 +7,9 @@
 #' @details
 #'
 #' Valid entries for 'type' are "bar" (alias: "martel"), "brandy", "britney",
-#' "faceted-boxplot", "faceted-line", "line" (alias: "imfquotas"), "prop-bar"
-#' (alias: "uspopgengroup"), "scatter", and "stacked-bar".
+#' "faceted-boxplot", "faceted-line", "fill-bar" (alias: "anes-protect"),
+#' "line" (alias: "imfquotas"), "map", (alias: "annie-andrews"),
+#' "prop-bar", (alias: "uspopgengroup"), "scatter", and "stacked-bar".
 #'
 #' @name example_plot
 #'
@@ -173,6 +174,28 @@ example_plot <- function(type = "bar", alpha = 1, color = NULL, fill = NULL, fam
            fill = "",
            y = "", x = "",
            caption = "Data: U.S. Census Bureau, Population Division, by wya of the Annie E. Casey Foundation.") -> p
+
+  } else if (type %in% c("map", "annie-andrews")) {
+
+    ggplot(SC26SE, aes(.data$long, .data$lat, group = .data$group, fill = .data$mcat)) +
+      geom_polygon(colour = "grey50", alpha = alpha) +
+      labs(title = "Annie Andrews' Margin in the 2026 U.S. Senate Election, by County",
+           subtitle = "This is an example map. Experiment with customization options!",
+           fill = "Andrews' Margin (%)", x = "", y = "",
+           caption = "Andrews is the first Democrat to carry Greenville County since 1986. Jimmy Carter was the last Democratic presidential candidate to win it (1976).") -> p
+
+  } else if (type %in% c("fill-bar", "anes-protect")) {
+
+    ggplot(anesprotect, aes(.data$pid7, .data$prop, fill = .data$pid7)) +
+      geom_bar(stat = 'identity', color = 'black') +
+      facet_wrap(~.data$year, nrow = 2) +
+      #geom_hline(yintercept = .5, linetype = 'dashed') +
+      labs(title = "The Relationship Between Partisanship and Trade Protectionism in the U.S. Shifted in 2016",
+           subtitle = "This is an example chart. Experiment with customization options!",
+           fill = "", y = "Proportion Favoring Limiting Foreign Imports to Protect American Workers",
+           x = "Partisanship (D to R)",
+           caption = "Data: American National Election Studies (2012, 2020).
+           Caveat: most Americans, if given the choice, would tell you they haven't thought much about this question.") -> p
 
   }
 

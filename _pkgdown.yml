@@ -5,6 +5,9 @@ template:
   params:
     bootswatch: journal
 
+toc:
+  depth: 3
+
 figures:
   fig.width: 11
 

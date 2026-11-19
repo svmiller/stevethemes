@@ -68,6 +68,8 @@ factor to \code{lighten_hex()}.
    \code{d-suBF} \tab Diverging Palette (SU Blue to SU "Fire") \cr
    \code{d-suRB} \tab Diverging Palette (SU Red to SU Blue) \cr
    \code{d-suBR} \tab Diverging Palette (SU Blue to SU Red) \cr
+   \code{d-suRW} \tab Diverging Palette (SU Red to SU "Water") \cr
+   \code{d-suWR} \tab Diverging Palette (SU "Water" to SU Red) \cr
    \code{d-suBO} \tab Diverging Palette (SU Blue to SU Olive) \cr
    \code{d-suOB} \tab Diverging Palette (SU Olive to SU Blue) \cr
    \code{d-suFW} \tab Diverging Palette (SU "Fire" to SU "Water") \cr

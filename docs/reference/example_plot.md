@@ -47,8 +47,9 @@ experiment with different themes to see which ones they like the best.
 ## Details
 
 Valid entries for 'type' are "bar" (alias: "martel"), "brandy",
-"britney", "faceted-boxplot", "faceted-line", "line" (alias:
-"imfquotas"), "prop-bar" ( alias: "uspopgengroup"), "scatter", and
+"britney", "faceted-boxplot", "faceted-line", "fill-bar" (alias:
+"anes-protect"), "line" (alias: "imfquotas"), "map", (alias:
+"annie-andrews"), "prop-bar", (alias: "uspopgengroup"), "scatter", and
 "stacked-bar".
 
 ## Author

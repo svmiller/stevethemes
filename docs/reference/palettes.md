@@ -31,18 +31,18 @@ This is mostly for internal use.
 ``` r
 
 print(palettes)
-#> # A tibble: 24 × 2
+#> # A tibble: 26 × 2
 #>    palette description                                      
 #>    <chr>   <chr>                                            
 #>  1 d-suFB  "Diverging Palette (SU \"Fire\" to SU Blue)"     
 #>  2 d-suBF  "Diverging Palette (SU Blue to SU \"Fire\")"     
 #>  3 d-suRB  "Diverging Palette (SU Red to SU Blue)"          
 #>  4 d-suBR  "Diverging Palette (SU Blue to SU Red)"          
-#>  5 d-suBO  "Diverging Palette (SU Blue to SU Olive)"        
-#>  6 d-suOB  "Diverging Palette (SU Olive to SU Blue)"        
-#>  7 d-suFW  "Diverging Palette (SU \"Fire\" to SU \"Water\")"
-#>  8 d-suWF  "Diverging Palette (SU \"Water\" to SU \"Fire\")"
-#>  9 s-suB   "Sequential Palette (SU Blue)"                   
-#> 10 s-suO   "Sequential Palette (SU Olive)"                  
-#> # ℹ 14 more rows
+#>  5 d-suRW  "Diverging Palette (SU Red to SU \"Water\")"     
+#>  6 d-suWR  "Diverging Palette (SU \"Water\" to SU Red)"     
+#>  7 d-suBO  "Diverging Palette (SU Blue to SU Olive)"        
+#>  8 d-suOB  "Diverging Palette (SU Olive to SU Blue)"        
+#>  9 d-suFW  "Diverging Palette (SU \"Fire\" to SU \"Water\")"
+#> 10 d-suWF  "Diverging Palette (SU \"Water\" to SU \"Fire\")"
+#> # ℹ 16 more rows
 ```
