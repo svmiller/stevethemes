@@ -4,7 +4,7 @@ Title: Steve's 'ggplot2' Themes and Related Theme Elements
 Depends: R (>= 3.5.0)
 Version: 0.2.0
 Authors@R: c(person("Steve", "Miller",
-                  email = "steven.v.miller@gmail.com", 
+                  email = "steve@svmiller.com", 
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0003-4072-6263")),
              person("Accademia di Belle Arti di Urbino",

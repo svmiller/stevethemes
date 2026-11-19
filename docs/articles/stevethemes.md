@@ -31,7 +31,7 @@ would want me to accomplish what I wanted to accomplish. I do a lot of
 instruction in my current job. It has to make sense to me in order for
 me to communicate it to my students.
 
-## What’s Included? And How Should I Use It?
+## How Should I Use It?
 
 [stevethemes](https://svmiller.com/stevethemes/) has a variety of
 functions to use with the plots you make in
@@ -425,12 +425,14 @@ Now, let’s create a map with this information.
 ggplot(Data, aes(long, lat, group = group, fill = bcat)) +
   geom_polygon(colour = "grey50") +
   theme_steve() +
+  coord_sf() +
   no_gridlines() + # Novelty function for removing gridlines, def. for maps.
   no_axes() +  # Novelty function; your audience won't care about long/lat coordinates in this context.
   scale_fill_manual(values = spal("s-suB", n = 8)) +
   labs(title = "The Percentage of South Carolina That is Black, Non-Hispanic",
        x = "", y = "", fill = "% Black (Non-Hispanic)",
-       subtitle = "South Carolina's majority black counties are largely south of Columbia, where the area was fertile for agriculture.")
+       subtitle = "South Carolina's majority black counties are largely south of Columbia, where the area was fertile for agriculture.",
+       caption = "There is an obvious legacy of chattel slavery that accounts for this.")
 ```
 
 ![](stevethemes_files/figure-html/unnamed-chunk-17-1.png)
@@ -457,3 +459,165 @@ example_plot("annie-andrews") +
 ```
 
 ![](stevethemes_files/figure-html/unnamed-chunk-18-1.png)
+
+## What Else is Included?
+
+I have a suite of other functions included in this package, which you
+can see in the [references
+section](https://svmiller.com/stevethemes/reference/index.html). Some of
+these are boutique functions, especially [the “print-ready”
+functions](https://svmiller.com/stevethemes/reference/print-ready.html)
+(two of which I just used). Here are some of the more useful ones.
+
+### `swatchplot()` (alias: `splt()`)
+
+[`swatchplot()`](https://svmiller.com/reference/swatchplot.md) returns a
+plot of swatches of all the palettes included in this package. Hopefully
+you find one you like.
+
+``` r
+
+swatchplot(style = 'web')
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-19-1.png)
+
+You can also use this for an individual palette. For example, here’s is
+Paul Tol’s colorblind-safe palette of muted colors.
+
+``` r
+
+swatchplot("q-tolm", style = 'web')
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-20-1.png)
+
+Here is the full sequential palette of Stockholm University’s olive
+color.
+
+``` r
+
+swatchplot("s-suO", style = 'web')
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-21-1.png)
+
+Here is the diverging palette of Stockholm University Blue to Stockholm
+University “Fire”.
+
+``` r
+
+swatchplot("d-suBF", style = 'web')
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-22-1.png)
+
+[`splt()`](https://svmiller.com/reference/swatchplot.md) is an alias for
+this function if you’re experimenting with the
+[colorspace](https://colorspace.R-Forge.R-project.org/) package, which
+also has a function with this name.
+
+### `lighten_hex()`
+
+[`lighten_hex()`](https://svmiller.com/reference/lighten_hex.md) is used
+internally for whitening colors to form diverging and sequential
+palettes. It takes a hex triplet, and some proportion between 0 and 1,
+and returns a triplet that retains some proportion of its original
+color. For example, `lighten_hex("#000000" , 0)` takes pure black and
+returns a hex triplet that retains none of its original color. This
+would incidentally be white. Observe:
+
+``` r
+
+lighten_hex("#000000", 0)
+#> [1] "#FFFFFF"
+```
+
+### `example_plot()`
+
+I’ve showcased this a few times already, but
+[`example_plot()`](https://svmiller.com/reference/example_plot.md) has
+some example graphs that you can use to see which palettes you might
+like. Here, for example, is the number of “Brandy” births from 1942 to
+2017. You can use this to experiment with a fill color and a theme,
+along with some other minor details that appear on a plot-by-plot basis.
+
+``` r
+
+example_plot("brandy", fill = g_c("martel_eau"), 
+             alpha = .8, family = "Open Sans") +
+  theme_steve()
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-24-1.png)
+
+### Installation and Diagnostic Checks (`are_fonts_installed()` and `how_to_install_fonts()`)
+
+Students of mine who may want to make use of these finer themes, but
+don’t know how to get started, can consult thes two intuitively named
+functions that will tell you if you have the fonts installed *and* will
+tell you how to install them if you don’t already have them.
+
+``` r
+
+are_fonts_installed()
+#> The {systemfonts} package in R suggests you have the following fonts in your registry:
+#> 
+#> Open Sans (✓); Titillium Web (✓); Crimson Pro (✓); Fira Sans (✓); Merriweather (✓)
+#> 
+#> If you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:
+#> 
+#> - /tmp/RtmpNqAnyV/temp_libpath36a79f56d73202/stevethemes/fonts
+#> 
+#> You can also find full versions of these fonts (and more) here:
+#> 
+#> - https://fonts.google.com
+#> 
+#> It might be in your interest to download and install the full fonts.
+how_to_install_fonts()
+#> Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'. Then, do the following (contingent on whether you're a Windows user, a Mac user, or a Linux user).
+#> 
+#> - Windows users: select all fonts you want to install. Right click, and select 'Install'.
+#> - Mac users: Double-click the font file and install in Font Book app.
+#> - Linux users: create a folder in your home directory called '.fonts' and copy-paste all the fonts you want into it. For you, this directory would be: /home/steve/.fonts
+#> 
+#> After installing these fonts, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.
+```
+
+[`how_to_install_fonts()`](https://svmiller.com/reference/how_to_install_fonts.md)
+has a few different arguments if you need more focused instructions. For
+example, Linux users likely know how to do this, but here’s more
+detailed information for them if they want it.
+
+``` r
+
+how_to_install_fonts("linux")
+#> Because you are among the proud, the few, the elite---the Linux user---you probably know how to do this already. Linux users self-select into being Linux users. However, I'll write it out for you anyway because you asked.
+#> 
+#> Open up the directory containing the fonts you want to install. You will see that these font files have an extension of something like '.ttf' or '.otf'.
+#> 
+#> Now, go to your home directory in another tab in your file browser. For you, this directory would be: /home/steve. Create a directory in your user home directory called '.fonts'. The leading dot in '.fonts' is important because this is a kind of 'hidden' directory that will become immediately invisible once you create it. However, it's there. Once you create it, press Ctrl+H to reveal hidden directories in the home directory and you'll see it. Once you see it, open it. Move all the font files you want into this directory (/home/steve/.fonts). Easy as that. That's the installation procedure.
+#> 
+#> After creating this directory and moving the font files into that directory, check that your word processor can see them. Restart RStudio if necessary and run something like example_plot() + theme_steve() to see if these fonts will render correctly.
+```
+
+### Color Vision Deficiency Tools
+
+[stevethemes](https://svmiller.com/stevethemes/) also has a suite of
+tools to help users understand what their palettes might look like under
+varying conditions of color vision deficiency. Please consult [the
+documentation for more
+details](https://svmiller.com/stevethemes/reference/cvd-simulator.html).
+The most basic thing to do would be to use
+[`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) to get an
+idea what a palette (of any length, of any form, included in this
+package or not) would look like under conditions of deuteranomaly,
+protanomaly, tritanomaly, and achromatopsia. Let’s showcase this with
+the Rick Martel palette, which is rather color-blind friendly.
+
+``` r
+
+cvdplot("q-martel") + theme_steve()
+```
+
+![](stevethemes_files/figure-html/unnamed-chunk-27-1.png)

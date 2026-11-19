@@ -74,7 +74,7 @@ I'm using "achromatopsia" here, though with some hesitation. I'm reluctant
 to say this is a physiologically accurate simulation of complete achromatopsia.
 It is certainly a visual simulation of grayscale and may approximate a complete
 loss of chromatic information using photopic relative luminance. These terms
-can be used interchangably, but with important caveats.
+can be used interchangeably, but with important caveats.
 }
 \examples{
 

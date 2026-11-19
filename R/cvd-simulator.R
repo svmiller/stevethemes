@@ -30,7 +30,7 @@
 #' to say this is a physiologically accurate simulation of complete achromatopsia.
 #' It is certainly a visual simulation of grayscale and may approximate a complete
 #' loss of chromatic information using photopic relative luminance. These terms
-#' can be used interchangably, but with important caveats.
+#' can be used interchangeably, but with important caveats.
 #'
 #'
 #' @param pal a character vector of valid hex triplets (with leading pound
