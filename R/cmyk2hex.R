@@ -16,11 +16,8 @@
 #'
 #' Conversion to RGB format is performed using a simplified mathematical model,
 #' in which the CMYK values are first converted to proportions between 0 and 1.
-#' The corresponding RGB values are then calculated as:
-#'
-#' \deqn{R = 255(1-C)(1-K)}
-#' \deqn{G = 255(1-M)(1-K)}
-#' \deqn{B = 255(1-Y)(1-K)}
+#' The resulting RGB values are calculated as ` R = 255(1-C)(1-K)`,
+#' `G = 255(1-M)(1-K)`, and `B = 255(1-Y)(1-K)`.
 #'
 #' The resulting RGB values are rounded to the nearest integer before being
 #'  converted to a hex triplet.

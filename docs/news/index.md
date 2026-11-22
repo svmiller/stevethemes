@@ -2,6 +2,9 @@
 
 ## stevethemes 0.3.0
 
+- [`cmyk2hex()`](https://svmiller.com/reference/cmyk2hex.md) and
+  [`rgb2hex()`](https://svmiller.com/reference/rgb2hex.md) convert
+  different color specifications to six-digit hex triplets.
 - Documentation updates
 
 ## stevethemes 0.2.0
@@ -50,7 +53,7 @@ CRAN release: 2026-11-19
   [`achrom()`](https://svmiller.com/reference/cvd-simulator.md), and
   [`cvdplot()`](https://svmiller.com/reference/cvd-simulator.md) are
   functions to simulate color palettes under varying conditions of color
-  vision defiency.
+  vision deficiency.
 - [`no_axes()`](https://svmiller.com/reference/print-ready.md) removes
   ticks and lines on the x- and y-axis. Useful if you’re making a map.
 

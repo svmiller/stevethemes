@@ -79,7 +79,8 @@ website](https://svmiller.com). My preferred online font is Open Sans
 and my sections use Titillium Web. Those are the fonts this function
 uses. The use of Titillium Web, in particular, dates to [Alex
 King](https://alexking.org/) and my introduction to him when I was still
-a university student learning about web design.
+a university student learning about web design. The font itself is only
+about 15 years old, but King was my introduction to it.
 
 [`theme_steve()`](https://svmiller.com/reference/theme_steve.md) comes
 in several flavors, using the `style` argument in this function. These
@@ -575,7 +576,7 @@ are_fonts_installed()
 #> 
 #> If you see an 'x' in parentheses next to these fonts, it means {systemfonts} doesn't think you have these fonts installed. This package has copies of these fonts that should be minimally sufficient to get you started, which you can find here:
 #> 
-#> - /tmp/RtmpLjKlJS/temp_libpath370f9959da7a7a/stevethemes/fonts
+#> - /tmp/Rtmp2Xzi5r/temp_libpath38b50b38d10695/stevethemes/fonts
 #> 
 #> You can also find full versions of these fonts (and more) here:
 #> 

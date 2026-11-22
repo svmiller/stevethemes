@@ -11,7 +11,7 @@ gridlines, and axes.'></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">stevethemes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.9</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,7 +75,9 @@ gridlines, and axes.</p>
 the gridlines from the plot before returning it to the user.</p>
 <p><code>make_classic()</code> takes a plot made in <span class="pkg">ggplot2</span> and removes the
 gridlines, gray background, and adds solid axes to the plot.</p>
-<p><code>no_axes()</code> removes the x- and y-axes.</p>
+<p><code>no_axes()</code> removes the x- and y-axes. Use it for making maps because your
+audience won't care about the longitude and latitude coordinates that make
+the map.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -112,6 +114,9 @@ overwrite this function.</p>
 <span class="r-in"><span><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span>type<span class="op">=</span><span class="st">'scatter'</span><span class="op">)</span> <span class="op">+</span> <span class="fu">make_classic</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> `geom_smooth()` using formula = 'y ~ x'</span>
 <span class="r-plt img"><img src="print-ready-3.png" alt="" width="1056" height="653"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="example_plot.html">example_plot</a></span><span class="op">(</span><span class="st">"map"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">no_axes</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="print-ready-4.png" alt="" width="1056" height="653"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

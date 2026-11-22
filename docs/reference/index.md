@@ -8,6 +8,9 @@ Functions included in this data set.
   : Check if you have the fonts you need already installed on your
   computer
 
+- [`cmyk2hex()`](https://svmiller.com/reference/cmyk2hex.md) : Convert
+  CMYK values to a HEX color
+
 - [`deut()`](https://svmiller.com/reference/cvd-simulator.md)
   [`prot()`](https://svmiller.com/reference/cvd-simulator.md)
   [`trit()`](https://svmiller.com/reference/cvd-simulator.md)
@@ -39,6 +42,9 @@ Functions included in this data set.
   [`no_axes()`](https://svmiller.com/reference/print-ready.md) :
 
   Miscellaneous functions to make your ggplot2 plot "print-ready"
+
+- [`rgb2hex()`](https://svmiller.com/reference/rgb2hex.md) : Convert RGB
+  values to a HEX color
 
 - [`spal()`](https://svmiller.com/reference/spal.md) : Load a palette as
   a character vector
