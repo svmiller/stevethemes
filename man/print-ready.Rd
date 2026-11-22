@@ -22,7 +22,9 @@ the gridlines from the plot before returning it to the user.
 \code{make_classic()} takes a plot made in \pkg{ggplot2} and removes the
 gridlines, gray background, and adds solid axes to the plot.
 
-\code{no_axes()} removes the x- and y-axes.
+\code{no_axes()} removes the x- and y-axes. Use it for making maps because your
+audience won't care about the longitude and latitude coordinates that make
+the map.
 }
 \description{
 These are assorted functions that will make your plot
@@ -54,6 +56,8 @@ example_plot(type = "scatter")
 example_plot(type='scatter') + no_gridlines()
 
 example_plot(type='scatter') + make_classic()
+
+example_plot("map") + no_axes()
 
 }
 \author{

@@ -2,7 +2,7 @@ Package: stevethemes
 Type: Package
 Title: Steve's 'ggplot2' Themes and Related Theme Elements
 Depends: R (>= 3.5.0)
-Version: 0.2.0
+Version: 0.2.9
 Authors@R: c(person("Steve", "Miller",
                   email = "steve@svmiller.com", 
                   role = c("aut", "cre"),

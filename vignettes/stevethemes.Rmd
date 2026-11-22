@@ -70,7 +70,8 @@ Notice that these design choices are everywhere on [my academic website](https:/
 My preferred online font is Open Sans and my sections use Titillium Web. Those
 are the fonts this function uses. The use of Titillium Web, in particular, dates
 to [Alex King](https://alexking.org/) and my introduction to him when I was still
-a university student learning about web design.
+a university student learning about web design. The font itself is only about 15
+years old, but King was my introduction to it.
 
 `theme_steve()` comes in several flavors, using the `style` argument in this
 function. These are ["web"](https://svmiller.com/stevethemes/articles/default-example.html) 

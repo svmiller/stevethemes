@@ -1,5 +1,6 @@
 # stevethemes 0.3.0
 
+- `cmyk2hex()` and `rgb2hex()` convert different color specifications to six-digit hex triplets.
 - Documentation updates
 
 # stevethemes 0.2.0
@@ -15,7 +16,7 @@
 - `example_plot()` has a host of new examples.
 - `lighten_hex()` takes a valid RGB hex value and whitens it to be some proportion of its original value.
 - `spal()` is a workhorse function, to be used with functions like `scale_fill_manual()` or `scale_color_manual()` in `{ggplot2}`, for applying color palettes from this package.
-- `deut()`, `prot()`, `trit()`, `achrom()`, and `cvdplot()` are functions to simulate color palettes under varying conditions of color vision defiency.
+- `deut()`, `prot()`, `trit()`, `achrom()`, and `cvdplot()` are functions to simulate color palettes under varying conditions of color vision deficiency.
 - `no_axes()` removes ticks and lines on the x- and y-axis. Useful if you're making a map.
 
 # stevethemes 0.1.0
